@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+.chart {
+    width: 45%;
+    height: 500px;
+    min-width: 400px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column; 
+    }
+    .chart {
+        width: 90%;
+        height: 400px;
+    }
+}
