@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> fuzz </title>
+    <title>Fuzz Visualization</title>
     <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="styles.css"> 
-    </head>
-    <body>
-        <h1>Welcome to Fuzz</h1>
-        <p>sample page for Fuzz project.</p>
-        <button onclick="alert('Button clicked!')">Click Me</button>
-        <h2> Nightingale Chart</h2>
-        <h3> Treemap and sunburst visualisation</h3>
-        <div class="container">
-            <div id="chart1" class="chart"></div>
-            
-        </div>
-        <div class="container2">
-            <div id="chart2" class="chart"></div>
-        </div>
-        <script src="graph1.js"></script>
-        <script src="graph2.js"></script>
-
-
-    </body>
-
+</head>
+<body>
+    <h1>Welcome to Fuzz</h1>
+    <p>Sample page for Fuzz project.</p>
+    <button onclick="alert('Button clicked!')">Click Me</button>
+    
+    <h2>Nightingale Chart</h2>
+    <h3>Treemap and Sunburst Visualisation</h3>
+    <h4>Bar Visualisation</h4>
+    
+    <div class="container">
+        <div id="chart1" class="chart"></div>
+    </div>
+    
+    <div class="container2">
+        <div id="chart2" class="chart"></div>
+    </div>
+    
+    <div class="container3">
+        <div id="chart3" class="chart"></div>
+    </div>
+    
+    <script src="graph1.js" defer></script>
+    <script src="graph2.js" defer></script>
+    <script src="graph3.js" defer></script>
+</body>
 </html>
