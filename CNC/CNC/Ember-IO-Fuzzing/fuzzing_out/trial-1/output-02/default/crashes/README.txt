@@ -1,15 +1,3 @@
-Command line used to find this crash:
-
-/home/mathew/firmrebugger/fuzzers/Ember-IO-Fuzzing/AFLplusplus/afl-fuzz -V 86400 -i ./seeds -o cnc-t100/Ember-IO-Fuzzing/output-02 -t 100 -Q ./CNC.elf -sram_size 192k -flash_size 2048k -machine embedded_fuzz -fuzz_input @@
-
-If you can't reproduce a bug outside of afl-fuzz, be sure to set the same
-memory limit. The limit used for this fuzzing session was 0 B.
-
-Need a tool to minimize test cases before investigating the crashes or sending
-them to a vendor? Check out the afl-tmin that comes with the fuzzer!
-
-Found any cool bugs in open-source tools using afl-fuzz? If yes, please drop
-an mail at <afl-users@googlegroups.com> once the issues are fixed
-
-  https://github.com/AFLplusplus/AFLplusplus
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:3187b4dd15b7695dedc9e960a8e8d0cc3d98920ed6aa74d6d0db608b0b20c794
+size 740

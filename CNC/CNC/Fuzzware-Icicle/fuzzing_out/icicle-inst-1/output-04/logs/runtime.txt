@@ -1,3 +1,3 @@
-planned_run_time: 86400
-start_epoch_seconds: 1693286590
-end_epoch_seconds: 1693372990
+version https://git-lfs.github.com/spec/v1
+oid sha256:a40a995a1a287f7f77ecd71a0e2e4f7b5229160d62b1fdf62b1e6d5a782df171
+size 86
