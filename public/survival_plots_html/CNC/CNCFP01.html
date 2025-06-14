@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Survival Plot - CNCFP01</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 30px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #plot {
+            width: 100%;
+            height: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Survival Curve: CNCFP01 (Binary: CNC)</h2>
+    <div id="plot"></div>
+    <script>
+        const data = [{"fuzzer": "SplITS", "time": [0.0, 23.08972222222222, 24.0], "survival": [1.0, 0.9, 0.9]}, {"fuzzer": "Hoedur", "time": [0.0, 0.5575, 1.3688888888888888, 5.133611111111111, 6.3902777777777775, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.5999999999999999]}, {"fuzzer": "MultiFuzz", "time": [0.0, 4.139444444444444, 7.814166666666667, 14.351944444444445, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.6999999999999998]}, {"fuzzer": "Fuzzware", "time": [0.0, 6.382777777777778, 12.536111111111111, 12.797777777777778, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.6999999999999998]}, {"fuzzer": "Fuzzware-Icicle", "time": [0.0, 24.0], "survival": [1.0, 1.0]}, {"fuzzer": "Ember-IO-Fuzzing", "time": [0.0, 0.9047222222222222, 16.753611111111113, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.7999999999999997]}];
+        const traces = data.map(entry => {
+            return {
+                x: entry.time,
+                y: entry.survival,
+                mode: 'lines+markers',
+                name: entry.fuzzer,
+                line: { 
+                    width: 2,
+                    shape: 'hv'  // Creates stepped line effect (horizontal then vertical)
+                },
+                marker: { size: 4 }
+            };
+        });
+        
+        const layout = {
+            title: 'Survival Curve for Bug CNCFP01',
+            xaxis: {
+                title: 'Time (hrs)',
+                range: [0, Math.max(...data.flatMap(d => d.time)) * 1.05],
+                gridcolor: '#ddd'
+            },
+            yaxis: {
+                title: 'Survival Probability',
+                range: [0, 1.05],
+                gridcolor: '#ddd'
+            },
+            legend: {
+                orientation: 'h',
+                y: -0.15,
+                xanchor: 'center',
+                x: 0.5
+            },
+            margin: { t: 60, b: 80, l: 60, r: 30 },
+            plot_bgcolor: 'white',
+            paper_bgcolor: 'white',
+            hovermode: 'closest'
+        };
+        
+        Plotly.newPlot('plot', traces, layout, {
+            responsive: true,
+            displayModeBar: true,
+            displaylogo: false,
+            modeBarButtonsToRemove: ['lasso2d', 'select2d', 'hoverClosestCartesian', 'hoverCompareCartesian', 'toggleSpikelines', 'zoom2d']
+        });
+    </script>
+</body>
+</html>

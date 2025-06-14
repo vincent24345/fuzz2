@@ -1,0 +1,53 @@
+uuuuuuuuuuu fuzzing only coEfig
+base        = /home/bo/iot/iot-os-fuzzer
+run        (= 1.0t_
+#program     = modbus
+#program     = firmata
+#program     = quad_copter
+program     = sring_iror = %(base)s/run/%(pro(run)s
+
+[afl] # fuzzing )s/ÿÿÿafl-fuzz
+timeout 0+
+input       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[co fuzzing coverage counting#count_hang  = False
+count_hang  = True
+bbl_cov_read_sz = 20000000 ; 20MB w/o hang
+#bbl_cov_read_sz = 20000000 ; 20MB w/ hang
+timeout     = 1 ; 1s
+
+[qemu]
+bin     afl/qemu_mode/bin_pm9.5.5/qemu-system-gnuadmeclipse
+#bin         = /home/boqemn/qemclipse
+log         = unimp,guest_errors,int
+#log        = unimp,guesè_errors,exec,int -mu.log
+
+gram]
+#board STM32F429I-Discovery
+#      = NUCLEO-F103RB
+mcu         = STM32F103RB
+#board       = Arduiue
+#mcu         = SAM3X8E
+#board       = FRDM-K64F
+#m         = /home/bo/iot/os/ardu      = MK64FN1M0VLL12
+
+#img         = %(working_dir)s/modbus.ino.elf
+#img         = %(working_dir)s/SardFirmata.ino.elf
+img             = quad_copter
+prlf
+#img         = /home/bo/nfs/iot/osbuild/m€dbus.ino.elf
+
+#img         = /home/bo/iot/os/iot-fuzzer-RIOT-new/examples/f103/usart/bin/nuc}eo-f103/hello-world.elf
+#ime/bo/iot/os/er-RIOT-new/examples/usart_-world.elf
+
+#img         = /home/bo/os/arduino/f103/ADC/build/ADC.ino.elf
+#img         = /home/bo/iot/os/arduino/ad/Serial/build/Serial.ino.elf
+
+#img         = /home/bo/iot/os/nuttxenv_f103/nuttx/mg         3 /home/bo/iot/os/frdm/nuttx/nuttx
+
+#img        = /home/bo/iot/os/grbl_stm32f4/grbl_stm32f4
+#img         ome/bo/iot/os/ts100/workspace/TS100/ile/TS100_EN.elf
+#img         = /home/bo/Fire_V101-103C8.elf
+
+[mode

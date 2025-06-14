@@ -1,0 +1,6 @@
+numexpr==2.7.3
+pandas==2.0.3
+matplotlib==3.7.3
+formulaic==0.6.1
+lifelines==0.27.7
+numpy==1.22.3

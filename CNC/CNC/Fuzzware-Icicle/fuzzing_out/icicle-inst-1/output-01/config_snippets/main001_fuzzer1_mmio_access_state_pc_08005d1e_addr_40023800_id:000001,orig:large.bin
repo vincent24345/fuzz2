@@ -1,0 +1,9 @@
+mmio_models:
+  set:
+    pc_08005d1e_mmio_40023800:
+      access_size: 0x4
+      addr: 0x40023800
+      pc: 0x8005d1e
+      vals:
+      - 0x0
+      - 0x20000

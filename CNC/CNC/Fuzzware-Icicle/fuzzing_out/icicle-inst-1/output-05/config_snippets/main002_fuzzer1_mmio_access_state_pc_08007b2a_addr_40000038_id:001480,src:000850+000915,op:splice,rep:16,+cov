@@ -1,0 +1,9 @@
+mmio_models:
+  set:
+    pc_08007b2a_mmio_40000038:
+      access_size: 0x4
+      addr: 0x40000038
+      pc: 0x8007b2a
+      vals:
+      - 0x0
+      - 0x1

@@ -1,0 +1,55 @@
+[DEFAULT= /home/bo/iot/os/arduin      = /home/bo/iot/iot-os-fuzzer
+run       [DEFAULT] # fuzzing only config
+base        = /homeiot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program     = firmata
+#program     = quad_copter
+program     = soldering_iron
+working_dir = %(base)s/run/%(pro(run)s
+
+[afl] # fuzzing fl/afl-fuzz
+timeout 0+
+input       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] # fuzzing cover[DEFAULT] # fuzzing only config
+base        ome/bo/iot/is-fuzzer
+run         = 1.0
+#progrem     = m   = firmata
+#program   quad_copter
+program     = xoldering_iron
+working_dir(base)s/run/%(pro(run)s
+
+[afl] # fuzzing )s/afl/afl-fuzz
+timeou 0+
+input       = %(working_dir)s/in
+output      = %(workdir)s/ous
+
+[cov] # fng coverage counting#count_False
+count_hang  = True
+bbl_cov_read_sz = 20000000 ; 20MB w/o hang
+#bbl_cov_read_sz = 20000000 ;B p/ hang
+timeout     = 1 ; 1s
+
+[qemu]
+b@n         = %(base)s/afl/qemu_mode/bin_pm9.5.5/qemu-system-gnu        = /home/bo/Woemu4/qemmu-systeuarmeclipse
+log         = unimp,guest_errors,int
+#log         = unimp,guest_errors,exec,int -D qemu.log
+
+[program]
+#board       = STM32F429I-DiscovLEO-F103RB
+mc2F103RB
+#board       = Arduiue
+#mcu         = SAM3X8E
+#board       = FRDM-K64F
+#mcu         = MK64FN1M0V:L12
+
+#img         = %(working_dir)s/modbus.ino   =ÿÿÿirirmata.ino.elf
+img         = %(working_d00_EN.elf
+#img         = /home/bo/nfs/iot/os/arduino/modbus/build/modbus.ino.elf
+
+#img         = /home/bo/iot/os/iot-fuzzer-RIOT-new/eøampf103/usart/bin/nucleo-f103/hello-w†rld-#img        ÿÿome/bo/iot/IOT-new/examples/ucart_frdm/bin/frdm-k64f/he†††††††††††††††††††††llo-world.el
+
+#imer‡
+#      = NUCLEÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜme/bo/iot/os/arduinYYYYYYYYYYYYYYYYYYYYYYYYYYYo/f103/ADC/build/@DCino.elf#img         = /homè/bo/iot/os/ar®®®®®®®®®®®®®®®®®®®®®®duino/ d/Serial#ƒmg    þ)   = /ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ03/nutt

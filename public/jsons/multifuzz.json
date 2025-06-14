@@ -1,0 +1,343 @@
+{
+    "Fuzzer": "MultiFuzz",
+    "Target": "CNC",
+    "Number-Trials": 10,
+    "Trial-Time": 86400,
+    "Campaign": {
+        "run-0": [
+            {
+                "bug_id": "FW11",
+                "reached": 23739,
+                "triggered": 23739,
+                "raw_crash_data": [
+                    "0x80081fb_0x8003bac_read_error",
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x800302e_write_error",
+                    "0x80081fb_0x8003a02_jump_invalid",
+                    "0x80081fb_0x8004b24_jump_null",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 597,
+                "triggered": 597,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-1": [
+            {
+                "bug_id": "FW11",
+                "reached": 3532,
+                "triggered": 3532,
+                "raw_crash_data": [
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x800302e_write_error",
+                    "0x80081fb_0x8004b24_jump_null",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1839,
+                "triggered": 1839,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 14902,
+                "triggered": 14902,
+                "raw_crash_data": [
+                    "0x8003bd9_0x8005858_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-2": [
+            {
+                "bug_id": "FW11",
+                "reached": 2716,
+                "triggered": 2716,
+                "raw_crash_data": [
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 2404,
+                "triggered": 2404,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-3": [
+            {
+                "bug_id": "FW11",
+                "reached": 4508,
+                "triggered": 4508,
+                "raw_crash_data": [
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x8003a02_jump_invalid",
+                    "0x80081fb_0x8004a32_write_error",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1979,
+                "triggered": 1979,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-4": [
+            {
+                "bug_id": "FW11",
+                "reached": 18781,
+                "triggered": 18781,
+                "raw_crash_data": [
+                    "0x80081fb_0x8003bac_read_error",
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x8002e82_write_error",
+                    "0x8003bd9_0x8003c20_jump_invalid",
+                    "0x80081fb_0x8004b24_jump_null",
+                    "0x8003bf7_0x8003c20_jump_invalid",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 7897,
+                "triggered": 7897,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error",
+                    "0x80081fb_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/fuzzers/multi-fuzz-canary/MultiFuzz/0x80081fb_0x8002f28_read_error"
+                ]
+            }
+        ],
+        "run-5": [
+            {
+                "bug_id": "FW11",
+                "reached": 2131,
+                "triggered": 2131,
+                "raw_crash_data": [
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x8004b24_jump_null",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 2908,
+                "triggered": 2908,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 51667,
+                "triggered": 51667,
+                "raw_crash_data": [
+                    "0x8003bd9_0x8005858_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-6": [
+            {
+                "bug_id": "FW11",
+                "reached": 10969,
+                "triggered": 10969,
+                "raw_crash_data": [
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x8004b24_jump_null",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 2774,
+                "triggered": 2774,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-7": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 871,
+                "triggered": 871,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-8": [
+            {
+                "bug_id": "FW11",
+                "reached": 5484,
+                "triggered": 5484,
+                "raw_crash_data": [
+                    "0x80081fb_0x8003bac_read_error",
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x8003eee_jump_invalid",
+                    "0x80081fb_0x8004b24_jump_null",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 400,
+                "triggered": 400,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 28131,
+                "triggered": 28131,
+                "raw_crash_data": [
+                    "0x8003bd9_0x8005858_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-9": [
+            {
+                "bug_id": "FW11",
+                "reached": 24840,
+                "triggered": 24840,
+                "raw_crash_data": [
+                    "0x80081fb_0x8004a0e_read_error",
+                    "0x80081fb_0x8004b24_jump_null",
+                    "0x80081fb_0x8004b24_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1800,
+                "triggered": 1800,
+                "raw_crash_data": [
+                    "0x8002f81_0x8002f28_read_error"
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ]
+    }
+}

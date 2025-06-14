@@ -1,0 +1,293 @@
+{
+    "Fuzzer": "Fuzzware-Icicle",
+    "Target": "Console",
+    "Number-Trials": 10,
+    "Trial-Time": 86400,
+    "Campaign": {
+        "run-1": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-2": [
+            {
+                "bug_id": "I01",
+                "reached": 75595,
+                "triggered": 76309,
+                "raw_crash_data": [
+                    "main003/fuzzers/fuzzer1/crashes/id:000000,sig:06,src:000017,op:havoc,rep:128",
+                    "main003/fuzzers/fuzzer1/crashes/id:000001,sig:06,src:000017,op:havoc,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000002,sig:06,src:000017,op:havoc,rep:2",
+                    "main003/fuzzers/fuzzer1/crashes/id:000003,sig:06,src:000017,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000004,sig:06,src:000017,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000005,sig:06,src:000017,op:havoc,rep:64",
+                    "main003/fuzzers/fuzzer1/crashes/id:000006,sig:06,src:000017+000289,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000007,sig:06,src:000029+000506,op:splice,rep:64",
+                    "main003/fuzzers/fuzzer1/crashes/id:000008,sig:06,src:000036,op:havoc,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000009,sig:06,src:000036,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000010,sig:06,src:000067+000017,op:splice,rep:4",
+                    "main003/fuzzers/fuzzer1/crashes/id:000011,sig:06,src:000520,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000012,sig:06,src:000579,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000013,sig:06,src:000579,op:havoc,rep:128",
+                    "main003/fuzzers/fuzzer1/crashes/id:000014,sig:06,src:000592+000551,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000015,sig:06,src:000600+000244,op:splice,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000016,sig:06,src:000607+000574,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000017,sig:06,src:000629+000933,op:splice,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000018,sig:06,src:000735+000048,op:splice,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000019,sig:06,src:000889+000551,op:splice,rep:64",
+                    "main003/fuzzers/fuzzer1/crashes/id:000020,sig:06,src:000891,op:havoc,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000021,sig:06,src:000940+000557,op:splice,rep:64",
+                    "main003/fuzzers/fuzzer1/crashes/id:000022,sig:06,src:000941+000618,op:splice,rep:128",
+                    "main003/fuzzers/fuzzer1/crashes/id:000023,sig:06,src:001048+000939,op:splice,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000024,sig:06,src:001061+001089,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000025,sig:06,src:001112+000928,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000026,sig:06,src:001255,op:havoc,rep:2",
+                    "main003/fuzzers/fuzzer1/crashes/id:000027,sig:06,src:001255,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000028,sig:06,src:001282,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000029,sig:06,src:001282,op:havoc,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000030,sig:06,src:001284,op:havoc,rep:4",
+                    "main003/fuzzers/fuzzer1/crashes/id:000031,sig:06,src:001286+001301,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000032,sig:06,src:001287,op:havoc,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000033,sig:06,src:001306+000403,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000034,sig:06,src:001326,op:havoc,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000035,sig:06,src:001327,op:havoc,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000036,sig:06,src:001327,op:havoc,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000037,sig:06,src:001327+000170,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000038,sig:06,src:001328+000525,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000039,sig:06,src:001329,op:havoc,rep:4",
+                    "main003/fuzzers/fuzzer1/crashes/id:000040,sig:06,src:001329,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000041,sig:06,src:001343+000592,op:splice,rep:2",
+                    "main003/fuzzers/fuzzer1/crashes/id:000042,sig:06,src:001346,op:havoc,rep:4",
+                    "main003/fuzzers/fuzzer1/crashes/id:000043,sig:06,src:001355+000509,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000044,sig:06,src:001360,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000045,sig:06,src:001360+001352,op:splice,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000046,sig:06,src:001382+001196,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000047,sig:06,src:001382+001059,op:splice,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000048,sig:06,src:001389+000092,op:splice,rep:2",
+                    "main003/fuzzers/fuzzer1/crashes/id:000049,sig:06,src:001389+001376,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000050,sig:06,src:001392,op:havoc,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000051,sig:06,src:001392+000418,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000052,sig:06,src:001409+000941,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000053,sig:06,src:001420,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000054,sig:06,src:001426,op:havoc,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000055,sig:06,src:001426,op:havoc,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000056,sig:06,src:001427+001077,op:splice,rep:128",
+                    "main003/fuzzers/fuzzer1/crashes/id:000057,sig:06,src:001431+000576,op:splice,rep:32",
+                    "main003/fuzzers/fuzzer1/crashes/id:000058,sig:06,src:001457+001479,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000059,sig:06,src:001477,op:havoc,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000060,sig:06,src:001477+000465,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000061,sig:06,src:001477+001167,op:splice,rep:64",
+                    "main003/fuzzers/fuzzer1/crashes/id:000062,sig:06,src:001532+000941,op:splice,rep:16",
+                    "main003/fuzzers/fuzzer1/crashes/id:000063,sig:06,src:001609+001349,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000064,sig:06,src:001609+000394,op:splice,rep:64",
+                    "main003/fuzzers/fuzzer1/crashes/id:000065,sig:06,src:001616+000929,op:splice,rep:8",
+                    "main003/fuzzers/fuzzer1/crashes/id:000066,sig:06,src:001673+000516,op:splice,rep:32"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-3": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-4": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-5": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-6": [
+            {
+                "bug_id": "I01",
+                "reached": 57065,
+                "triggered": 64416,
+                "raw_crash_data": [
+                    "main004/fuzzers/fuzzer1/crashes/id:000000,sig:06,src:000727,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000001,sig:06,src:000895+000509,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000002,sig:06,src:000900,op:havoc,rep:2",
+                    "main004/fuzzers/fuzzer1/crashes/id:000003,sig:06,src:000900+000467,op:splice,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000004,sig:06,src:000932,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000005,sig:06,src:000932,op:havoc,rep:2",
+                    "main004/fuzzers/fuzzer1/crashes/id:000006,sig:06,src:000937+000969,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000007,sig:06,src:000958+001044,op:splice,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000008,sig:06,src:000969,op:havoc,rep:64",
+                    "main004/fuzzers/fuzzer1/crashes/id:000009,sig:06,src:000975,op:havoc,rep:64",
+                    "main004/fuzzers/fuzzer1/crashes/id:000010,sig:06,src:000997,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000011,sig:06,src:000997,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000012,sig:06,src:000997+000948,op:splice,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000013,sig:06,src:000997+000434,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000014,sig:06,src:001025+000571,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000015,sig:06,src:001029+001073,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000016,sig:06,src:001048,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000017,sig:06,src:001049,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000018,sig:06,src:001077+000154,op:splice,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000019,sig:06,src:001104,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000020,sig:06,src:001107+000206,op:splice,rep:64",
+                    "main004/fuzzers/fuzzer1/crashes/id:000021,sig:06,src:001107+000206,op:splice,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000022,sig:06,src:001130,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000023,sig:06,src:001423,op:havoc,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000024,sig:06,src:001440,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000025,sig:06,src:001440,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000026,sig:06,src:001453,op:havoc,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000027,sig:06,src:001453,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000028,sig:06,src:001453,op:havoc,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000029,sig:06,src:001453,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000030,sig:06,src:001453,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000031,sig:06,src:001455+001433,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000032,sig:06,src:001454,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000033,sig:06,src:001614,op:havoc,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000034,sig:06,src:001614,op:havoc,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000035,sig:06,src:001614+000865,op:splice,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000036,sig:06,src:001626+001621,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000037,sig:06,src:001632,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000038,sig:06,src:001635,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000039,sig:06,src:001635,op:havoc,rep:2",
+                    "main004/fuzzers/fuzzer1/crashes/id:000040,sig:06,src:001635,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000041,sig:06,src:001635,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000042,sig:06,src:001635,op:havoc,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000043,sig:06,src:001635,op:havoc,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000044,sig:06,src:001635+000886,op:splice,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000045,sig:06,src:001660,op:havoc,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000046,sig:06,src:001660,op:havoc,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000047,sig:06,src:001676+001636,op:splice,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000048,sig:06,src:001694,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000049,sig:06,src:001655,op:havoc,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000050,sig:06,src:001529+001346,op:splice,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000051,sig:06,src:000087+001072,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000052,sig:06,src:001649,op:havoc,rep:4",
+                    "main004/fuzzers/fuzzer1/crashes/id:000053,sig:06,src:000282+001344,op:splice,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000054,sig:06,src:000601+001635,op:splice,rep:64",
+                    "main004/fuzzers/fuzzer1/crashes/id:000055,sig:06,src:001665,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000056,sig:06,src:001665,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000057,sig:06,src:001665,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000058,sig:06,src:001826,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000059,sig:06,src:001826+000168,op:splice,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000060,sig:06,src:001828,op:havoc,rep:2",
+                    "main004/fuzzers/fuzzer1/crashes/id:000061,sig:06,src:001828,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000062,sig:06,src:001828,op:havoc,rep:64",
+                    "main004/fuzzers/fuzzer1/crashes/id:000063,sig:06,src:001828,op:havoc,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000064,sig:06,src:001828,op:havoc,rep:64",
+                    "main004/fuzzers/fuzzer1/crashes/id:000065,sig:06,src:001828,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000066,sig:06,src:001828,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000067,sig:06,src:001828,op:havoc,rep:32",
+                    "main004/fuzzers/fuzzer1/crashes/id:000068,sig:06,src:001828,op:havoc,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000069,sig:06,src:001828+000368,op:splice,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000070,sig:06,src:001828+000368,op:splice,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000071,sig:06,src:000134+001633,op:splice,rep:16",
+                    "main004/fuzzers/fuzzer1/crashes/id:000072,sig:06,src:000350+001795,op:splice,rep:64",
+                    "main004/fuzzers/fuzzer1/crashes/id:000073,sig:06,src:001830+000651,op:splice,rep:8",
+                    "main004/fuzzers/fuzzer1/crashes/id:000074,sig:06,src:001858,op:havoc,rep:128",
+                    "main004/fuzzers/fuzzer1/crashes/id:000075,sig:06,src:000400+001868,op:splice,rep:4"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-7": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-8": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-9": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-10": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ]
+    }
+}

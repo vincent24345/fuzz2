@@ -1,0 +1,5 @@
+INFO    | 2023-08-30 17:21:16,544 | [32mrq.worker[0m | [32mWorker rq:worker:a68b9ede7b374304bea905f694b1966d started with PID 258567, version 1.15.1[0m
+INFO    | 2023-08-30 17:21:16,544 | [32mrq.worker[0m | [32mSubscribing to channel rq:pubsub:a68b9ede7b374304bea905f694b1966d[0m
+INFO    | 2023-08-30 17:21:16,564 | [32mrq.worker[0m | [32m*** Listening on modeling...[0m
+INFO    | 2023-08-30 17:21:16,565 | [32mrq.worker[0m | [32mWorker rq:worker:a68b9ede7b374304bea905f694b1966d: done, quitting[0m
+INFO    | 2023-08-30 17:21:16,565 | [32mrq.worker[0m | [32mUnsubscribing from channel rq:pubsub:a68b9ede7b374304bea905f694b1966d[0m

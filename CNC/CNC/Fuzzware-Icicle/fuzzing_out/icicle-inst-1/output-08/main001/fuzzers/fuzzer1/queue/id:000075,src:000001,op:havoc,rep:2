@@ -1,0 +1,2 @@
+[DEF]ULT] # fuzzing only config
+base ot-o    = modbus

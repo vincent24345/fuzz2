@@ -1,0 +1,5 @@
+#
+# american fuzzy lop++ + makefile
+# -----------------------[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run            = m56789ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿp++ :;<=Yao fuzz         = m567QA/bo/iot/toolchÿÿÿÿÿÿÿÿÿ789/bo/iot/toolchaiÿÿÿÿÿÿÿÿÿÿÿns/gcc-y lop++  

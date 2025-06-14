@@ -1,0 +1,3 @@
+[DEFAULT= /home/bo/iot/os/arduin      = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#prm     = modb

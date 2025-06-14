@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Survival Plot - FW11</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 30px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #plot {
+            width: 100%;
+            height: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Survival Curve: FW11 (Binary: CNC)</h2>
+    <div id="plot"></div>
+    <script>
+        const data = [{"fuzzer": "SplITS", "time": [0.0, 2.351111111111111, 2.9330555555555557, 2.9775, 3.8313888888888887, 7.272222222222222, 9.217777777777778, 12.894166666666667, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.3]}, {"fuzzer": "Hoedur", "time": [0.0, 0.0913888888888889, 0.10333333333333333, 0.1225, 0.1322222222222222, 0.1411111111111111, 0.14555555555555555, 0.17, 0.17694444444444443, 0.195, 0.19555555555555557], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.09999999999999998, 0.0]}, {"fuzzer": "MultiFuzz", "time": [0.0, 0.5919444444444445, 0.7544444444444445, 0.9811111111111112, 1.2522222222222221, 1.5233333333333334, 3.0469444444444442, 5.216944444444445, 6.594166666666666, 6.9, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.09999999999999998, 0.09999999999999998]}, {"fuzzer": "Fuzzware", "time": [0.0, 0.6002777777777778, 2.6780555555555554, 3.5836111111111113, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.6999999999999998]}, {"fuzzer": "Fuzzware-Icicle", "time": [0.0, 0.7047222222222222, 3.9541666666666666, 7.673611111111111, 9.766388888888889, 17.601944444444445, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.49999999999999983]}, {"fuzzer": "Ember-IO-Fuzzing", "time": [0.0, 15.750833333333333, 15.78138888888889, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.7999999999999997]}];
+        const traces = data.map(entry => {
+            return {
+                x: entry.time,
+                y: entry.survival,
+                mode: 'lines+markers',
+                name: entry.fuzzer,
+                line: { 
+                    width: 2,
+                    shape: 'hv'  // Creates stepped line effect (horizontal then vertical)
+                },
+                marker: { size: 4 }
+            };
+        });
+        
+        const layout = {
+            title: 'Survival Curve for Bug FW11',
+            xaxis: {
+                title: 'Time (hrs)',
+                range: [0, Math.max(...data.flatMap(d => d.time)) * 1.05],
+                gridcolor: '#ddd'
+            },
+            yaxis: {
+                title: 'Survival Probability',
+                range: [0, 1.05],
+                gridcolor: '#ddd'
+            },
+            legend: {
+                orientation: 'h',
+                y: -0.15,
+                xanchor: 'center',
+                x: 0.5
+            },
+            margin: { t: 60, b: 80, l: 60, r: 30 },
+            plot_bgcolor: 'white',
+            paper_bgcolor: 'white',
+            hovermode: 'closest'
+        };
+        
+        Plotly.newPlot('plot', traces, layout, {
+            responsive: true,
+            displayModeBar: true,
+            displaylogo: false,
+            modeBarButtonsToRemove: ['lasso2d', 'select2d', 'hoverClosestCartesian', 'hoverCompareCartesian', 'toggleSpikelines', 'zoom2d']
+        });
+    </script>
+</body>
+</html>

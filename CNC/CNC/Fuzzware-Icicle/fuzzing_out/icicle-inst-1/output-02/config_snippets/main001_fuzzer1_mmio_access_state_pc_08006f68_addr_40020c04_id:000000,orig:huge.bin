@@ -1,0 +1,7 @@
+mmio_models:
+  passthrough:
+    pc_08006f68_mmio_40020c04:
+      access_size: 0x4
+      addr: 0x40020c04
+      init_val: 0x0
+      pc: 0x8006f68

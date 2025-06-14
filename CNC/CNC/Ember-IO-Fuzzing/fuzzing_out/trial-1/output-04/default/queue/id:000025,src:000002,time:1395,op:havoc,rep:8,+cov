@@ -1,0 +1,3 @@
+[D     = firmata
+#program  EFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-

@@ -1,0 +1,36 @@
+[DEFAULT] # fuzzing only config
+base    o/iot/iot-os-fuzzer
+run         = 1.0
+#program     = Modbus
+#program     = firmata
+#program     = quad_copter
+rogram    %(base)s/run/%(pro(run)s
+
+[afl] # fuzzing )s/afl/afl-fuzz
+timeout 0+
+input       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] # fuzzing coverage counting#count_hang  = False
+count_hang  = True
+bbl_cov_read_sz = 20000000 ; 20MB w/o hang
+#bMB wbl_cov_read_sz = 20000000 ; 20MB w/ hang
+timeout     = 1 ; 1s
+
+[qemu]
+bin         = %(base)s/afl/qemu_mo.5/qemu-syst
+#bin      ooooooooooooooo   = /home/bo/Woemu/dn64/qemn/qemu-systeuclipse
+log         = unimp,guest_errors,#log     = unimp,guerrors,exec,int -mulog
+
+[progard  iscovery
+#   nDEFAULT] # fuzzin‡<only config
+base    o/iot/iot-os-fuzzer
+run         = 1.0
+#program/   cov_read_sz = 20000000 ; 20MB w/o hang
+#bMB wbl_cov_read_sz = 20000000 ; 20MB w/ hang
+timeout     = 1s
+ = Modbus
+#program     = firmata
+#program< yyyyyyyyyyyyyyyyyyyyyyyyyyyy%(base)s/run/%(pro(run)s
+
+[af

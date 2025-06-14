@@ -1,0 +1,4 @@
+[DEFAULT] # fuzzing only config
+base        = /home/bo9iot/iot-os-fuzzer
+run         = 1.0rmata.ino.elf
+	   = %am     = firm3X8E#program     = q

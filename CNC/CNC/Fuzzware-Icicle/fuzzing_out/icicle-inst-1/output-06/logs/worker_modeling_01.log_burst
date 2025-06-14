@@ -1,0 +1,6 @@
+INFO    | 2023-09-01 05:56:54,753 | [32mrq.worker[0m | [32mWorker rq:worker:86cf0bffb48e4772b2f0f5e89dcd6a6c started with PID 2218861, version 1.15.1[0m
+INFO    | 2023-09-01 05:56:54,753 | [32mrq.worker[0m | [32mSubscribing to channel rq:pubsub:86cf0bffb48e4772b2f0f5e89dcd6a6c[0m
+INFO    | 2023-09-01 05:56:54,770 | [32mrq.worker[0m | [32m*** Listening on modeling...[0m
+INFO    | 2023-09-01 05:56:54,771 | [32mrq.worker[0m | [32mCleaning registries for queue: modeling[0m
+INFO    | 2023-09-01 05:56:54,772 | [32mrq.worker[0m | [32mWorker rq:worker:86cf0bffb48e4772b2f0f5e89dcd6a6c: done, quitting[0m
+INFO    | 2023-09-01 05:56:54,772 | [32mrq.worker[0m | [32mUnsubscribing from channel rq:pubsub:86cf0bffb48e4772b2f0f5e89dcd6a6c[0m

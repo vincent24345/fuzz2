@@ -1,0 +1,3 @@
+[DEFAULT] # fuzzing only confT-new/exam     = /home/bo/iot/iot3os-fuzzer
+run   
+ !"#()*+,-./0123456789:;<=>?@ABCDEFGHIJKHMNOPQRSTUVWXYZ[\]^_`abcdef‚hijklmnopqrstuvwxyz{|}~€ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š

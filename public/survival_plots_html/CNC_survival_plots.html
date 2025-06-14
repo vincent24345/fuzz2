@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Survival Plots - CNC</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 30px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .plots-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .plot-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+        .plot-container {
+            width: 600px;
+            flex-shrink: 0;
+        }
+        .plot-box {
+            width: 100%;
+            height: 600px;
+        }
+        /* Specific layout rules */
+        .row-1 { /* First row - always up to 2 plots */ }
+        .row-2 { /* Second row - 1 plot centered for 3 total, or up to 2 for 4+ total */ }
+        .row-3 { /* Third row - for 5+ plots */ }
+    </style>
+</head>
+<body>
+    <h2>Survivability Graph: CNC</h2>
+    <div class="plots-container" id="plotsContainer"></div>
+    
+    <script>
+        const allData = {"FW11": [{"fuzzer": "SplITS", "time": [0.0, 2.351111111111111, 2.9330555555555557, 2.9775, 3.8313888888888887, 7.272222222222222, 9.217777777777778, 12.894166666666667, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.3]}, {"fuzzer": "Hoedur", "time": [0.0, 0.0913888888888889, 0.10333333333333333, 0.1225, 0.1322222222222222, 0.1411111111111111, 0.14555555555555555, 0.17, 0.17694444444444443, 0.195, 0.19555555555555557], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.09999999999999998, 0.0]}, {"fuzzer": "MultiFuzz", "time": [0.0, 0.5919444444444445, 0.7544444444444445, 0.9811111111111112, 1.2522222222222221, 1.5233333333333334, 3.0469444444444442, 5.216944444444445, 6.594166666666666, 6.9, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.09999999999999998, 0.09999999999999998]}, {"fuzzer": "Fuzzware", "time": [0.0, 0.6002777777777778, 2.6780555555555554, 3.5836111111111113, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.6999999999999998]}, {"fuzzer": "Fuzzware-Icicle", "time": [0.0, 0.7047222222222222, 3.9541666666666666, 7.673611111111111, 9.766388888888889, 17.601944444444445, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.49999999999999983]}, {"fuzzer": "Ember-IO-Fuzzing", "time": [0.0, 15.750833333333333, 15.78138888888889, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.7999999999999997]}], "FW18": [{"fuzzer": "SplITS", "time": [0.0, 3.703333333333333, 3.9427777777777777, 5.201944444444444, 5.5525, 7.204444444444444, 9.432777777777778, 12.203611111111112, 20.22277777777778, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.19999999999999998]}, {"fuzzer": "Hoedur", "time": [0.0, 0.12777777777777777, 0.1638888888888889, 0.1686111111111111, 0.17083333333333334, 0.20583333333333334, 0.2061111111111111, 0.2411111111111111, 0.29555555555555557, 0.37027777777777776, 0.47805555555555557], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.09999999999999998, 0.0]}, {"fuzzer": "MultiFuzz", "time": [0.0, 0.1111111111111111, 0.16583333333333333, 0.24194444444444443, 0.5, 0.5108333333333334, 0.5497222222222222, 0.6677777777777778, 0.7705555555555555, 0.8077777777777778, 2.193611111111111], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.09999999999999998, 0.0]}, {"fuzzer": "Fuzzware", "time": [0.0, 4.363888888888889, 4.847222222222222, 4.894166666666667, 8.091388888888888, 8.521666666666667, 12.080555555555556, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3999999999999999]}, {"fuzzer": "Fuzzware-Icicle", "time": [0.0, 0.4816666666666667, 2.5413888888888887, 2.8180555555555555, 2.9791666666666665, 5.1466666666666665, 5.822777777777778, 6.87, 7.3725, 7.671666666666667, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.09999999999999998, 0.09999999999999998]}, {"fuzzer": "Ember-IO-Fuzzing", "time": [0.0, 0.7083333333333334, 5.591111111111111, 6.573055555555555, 8.043888888888889, 13.330833333333333, 16.136666666666667, 20.531388888888888, 20.786666666666665, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.49999999999999983, 0.3999999999999999, 0.3, 0.19999999999999998, 0.19999999999999998]}], "CNCFP01": [{"fuzzer": "SplITS", "time": [0.0, 23.08972222222222, 24.0], "survival": [1.0, 0.9, 0.9]}, {"fuzzer": "Hoedur", "time": [0.0, 0.5575, 1.3688888888888888, 5.133611111111111, 6.3902777777777775, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.5999999999999999, 0.5999999999999999]}, {"fuzzer": "MultiFuzz", "time": [0.0, 4.139444444444444, 7.814166666666667, 14.351944444444445, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.6999999999999998]}, {"fuzzer": "Fuzzware", "time": [0.0, 6.382777777777778, 12.536111111111111, 12.797777777777778, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.6999999999999998, 0.6999999999999998]}, {"fuzzer": "Fuzzware-Icicle", "time": [0.0, 24.0], "survival": [1.0, 1.0]}, {"fuzzer": "Ember-IO-Fuzzing", "time": [0.0, 0.9047222222222222, 16.753611111111113, 24.0], "survival": [1.0, 0.9, 0.7999999999999997, 0.7999999999999997]}]};
+        const totalPlots = Object.keys(allData).length;
+        const plotsContainer = document.getElementById('plotsContainer');
+        
+        function createPlot(bugId, bugData, container) {
+            // Create container for this plot
+            const plotContainer = document.createElement('div');
+            plotContainer.className = 'plot-container';
+            
+            const plotDiv = document.createElement('div');
+            plotDiv.className = 'plot-box';
+            plotDiv.id = `plot-${bugId}`;
+            
+            plotContainer.appendChild(plotDiv);
+            container.appendChild(plotContainer);
+            
+            // Create traces for this bug
+            const traces = bugData.map(entry => {
+                return {
+                    x: entry.time,
+                    y: entry.survival,
+                    mode: 'lines+markers',
+                    name: entry.fuzzer,
+                    line: { 
+                        width: 4,
+                        shape: 'hv'
+                    },
+                    marker: { size: 4 }
+                };
+            });
+            
+            const layout = {
+                title: `Survival Curve for Bug ${bugId}`,
+                xaxis: {
+                    title: 'Time (hrs)',
+                    range: [0, Math.max(...bugData.flatMap(d => d.time)) * 1.05],
+                    gridcolor: '#ddd'
+                },
+                yaxis: {
+                    title: 'Survival Probability',
+                    range: [0, 1.05],
+                    gridcolor: '#ddd'
+                },
+                legend: {
+                    orientation: 'h',
+                    y: -0.2,
+                    xanchor: 'center',
+                    x: 0.5
+                },
+                margin: { t: 60, b: 90, l: 80, r: 30 },
+                plot_bgcolor: 'white',
+                paper_bgcolor: 'white',
+                hovermode: 'closest'
+            };
+            
+            Plotly.newPlot(plotDiv.id, traces, layout, {
+                responsive: true,
+                displayModeBar: true,
+                displaylogo: false,
+                modeBarButtonsToRemove: ['lasso2d', 'select2d', 'hoverClosestCartesian', 'hoverCompareCartesian', 'toggleSpikelines', 'zoom2d']
+            });
+        }
+        
+        function createRowLayout(plotEntries) {
+            const rows = [];
+            
+            if (totalPlots <= 2) {
+                // 1-2 plots: all in one row
+                const row = document.createElement('div');
+                row.className = 'plot-row row-1';
+                rows.push({ element: row, plots: plotEntries });
+            } else if (totalPlots === 3) {
+                // 3 plots: 2 in first row, 1 centered in second row
+                const row1 = document.createElement('div');
+                row1.className = 'plot-row row-1';
+                const row2 = document.createElement('div');
+                row2.className = 'plot-row row-2';
+                
+                rows.push({ element: row1, plots: plotEntries.slice(0, 2) });
+                rows.push({ element: row2, plots: plotEntries.slice(2, 3) });
+            } else if (totalPlots === 4) {
+                // 4 plots: 2 in first row, 2 in second row
+                const row1 = document.createElement('div');
+                row1.className = 'plot-row row-1';
+                const row2 = document.createElement('div');
+                row2.className = 'plot-row row-2';
+                
+                rows.push({ element: row1, plots: plotEntries.slice(0, 2) });
+                rows.push({ element: row2, plots: plotEntries.slice(2, 4) });
+            } else if (totalPlots === 5) {
+                // 5 plots: 2 in first row, 2 in second row, 1 centered in third row
+                const row1 = document.createElement('div');
+                row1.className = 'plot-row row-1';
+                const row2 = document.createElement('div');
+                row2.className = 'plot-row row-2';
+                const row3 = document.createElement('div');
+                row3.className = 'plot-row row-3';
+                
+                rows.push({ element: row1, plots: plotEntries.slice(0, 2) });
+                rows.push({ element: row2, plots: plotEntries.slice(2, 4) });
+                rows.push({ element: row3, plots: plotEntries.slice(4, 5) });
+            } else {
+                // 6+ plots: 2 per row
+                let plotIndex = 0;
+                while (plotIndex < plotEntries.length) {
+                    const row = document.createElement('div');
+                    row.className = 'plot-row';
+                    const plotsForRow = plotEntries.slice(plotIndex, plotIndex + 2);
+                    rows.push({ element: row, plots: plotsForRow });
+                    plotIndex += 2;
+                }
+            }
+            
+            return rows;
+        }
+        
+        // Create all plots with proper layout
+        const plotEntries = Object.entries(allData);
+        const rows = createRowLayout(plotEntries);
+        
+        rows.forEach(rowInfo => {
+            plotsContainer.appendChild(rowInfo.element);
+            rowInfo.plots.forEach(([bugId, bugData]) => {
+                createPlot(bugId, bugData, rowInfo.element);
+            });
+        });
+    </script>
+</body>
+</html>

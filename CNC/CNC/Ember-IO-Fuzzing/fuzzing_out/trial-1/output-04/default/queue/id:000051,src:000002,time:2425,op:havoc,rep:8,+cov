@@ -1,0 +1,8 @@
+# fuzzing only config
+base    = /hom/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program r = %(base)s/run/%(pro(run)s
+
+[a-fuzz
+ti

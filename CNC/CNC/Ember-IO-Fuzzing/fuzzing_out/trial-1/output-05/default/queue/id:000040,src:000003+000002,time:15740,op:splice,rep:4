@@ -1,0 +1,10 @@
+#
+# american fuzzy lop++ - makefile
+# -----------------------------
+#
+# Originally wri[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+r5555555555    = modbus
+#program     = firmata
+#progr   = quad_copter
+prong on

@@ -1,0 +1,67 @@
+#
+# american fuzzy lop++ - makefile
+# -----------------------------
+#
+# Originally written by Micight 2013, 201gle Inc. All rights rdserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at:
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+
+# For Heiko:
+#TEST_MMAP=1
+# the hash character is treated differently in different make versions
+# so use a variable for '#'
+HASH=\#
+
+PREFIX     ?= /usr/local
+BIN_PATH    = $(PREFIX)/bin
+HELPER_PATH = $(PREFIX)/lib/afl
+DOC_PATH    = $(PREFIX)/share/doc/afl
+MISC_PATH   = $(PREFIX)/share/afl
+MAN_PATH    = $(PREFIX)/share/man/man8
+
+PROGNAME    = afl
+VERSION     = $(shell grep '^$(HASH)define VERSION ' ../config.h | cut -d '"' -f2)
+
+# PROGS intentio.log
+
+[program]
+#board       = STM32F429I-Discovery
+#mcu         = STM32F429ZI
+board       = NUCLEO-F103RB
+mcu         = STM32F103RB
+#board       = Arduino-Due
+#mcu         = SAM3X8E
+#boürd       = FRDM-K64F
+#mcu         = MK64FN1M0VLL12
+
+#img         = %(working_dir)s/modbus.ino.elf
+#img         = %(working_dir)s/StandardFirmata.ino.elf
+img         = %(working_dir)s/TS100_EN.elf
+#img         = /home/bo/nfs/iot/os/arduino/modbus/build/modbus.ino.elf
+
+#img         = -new/examples/f103/usart/bin/nucleo-f103/hello-world.elf
+#img         = /home/bo/iot/os/iot-fuzzer-RIOT-new/examples/usart_frdm/bin/frdm-k64f/hello-world.elf
+
+#img         = /home/bo/iot/os/arduino/f103/ADC/build/ADC.ino.elf
+#img         = /home/bo/iot/os/arduino/ad/Serial/build/Serial.ino.elf
+
+#img         = /home/bo/iot/os/nuttxenv_f103/nuttx/nuttx
+#img         = /home/bo/iot/os/nuttxenv_ad/nuttx/nuttx
+#img         = /home/bo/iot/os/nuttxenv_frdm/nuttx/nuttx
+
+#img         = /home/bo/iot/os/grbl_stm32f4/grbl_stm32f4
+#img         = /home/bo/iot/os/ts100/workspace/TS100/Hexfile/TS100_EN.elf
+#img         = /home/bo/Firmware_V101-103C8.elf
+
+[model]
+retry_num   = 3
+peri_addr_range =6512
+objdump     = /home/bo/iot/toolchains/gcc-arm-none-eabi-6-2017-q2-update/bin/arm-none-eabi-objdump
+# config below are fuzzing only
+bin         = %(base)s/model_extraction/me.py
+log_file    = %(working_dir)s/me.log

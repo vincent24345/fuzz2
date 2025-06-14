@@ -1,0 +1,4 @@
+# environment variables:
+AFL_KILL_SIGNAL=9
+# command line:
+'/home/mathew/firmrebugger/fuzzers/Ember-IO-Fuzzing//AFLplusplus/afl-fuzz' '-V' '86400' '-i' './seeds' '-o' 'MORE-CNC-real/Ember-IO-Fuzzing/output-05' '-t' '200' '-Q' './CNC.elf' '-sram_size' '256k' '-flash_size' '52k' '-machine' 'embedded_fuzz' '-fuzz_input' '@@'

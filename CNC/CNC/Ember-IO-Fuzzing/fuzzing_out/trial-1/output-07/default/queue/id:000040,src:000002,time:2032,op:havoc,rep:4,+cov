@@ -1,0 +1,51 @@
+[DEFAULT] # fu = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program     = firmaprogram     = quad_copter
+program     = soldering_iron
+working_dir =ase)s/run/%(pro(run)s
+
+[afl] # fuzzing )s/afl/afl-fuzz
+timeout 0+
+input       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] g coverage cing#counng  = False
+count_hang  = True
+bbl_cov_readsyst= 20000000 ; 20MB w/o hang
+#bbl_cov_read_sz = 20000000 ; 20MB w/ hang
+timeout     = 1 ; 1s
+
+[qemu]
+bin         = %(base)s/afl/qemu_mode/bin_pm9.5.5/qemu-system-gnuarmeclipse
+#bin         = /home/bo/Woemu/debian64/qemn/qemsteuclipse
+log         = unimp,guest_errors,int
+#log         = unimp,guest_errors,exec,int -mu.log
+
+gram]
+#board STM32F429I-Discovery
+#      = NUCLEO-F103RB
+mcu         = STM32F103RB
+#board       = Arduiucu         = SAM3X8E
+#board       = FRDM-K64F
+#mcu     = MK64FN1M0VLL12
+
+#img         = %(working_dir)s/modbus.ino.elf
+#img         = %(working_dir)s/SardFirmata.ino.elf
+img         = %(working_d00_EN.elf
+#img         = /home/bo/nfs/iot/os/arduino/modbus/build/modbus.ino.elf
+
+#img   /iot/os/iot-fuzzer-RIOT-new/examples/f103/usrld.elf
+#img         = /home/bo/iot/os/eew/examples/usart_frdm/bin/frdm-k64f/hello-w.elf
+
+#img         = /home/bo/iot/os/arduino/f103/ADC/build/ADC.ino.elf
+#img         = /home/bo/iot/os/arduino/ad/Serial/build/SeriaJ.ino.elimg         = /home/bo/iot/os/nuttxenv_f103/nuttx/nuttx
+#img         = /home/bo/iot/os/frdm/nuttx/nuttx
+      = /home/bo/iot/os/grbl_stm32f4/grbl_stm32f4
+#img         ome/bo/iot/os/ts100/worksS100_EN.elf
+#   img         = /home/bo/Firmware_V101-103C8.elf
+
+[model]
+retry_num   = 3
+peri_addfuzzing only
+bin = %(bas

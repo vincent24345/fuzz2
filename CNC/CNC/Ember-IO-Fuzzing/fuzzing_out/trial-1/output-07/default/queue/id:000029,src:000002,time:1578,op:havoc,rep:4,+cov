@@ -1,0 +1,6 @@
+[DEFAULg only config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program  mata
+#pr

@@ -1,0 +1,4 @@
+[DEFAULT] # fuzzd       = FR64F
+#mcu    nly config
+base     me/bo/iot/iot-os-fuzzer
+run         = 1.rogrme.lo

@@ -1,0 +1,168 @@
+{
+    "Fuzzer": "Ember-IO-Fuzzing",
+    "Target": "Console",
+    "Number-Trials": 10,
+    "Trial-Time": 86400,
+    "Campaign": {
+        "run-1": [
+            {
+                "bug_id": "I01",
+                "reached": 18382,
+                "triggered": 18616,
+                "raw_crash_data": [
+                    "./output-1/default/crashes/id_000000,sig_06,src_000664,time_18615854,op_havoc,rep_8",
+                    "./output-1/default/crashes/id_000001,sig_06,src_000658,time_18702200,op_havoc,rep_4",
+                    "./output-1/default/crashes/id_000002,sig_06,src_000690,time_18799562,op_havoc,rep_4",
+                    "./output-1/default/crashes/id_000003,sig_06,src_000690,time_18799979,op_havoc,rep_2",
+                    "./output-1/default/crashes/id_000004,sig_06,src_000690,time_18800699,op_havoc,rep_8",
+                    "./output-1/default/crashes/id_000005,sig_06,src_000690,time_18801862,op_havoc,rep_4",
+                    "./output-1/default/crashes/id_000006,sig_06,src_000690,time_18808387,op_havoc,rep_4",
+                    "./output-1/default/crashes/id_000007,sig_06,src_000690,time_18808673,op_havoc,rep_8",
+                    "./output-1/default/crashes/id_000008,sig_06,src_000690,time_18812041,op_havoc,rep_4",
+                    "./output-1/default/crashes/id_000009,sig_06,src_000690,time_18822713,op_havoc,rep_8",
+                    "./output-1/default/crashes/id_000010,sig_06,src_000690,time_18825805,op_havoc,rep_2",
+                    "./output-1/default/crashes/id_000011,sig_06,src_000699,time_35502493,op_havoc,rep_8",
+                    "./output-1/default/crashes/id_000012,sig_06,src_000655+000672,time_37652148,op_splice,rep_16",
+                    "./output-1/default/crashes/id_000013,sig_06,src_000700,time_38783621,op_havoc,rep_4",
+                    "./output-1/default/crashes/id_000014,sig_06,src_000700,time_52651218,op_havoc,rep_32",
+                    "./output-1/default/crashes/id_000015,sig_06,src_000700+000474,time_53532015,op_splice,rep_32",
+                    "./output-1/default/crashes/id_000016,sig_06,src_000622,time_55916227,op_havoc,rep_16",
+                    "./output-1/default/crashes/id_000017,sig_06,src_000707+000479,time_58985636,op_splice,rep_64",
+                    "./output-1/default/crashes/id_000018,sig_06,src_000658,time_81765543,op_havoc,rep_4"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-2": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-3": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-4": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-5": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-6": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-7": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-8": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-9": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-10": [
+            {
+                "bug_id": "I01",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ]
+    }
+}

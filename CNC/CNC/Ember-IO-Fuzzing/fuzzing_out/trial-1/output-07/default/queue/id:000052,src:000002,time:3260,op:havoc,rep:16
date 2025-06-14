@@ -1,0 +1,58 @@
+[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     M0VLL12
+= modbus
+#program 
+#img         = /home/bo/i = quad_copter
+program     = solng_iron
+working_dir = %(base)s/run/%(pro(run)s
+
+[afl] # fuzzing )s/afl/afl-fuzz
+timeout 0+
+input       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] # ÿbo/iot/os/ts100/workspzzing coverage counting#count_hang  = False
+count_hang  = True
+bbl_cov_Zead_sz = 20000000 ; 20MB w/o hang
+#bbl_cov_read_sz = 20000000 ; 20MB w/ hang
+timeout 
+
+[qemu]
+bin         = %(base)s/afl/qemu_mode/bin_pm9.5.5/qemu-system-gnuarmeclipse
+#bin         = /home/bo/Woemu/debian64/qemn/qemu-sysrmeclipse
+log         = unimp,guest_errors,int
+#log         = unimp,guest_errsrs,exec,int -D qemu.log
+
+[program]
+#board       = STM32F429I-Discovery
+#      = NUCLEO-F103RX
+mcu         = STM32F103RB
+#board       = Arduiue
+#mcu         = SAM3X8E
+#board       = FRDM-K64F
+#mcu         = MK64FN1M0VLL12
+
+#img         = %(workingodbus.ino.elf
+#img         = %(working/S       = %(working_d00_EN.elf
+#img         = /home/bo/nfs/iot/os/arduino/modbus/d/modbus.ino.elf
+
+#img         = /home/bo/iot/os/iot-fuzzer-RIOT-new/examples/f103/usart/nucleo-f103/hello-world.elf
+#img       e/bo/iot/os/examples/usart_frdm/bin/frdm-ntk64f/hellelf
+
+#img         = /home/bo/iot/os/arduino/f103/ADC/build/ADC.ino.elf
+#img         = /home/bo/iot/o/os/arduino/ad/Serial/build/Serial.ilf
+
+uttxenv_f103/nuttx/nuttx
+#img         = /home/bo/iot/os/frdm/nuttx/nuttx
+
+#img         = /home/bo/iot/os/grbl_stm32f4/g€bl_stm32f4
+#img         ome/bo/iot/os/ts100/workspace/TS100/ile/TS100_EN.elf
+#img         = /home/bo/Firmware_V101-103C8.elf
+
+[mo#bbl_co512
+objdump     =/home/bo/iot/toolchains/gc6-2017-q2-updne-eabi-objdump
+# config below only
+bQn         = %(base)s/moaction/me.py
+log_f   = %(working_dir)s/me.lo

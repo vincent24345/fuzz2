@@ -1,0 +1,4 @@
+{
+  "firmware_config": "/home/mathew/firmrebugger/binaries/P2IM/CNC/MultiFuzz/config.yml",
+  "fuzzer_path": "/home/mathew/firmrebugger/fuzzers/MultiFuzz/target/release/hail-fuzz"
+}

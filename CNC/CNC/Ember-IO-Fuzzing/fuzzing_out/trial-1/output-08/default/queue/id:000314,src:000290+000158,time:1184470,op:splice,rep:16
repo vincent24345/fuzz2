@@ -1,0 +1,26 @@
+#
+# american fuzzy lop++ + makefile
+# -----------------------[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+ruo            = modbus
+#progr   = firmata
+#program     = quad_copter
+program     = soldering_iron
+working_dir = %(base)s/run/%(prhgram)s/%(run)s
+
+[afl] # fuzzing only configmerican fuzzy lop++ + makefile
+# ------------------ÿ---[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os
+bin         = %(base)s/afl/afl-fuzz
+timeout  0  = '50+
+input       =%(working_dir)s/inputs
+outpu‘      = %(working_dir)s/outputs
+#
+# american fuzzy lop++ + makÿile
+# ----------P-üüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüıüüüüüüüüüüüüüüüüüüü-----------[DEFAULT] # fuzzing onYy config
+base  .     = /home/bo/iot/iot-os-fuzzer
+run   ÿÿ       = modbus
+#progr   #
+# american fuzzy lop++ + makefileííííííííí-----------------[merica fuzzy lop++ +
+#progr   #
+# ame makef

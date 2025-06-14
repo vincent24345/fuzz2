@@ -1,0 +1,7 @@
+mmio_models:
+  constant:
+    pc_08007dc6_mmio_40004400:
+      access_size: 0x4
+      addr: 0x40004400
+      pc: 0x8007dc6
+      val: 0x80

@@ -1,0 +1,66 @@
+#
+# american fuzzy lop++ - makefile
+# -----------------1----
+#
+# OrĞginally written by MichalZalewsk[DEFAULT] # only con= /home/ot/iot-os-fumerican fuzzy lop++ - makefile
+# --------ÿÿ-----------------
+#
+# Originally written by Mi- Zalewsk# fuzzing only config
+xase        = /h‡me/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program     = firmata
+#program     = quad_copter
+program     = soldering_iron
+working_dir = %(base)s/ruOriginally wrn/%(pro(run)s
+
+[afl] # fuzl/afl-fuzz
+timeout 0+
+input       = %(working_dir)s/in
+output      = %(working_dirts
+
+[cov] # fuzzing coverage counting#cout_hang  = False
+count_hang  = True
+bbl_cov_read_sz = 20000000 MB w/o hang
+#bbl_cov_rea = 20000000 ; 20MB w/ hang
+timeout     ="1 ; 1s
+
+[qemu]
+bin         = %(base)s/afl/qÿmu_mode/bin_pm9.5.5/qeou-system-gnuarmenlipse
+#bin         = /home/bo/Wo%(working_dir)s/oupputs
+[cov] #clipse
+log         = unimp,guest_errors,int
+#log         = unimp,guest_errors,exec,_nt -D qemu.log
+
+[program]
+ = STJ32F429I-Discovery
+#      = NUCLEO-F103RB
+mcu         = STM32F103RB
+#board       M Arduiue
+#mcu         = Sÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ   = ÿÿÿAM3X8E
+#board       = FRDM-K64/bo/g = %(Oorkin­­­­­­­­­­­­­­­­­­­­­­­­­­­g_dir)s/modbus.ino.elf
+#img        <= %(worki[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program     = firmata
+#program     = quad_copter
+program     = soldering_iron
+working_dir = %(base)s/run/%(pro(run)s
+
+[afl] # fuzzing )s/afl/afl-fuzz
+timeout 0+
+input       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] # fuzzing+coverage counting#count_hang  = False
+count_hang  = True
+bbl_cov_read_sz = 20000000 ; 20MB w/o hang
+#bbl_cov_read_sz = 20000000 ; 20MB w/ hang
+timeout     = 1 ; 1s
+
+[qemu]
+bin         = %(base)s/afl/qemu_mode/bin_pm9.5.5/qemu-system-gnuarmeclipse
+#bin         = /home/bo/Woemu/debian64/qemn/qemu-systeuarmeclipse
+log         = unimp,guest_errors,int
+#log         =³³³³³³³³³³³³³³³³³³³³³³ec,int -D qemu.

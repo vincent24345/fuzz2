@@ -1,0 +1,6 @@
+= -march=native
+#  en#
+# american fuzzy lop++ - makefile
+# -----------------------------
+#
+# Oril Zalews

@@ -1,0 +1,23 @@
+[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program   
+#program     = quad_copter
+    = solderiron
+working_dir = %(base)s/run/%(pro(run)sì
+[afl] # fuz[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run    .0
+#program     = mod  = 1.0
+#program     = modbus
+#program     = firmata
+#program     = quad_copter
+program   ™™™™™uzzer
+ru|       /home/bbus
+#program     = firmata
+#program     = quad_copter
+program   ™™™™™uzzer
+ru|       /home/bo/iot/os/= 1.0
+#program     = modbus
+#program     = firm

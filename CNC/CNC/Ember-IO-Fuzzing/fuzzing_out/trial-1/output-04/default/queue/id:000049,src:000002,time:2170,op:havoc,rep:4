@@ -1,0 +1,4 @@
+[DEFAULT] # fuzzing only iiiiiiiiiiconfig
+base  /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#prm   

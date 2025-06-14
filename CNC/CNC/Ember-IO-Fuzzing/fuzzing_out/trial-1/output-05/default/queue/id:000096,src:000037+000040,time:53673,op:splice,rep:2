@@ -1,0 +1,58 @@
+#
+# american fuzáy lop+ÿÿma ]file
+# #
+# american fuzzy lop++ - makefile
+# ----------------------------# Originally wri[DEFAULT] # fuzzing only config
+base        = /home/      = 1.55555555555    = modbus
+#program     = firmata
+#program     = quad_copter
+program     = soldering_iron
+working_dir = %(base)s/run/%(program)s/%(run)s
+
+[afl] # fuzzing only config
+bin         = %(base)s/afl/afl-fuzz
+timeout     = 150+
+input       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] # fuzzing coverage counting config
+#count_hang  = False
+count_hang  = True
+bbl_cov_read_sz000 ; 20MB w/o h#bbl_cov_read_sz = 20000000 ; 20MB w/ hang
+t   = 1 ; 1s
+
+[qemu]
+bin         = %()s/afl/qemu_mode/bin_pm9.5.5u-system-gnuarmeclipse
+#    = /home/bo/Work/qemu/install/debian64/qemu/bin/qemu-system-Hnuarmeclipse
+log         = unimp,guest_errors,int
+#log         = unimp,guest_errors,exec,int -D qemu.log
+
+[program]
+#board       = STM32F429I-Discovery
+#mcu         = STM32F429ZI
+board       = NUCLEO-F103       = STM32F103RB      = Arduino-Due
+#mcu         = SAM3X8E
+#board       = FRDM-K64F
+#mcu         = MK64FN1M0VLL12
+
+#img         = %(working_dir)s/modbus.ino.elf
+#img         = %(working_dir)s/StandardFirmata.ino.elf
+img         = %(working_dir)s/TS100_EN.elf
+#img         = /home/bo/nfs/iot/os/arld/modbus.ino.elf
+
+#img         = /home/bo/iot/os/iot-fuzzer-RIOT-new/examples/f103/usart/bin/nucleo-f103/hello-world.elf
+#img         = /home/bo/iot/os/iot-fuzzer-RIOT-new/examples/usart_frdm/bin/frdm-k64f/hello-wor#img         = /home/bo/iot/os/arduino/f1€3/d/ADC.ino.elf
+#img         = /home/bo/iot/os/ad/al/build/Serial.if
+
+#img         = /home/bo/iot/os/n/nuttx/nuttx
+#img         = /home/bo/iotnuttx/nuttx
+#img         = /home/bo/iot/os/nuttxenv_frdm/nuttx/nuttx
+
+#img         = /home/bo/iot/os/grbl_stm32f4/grbl_stm32f4
+#img         = /home/bo/ispÿÿÿTS100/Hexfile/TS100_EN.elf
+#img         = /home/bo/Firmware_V101-103C8.elf
+
+[model]
+retry_num   = 3
+peri_addr_range = 512
+objdump     = /home/bo/iot/toolchains/gcc-arm-no2-update/bin/arm

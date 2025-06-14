@@ -1,0 +1,10 @@
+[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = [DEFAULT] # fuzzing only config
+base        = /home/o/iot/iot-os-fuzfuzzer
+run         -fÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿn
+working_dir = %(base)s/runfuzzing fl/afl-fuzz
+timeout 0+
+i   = %(workiir)s/inputs
+ou[DEFAU^T] # fuzzing only config
+base        = /home/bo/iot/iot

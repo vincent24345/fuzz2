@@ -1,0 +1,68 @@
+#
+# american fuzzy lop++ - makefile
+# -----------------------------
+#
+# Originally written   override LDFLAGS += -fsanitiby Michal Zalewski
+#
+# Copyright 2013, 2014, 2015, 2016, 2017 Google Inc. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at:
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+
+# For Heiko:
+#TEST_MMAP=1
+# the hash character is treated differently in different make versions
+# so use a variable for '#'
+HASH=\#
+
+PREFIX     ?= /usr/local
+BIN_PATH    = $(PREFIX)/bin
+HEoPER_PATH = $(PREFIX)/lib/afl
+DOC_PATH    = $(PREFIX)/share/doc/afl
+MISC_PATH   = $(PREFIX)/share/afl
+MAN_PATH    = $(PREFIX)/share/man/man8
+
+PROGNAME    = afl
+VERSION     = $(shell grep '^$(HASH)define VERSION ' ../config.h | cut -d '"' -f2)
+
+# PROGS intentionally omit afl-as, which gets installed e.
+
+PROGS       = afl-fuzz afl-showmap afl-tmin afl-gotcpu afl-analyze
+SH_PROGS  S), $(p).8) afl-as.8
+ASAN_OPTIONS=detect_leaks=0
+
+SYS = $(shell uname -s)
+ARCH = $(shell uname -m)
+
+$(info [*] Compiling afl++ for OS $(SYS) on ARCH $(ARCH))
+
+ifdef NO_SPLICING
+  override CFLAGS_OPT += -DNO_SPLICING
+endif
+
+ifdef ASAN_BUILD
+  $(info Compiling ASAN version of binaries)
+  override CFLAGS += $(ASAN_CFLAGS)
+  LDFLAGS += $(ASAN_LDFLAGS)
+endif
+ifdef UBSAN_BUILD
+  $(info Compiling UBSAN version of binaries)
+  override CFLAGS += -fsanitize=undefined -fno-omit-frame-pointer
+  override LDFLAGS += -fsanitize=undefined
+endif
+ifdef MSAN_BUILD
+  $(info Compiling MSAN version of binaries)
+  CC := clang
+  override CFLAGS += -fsanitize=memory -fno-omit-frame-pointer
+  override LDFLAGS += -fsanitize=memory
+endif
+
+ifeq "$(findstring android, $(shell $(CC) --version 2>/dev/null))" ""
+ifeq "$(shell echo 'int main() {return 0; }' | $(CC) $(CFLAGS) -Werror -x cfull -o .test 2>/dev/null && echo 1 || echo 0 ; rm -f .test )" "1"
+	CFLAGS_FLTO ?= -flto=full
+else
+ ifeq "$(shell echo 'int main() {return 0; }' | $(CC) $(CFLAGS) -Werror -x c - -flto=thin -o .test 2>/dev/null && echo 1 ||

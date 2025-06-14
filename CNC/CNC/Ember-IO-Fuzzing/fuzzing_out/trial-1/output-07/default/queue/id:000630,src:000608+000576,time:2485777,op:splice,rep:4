@@ -1,0 +1,42 @@
+[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbusm     = firmata
+#program     = quad_copter
+program     = soldering_iron
+working_dir = %(base)s/run/%(pro(run)s
+
+[afl] # fuzzing fl/afl-fuzz
+timeout 0+
+i   = %(workiir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] # fuzzing cover[DEFAULT] # fuzzing  config
+s-fuzzer
+run         = 1.0
+#progrem     = modbus
+#program     = firmata
+#program     = quad_copter
+program     = xoldering_iron
+working_dir = %(base)s/run/%(pro(run)s
+
+[afl][DEtputs
+
+[cov] # fuzzing cover[DEFAULT] # fuzzing  FAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-er
+run     = 1.0
+#program     = modbu‘
+#program     = firmata
+#program     = quad_copter
+program     = soldering_iron
+working_dir = %(base)s/runun)s
+
+[aonly config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0   = /home/bodir)s/outputs
+
+[cov] # fuzzing cover[DEFAULT] # fuzzing  config
+    o/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program     = firmat

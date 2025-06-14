@@ -1,0 +1,1599 @@
+{
+    "Fuzzer": "MultiFuzz",
+    "Target": "Gateway",
+    "Number-Trials": 10,
+    "Trial-Time": 86400,
+    "Campaign": {
+        "run-0": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 277,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8008791_0x8008b0a_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 1,
+                "triggered": 1,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 1492,
+                "triggered": 1492,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 33,
+                "triggered": 1375,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007779_0x8007778_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005feb_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f01_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x24_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fdd_0x800875c_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8000635_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f01_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005feb_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8006a8d_0x8006aa4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fa5_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8008c25_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f01_0x8006a76_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80077c5_0x8005e8c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f01_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800234d_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f97_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x2a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f97_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fb3_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80077c5_0x8005f1a_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f89_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8002ef5_0x800349c_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fcf_0x80030c0_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8003b00_0x8003b00_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fa5_0x8005f02_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8000737_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005feb_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fb3_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8007786_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8000bc8_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fb3_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80077c5_0x8005fd4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005ed1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8006325_0x800059c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x1a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8006add_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005ea1_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80077c5_0x8005e78_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0xfffffff9_0xfffffffe_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005ea1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007781_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x16_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fcf_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005ed1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fdd_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f31_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x22_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x6_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f31_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8006dd8_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x800a948_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fa5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8005f6c_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007781_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fcf_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x0_0x8004112_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f31_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005feb_0x80030c0_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f01_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0xc_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fcf_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8003193_0xffffff7e_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007779_0x8007778_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f89_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005ea1_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8002fa6_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8007786_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8008c14_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fcf_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fa5_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005feb_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800234d_0x8002fa6_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fa5_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x200003d4_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005ed1_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005ea1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x4_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fb3_0x8005f32_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007287_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8006ad5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x20_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80007f3_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fb3_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x4_0x8004112_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x30_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005feb_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x0_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800860d_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8000819_0xfffffffe_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005feb_0x8006afc_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8008631_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8006dd8_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005f97_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005ea1_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x200007d4_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fdd_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8007787_0x8003bf0_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005fdd_0x8007700_write_error"
+                ]
+            },
+            {
+                "bug_id": "E01",
+                "reached": 69,
+                "triggered": 51670,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8002e1b_0x80031e6_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8002e1b_0x80031e4_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800340b_0x80033a8_write_error"
+                ]
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 72,
+                "triggered": 7912,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8008829_0x80069f6_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8008829_0x80069f4_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 1492,
+                "triggered": 1492,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800529d_0x80050da_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 1492,
+                "triggered": 1492,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 1492,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-01/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            }
+        ],
+        "run-1": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 479,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x40010804_0x8007300_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007779_0x8007778_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f6c_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x24_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006a8d_0x8006aa4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008c25_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x80030c0_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005e8c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800234d_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x28_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80034c9_0x8003462_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x26_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005f1a_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x80030c0_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003b00_0x8003b00_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x12_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x2c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8007786_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8000bc8_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ed1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0xfffffff9_0x4_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x1a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006add_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005e78_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ea1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8006abe_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007781_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x16_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003477_0x8003476_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ed1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007781_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80034c9_0x8003462_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x18_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x22_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8006dd8_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x800a948_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_0x0_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_0x8004112_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0xc_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003193_0xffffff7e_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007779_0x8007778_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8002fa6_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8007786_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8008c14_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006ab5_0x8006b16_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x1c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005ed2_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800234d_0x8002fa6_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ea1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8005f32_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007287_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x200003d2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006ad5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x20_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008791_0x8008b0a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005fb8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x4_0x8004112_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800860d_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008631_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8006abe_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8006dd8_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8003bf0_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8005ea2_write_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 0,
+                "triggered": 0,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 1670,
+                "triggered": 1670,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 284,
+                "triggered": 3860,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x40010804_0x8007300_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007779_0x8007778_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f6c_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x24_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006a8d_0x8006aa4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008c25_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x80030c0_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005e8c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800234d_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x28_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80034c9_0x8003462_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x26_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005f1a_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x80030c0_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003b00_0x8003b00_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x12_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x2c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8007786_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8000bc8_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ed1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0xfffffff9_0x4_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x1a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006add_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005e78_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ea1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8006abe_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007781_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x16_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003477_0x8003476_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ed1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007781_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80034c9_0x8003462_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x18_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x22_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8006dd8_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x800a948_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_0x0_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_0x8004112_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0xc_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003193_0xffffff7e_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007779_0x8007778_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8002fa6_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8007786_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8008c14_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006ab5_0x8006b16_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x1c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005ed2_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800234d_0x8002fa6_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ea1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8005f32_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007287_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x200003d2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006ad5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x20_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005fb8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x4_0x8004112_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800860d_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008631_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8006abe_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8006dd8_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8003bf0_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8005ea2_write_error"
+                ]
+            },
+            {
+                "bug_id": "E01",
+                "reached": 21,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 435,
+                "triggered": 435,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008829_0x80069f4_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 1670,
+                "triggered": 1670,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800529d_0x80050da_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 1670,
+                "triggered": 1670,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 1670,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": 73636,
+                "triggered": 73636,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005287_0x8004e5e_write_error_null"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x40010804_0x8007300_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007779_0x8007778_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f6c_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x24_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006a8d_0x8006aa4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008c25_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x80030c0_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005e8c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800234d_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x28_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80034c9_0x8003462_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x26_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005f1a_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x80030c0_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003b00_0x8003b00_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x12_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x2c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8007786_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8000bc8_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ed1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0xfffffff9_0x4_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x1a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006add_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005e78_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ea1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8006abe_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007781_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x16_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003477_0x8003476_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ed1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007781_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80034c9_0x8003462_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x18_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x22_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007706_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8006dd8_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x800a948_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_0x0_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_0x8004112_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f31_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0xc_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8003193_0xffffff7e_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007779_0x8007778_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8002fa6_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8007786_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8008c14_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006ab5_0x8006b16_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fcf_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x1c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8005ed2_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8007706_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800234d_0x8002fa6_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fa5_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005ea1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8005f32_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007287_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x200003d2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8006ad5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x20_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x80077c5_0x8005fb8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fb3_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x4_0x8004112_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005feb_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x0_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x800860d_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8008631_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f01_0x8006abe_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8006dd8_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f97_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8007787_0x8003bf0_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005fdd_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-02/crashes/0x8005f89_0x8005ea2_write_error"
+                ]
+            }
+        ],
+        "run-2": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 336,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8008087_0x8005190_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8008791_0x8008b0a_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 0,
+                "triggered": 0,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 596,
+                "triggered": 596,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 78,
+                "triggered": 12326,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x80077c5_0x8005e78_read_error"
+                ]
+            },
+            {
+                "bug_id": "E01",
+                "reached": 57,
+                "triggered": 81886,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8002e1b_0x80031e4_read_error"
+                ]
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 60,
+                "triggered": 60,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8008829_0x80069f4_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8008097_0x80052f8_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 596,
+                "triggered": 596,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x800529d_0x800515a_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 596,
+                "triggered": 596,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 596,
+                "triggered": 72750,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8002f01_0x8003188_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x8002f01_0x8003186_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-03/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            }
+        ],
+        "run-3": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 623,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8008791_0x8008b0a_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 0,
+                "triggered": 0,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 906,
+                "triggered": 906,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 165,
+                "triggered": 8192,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8005feb_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80077c5_0x8005e8c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x28_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80077c5_0x8005f1a_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8007787_0x8007786_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80077c5_0x8005fd4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80077c5_0x8005e78_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80008eb_0x8002fae_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8007779_0x8007778_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8007787_0x8007786_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x800234d_0x8002fa6_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80077c5_0x8005fb8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8005fdd_0x8007700_write_error"
+                ]
+            },
+            {
+                "bug_id": "E01",
+                "reached": 18,
+                "triggered": 60680,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x800340b_0x80033a8_write_error"
+                ]
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 126,
+                "triggered": 140,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8008829_0x80069f4_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 906,
+                "triggered": 906,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x800529d_0x80050da_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 906,
+                "triggered": 906,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 906,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-04/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            }
+        ],
+        "run-4": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 237,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x8008087_0x8005190_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x8008791_0x8008b0a_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 0,
+                "triggered": 0,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 599,
+                "triggered": 599,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 193,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "E01",
+                "reached": 129,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 330,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 599,
+                "triggered": 599,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x800529d_0x800515a_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 599,
+                "triggered": 599,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 599,
+                "triggered": 81394,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x8002ed5_0x8002ed4_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-05/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            }
+        ],
+        "run-5": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 54,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008829_0x80069f6_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008791_0x8008b0a_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 1,
+                "triggered": 1,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 2468,
+                "triggered": 2468,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 45,
+                "triggered": 523,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8007779_0x8007778_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005feb_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005feb_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005fa5_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008c25_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8007787_0x80000a2_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80077c5_0x8005e8c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005f01_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x2e_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800234d_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80077c5_0x8005f1a_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005f89_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8003b00_0x8003b00_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80077c5_0x8005fc6_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x2c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8007787_0x8007786_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80077c5_0x8005fd4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005ed1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80077c5_0x8005e78_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x14_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x16_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x22_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x6_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8007787_0x8006dd8_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005f31_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80031cf_0x80030b4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0xc_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005fcf_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8003193_0xffffff7e_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8007779_0x8007778_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8007787_0x8007786_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x1c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8006d00_0x8006d00_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800234d_0x8002fa6_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005ea1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x4_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8007287_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008631_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80077c5_0x8005fb8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005fb3_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x0_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800860d_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008631_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005f97_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005fdd_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800866d_0x8008bda_write_error"
+                ]
+            },
+            {
+                "bug_id": "E01",
+                "reached": 101,
+                "triggered": 19701,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8002ded_0x800323c_read_error"
+                ]
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 981,
+                "triggered": 1729,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8008829_0x80069f4_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 2468,
+                "triggered": 2468,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800529d_0x80050da_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 2468,
+                "triggered": 2468,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 2468,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-06/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            }
+        ],
+        "run-6": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 586,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8008087_0x8005190_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800340b_0x80033a8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8008791_0x8008b0a_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 0,
+                "triggered": 0,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 1453,
+                "triggered": 1453,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 137,
+                "triggered": 12194,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800340b_0x8003410_read_error"
+                ]
+            },
+            {
+                "bug_id": "E01",
+                "reached": 58,
+                "triggered": 12194,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8002e1b_0x80031e6_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8002e1b_0x80031e4_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800340b_0x80033a8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800340b_0x8003410_read_error"
+                ]
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 519,
+                "triggered": 662,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8008829_0x80069f4_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 1453,
+                "triggered": 1453,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800529d_0x800515a_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 1453,
+                "triggered": 1453,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 1453,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": 80665,
+                "triggered": 80665,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x8005287_0x8004e5e_write_error_null"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800340b_0x80033a8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-07/crashes/0x800340b_0x8003410_read_error"
+                ]
+            }
+        ],
+        "run-7": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 346,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005fe2_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8008791_0x8008b0a_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 0,
+                "triggered": 0,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 1870,
+                "triggered": 1870,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 184,
+                "triggered": 6999,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8007779_0x8007778_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8005f01_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005e8c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800234d_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005fc6_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x2c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8007787_0x8007786_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x1a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005e78_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8007787_0x800a534_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x14_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005fe2_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x18_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8005f31_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8007787_0x800a948_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0xc_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8007779_0x8007778_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8007787_0x8007786_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800234d_0x8002fa6_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x4_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005fb8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800860d_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8005f97_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8007787_0x800003c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8005fdd_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8007787_0x800a534_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800866d_0x8008bda_write_error"
+                ]
+            },
+            {
+                "bug_id": "E01",
+                "reached": 27,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 800,
+                "triggered": 800,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8008829_0x80069f4_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 1870,
+                "triggered": 1870,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800529d_0x80050da_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 1870,
+                "triggered": 1870,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 1870,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005fe2_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-08/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            }
+        ],
+        "run-8": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 235,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8002e1b_0x80031e4_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800340b_0x80033a8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8008791_0x8008b0a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800340b_0x8003410_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 0,
+                "triggered": 0,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 946,
+                "triggered": 946,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 181,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "E01",
+                "reached": 30,
+                "triggered": 19016,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8002e1b_0x80031e6_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8002e1b_0x80031e4_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800340b_0x80033a8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800340b_0x8003410_read_error"
+                ]
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 383,
+                "triggered": 814,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8008829_0x80069f6_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8008829_0x80069f4_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800876b_0x8000108_jump_invalid"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 946,
+                "triggered": 946,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800529d_0x80050da_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 946,
+                "triggered": 946,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 946,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x8002e1b_0x80031e4_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800340b_0x80033a8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-09/crashes/0x800340b_0x8003410_read_error"
+                ]
+            }
+        ],
+        "run-9": [
+            {
+                "bug_id": "FW12",
+                "reached": 3,
+                "triggered": 527,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008631_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008087_0x8005190_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008829_0x80069f4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f31_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008791_0x8008b0a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x800003c_write_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP01",
+                "reached": 0,
+                "triggered": 0,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008791_0x8008790_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800876b_0x800876a_jump_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP02",
+                "reached": 144,
+                "triggered": 144,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80053cb_0x800501c_write_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005169_0x800501c_write_error_null"
+                ]
+            },
+            {
+                "bug_id": "FW23",
+                "reached": 281,
+                "triggered": 8412,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007280_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x40010804_0x8007300_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007779_0x8007778_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80063d1_0x80063f8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008c38_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005feb_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f01_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005eba_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8001b1a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8002ec8_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f01_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005feb_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8006a8d_0x8006aa4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fa5_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008b00_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008c25_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80063d1_0x80063da_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005e8c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f01_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f89_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800234d_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f97_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800307e_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x2a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f97_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fb3_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005f1a_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f89_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8003b00_0x8003b00_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0xfffffff9_0x0_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005fc6_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fb3_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x2c_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x8007786_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8000bc8_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005fd4_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005ed1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8006add_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005e78_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005ea1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007781_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0xfffffffe_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8003e05_0x8003e22_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x14_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x16_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fcf_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005fe2_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005ed1_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800711b_0x8005e62_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fdd_0x8005fc6_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005feb_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fdd_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80075b2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f31_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x8006dd8_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8002382_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x800a948_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fa5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fcf_0x8005f5a_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x0_0x8004112_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005eea_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8006d84_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f31_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fcf_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80031a1_0x80030b4_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8002ed5_0x8002ed4_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007779_0x8007778_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007286_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8002fa6_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x8007786_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8002ed4_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fcf_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008c4a_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008b06_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8006d00_0x8006d00_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x80000b0_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800234d_0x8002fa6_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80088c4_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005ed1_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005ea1_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007287_0x8002382_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8006ad5_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x8005fc6_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8000ed8_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80077c5_0x8005fb8_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fb3_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80073c6_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8006add_0x8005fc6_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80022fc_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005feb_0x8005f48_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800860d_0x8006b20_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008631_0xffffffde_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x8006dd8_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f97_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x800003c_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x200007d4_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fdd_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x8003bf0_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80023e2_unknown",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005fdd_0x8007700_write_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800866d_0x8008bda_write_error"
+                ]
+            },
+            {
+                "bug_id": "E01",
+                "reached": 24,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "MF01",
+                "reached": 141,
+                "triggered": 512,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8008829_0x80069f4_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP03",
+                "reached": 144,
+                "triggered": 144,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800529d_0x800515a_read_error_null"
+                ]
+            },
+            {
+                "bug_id": "GATFP04",
+                "reached": 144,
+                "triggered": 144,
+                "raw_crash_data": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005169_0x8004f8e_read_error",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x80053cb_0x8004f8e_read_error"
+                ]
+            },
+            {
+                "bug_id": "GATFP05",
+                "reached": 144,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "GATFP06",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800529d_0x80050da_read_error_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8005f31_0x80077c6_jump_invalid",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x800876b_0x800876a_jump_null",
+                    "/home/user/working-firmrebugger/firmrebugger/benchmark/01/Gateway/MultiFuzz/fuzzing_out/multifuzz-rerun-new-25-02/output-10/crashes/0x8007787_0x800003c_write_error"
+                ]
+            }
+        ]
+    }
+}

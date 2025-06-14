@@ -1,0 +1,8 @@
+---
+context:
+  pc: 134243712
+  mmio: 1073887236
+model:
+  bit-extract:
+    bits: 8
+    left_shift: 16

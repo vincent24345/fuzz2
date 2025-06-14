@@ -1,0 +1,16 @@
+[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbusm     = fEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0!#program     = modbus*#program     = firma#
+# american fuzzy lop++ - makeEil~AULT] # fuzzing only conf       = /home/bo/iot-os-fuzzer
+run         = 1.0
+#program     = modbus*#program     = firmairma#
+# american fuzzy lop++akeEil~AULT] # fuzzing only config
+base        = /homepbo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus*#program     = firma#
+# ican fuzzy lop++akeEile
+# ---
+# -----------------

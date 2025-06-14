@@ -1,0 +1,5 @@
+[DEFfig
+base        = /home/bo/iot/igt-os-fuzzer
+run         = 1.0
+#program     = mo  = ata
+#pro

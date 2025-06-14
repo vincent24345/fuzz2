@@ -1,36 +1,2166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuzz Visualization</title>
-    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="styles.css"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fuzz Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- zip-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+
 </head>
 <body>
-    <h1>Welcome to Fuzz</h1>
-    <p>Sample page for Fuzz project.</p>
-    <button onclick="alert('Button clicked!')">Click Me</button>
+  <!-- side bar-->
+
+  <div class="layout">
+        <aside class="sidebar">
+            <h3>Fuzzing</h3>
+
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">Experiment Summary</button>
+            <div class="dropdown-content">
+                <a href="#finaltable">Reached & Triggered Table</a>
+            </div>
+
+            <!-- Binary 1 -->
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">CNC</button>
+            <div class="dropdown-content">
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Ember</button>
+                <div class="fuzzer-content">
+                    <a href="#ember-box-chart">Box Plot</a>
+                    <a href="#ember-median-chart">Median Plot</a>
+                    <a href="#survival_ember">Survivability Graph</a>
+                    <a href="#ember_coverage_cnc">Coverage Graph</a>
+                    <a href="#ember_table_cnc">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Fuzzware-icicle</button>
+                <div class="fuzzer-content">
+                    <a href="#fi-boxplot">Box Plot</a>
+                    <a href="#fuzzware-median-chart">Median Plot</a>
+                    <a href="#survival_fuzzware_icicle">Survivability Graph</a>
+                    <a href="#fuzzware_icicle_coverage_cnc">Coverage Graph</a>
+                    <a href="#fuzzware_icicle_table_cnc">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Fuzzware</button>
+                <div class="fuzzer-content">
+                    <a href="#fuzzware-box-chart">Box Plot</a>
+                    <a href="#fuzz-median-chart">Median Plot</a>
+                    <a href="#survival_fuzzware">Survivability Graph</a>
+                    <a href="#coverage_line">Coverage Graph</a>
+                    <a href="#fuzzware_table_cnc">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Hoedur</button>
+                <div class="fuzzer-content">
+                    <a href="#hoedur-box-chart">Box Plot</a>
+                    <a href="#hoedur-median-chart">Median Plot</a>
+                    <a href="#survival_hoedur">Survivability Graph</a>
+                    <a href="#hoedur_coverage_cnc">Coverage Graph</a>
+                    <a href="#hoedur_table_cnc">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Multifuzz</button>
+                <div class="fuzzer-content">
+                    <a href="#multifuzz-box-chart">Box Plot</a>
+                    <a href="#multifuzz-median-chart">Median Plot</a>
+                    <a href="#survival_multifuzz">Survivability Graph</a>
+                    <a href="#multifuzz_coverage_cnc">Coverage Graph</a>
+                    <a href="#multifuzz_table_cnc">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Splits</button>
+                <div class="fuzzer-content">
+                    <a href="#splits-box-chart">Box Plot</a>
+                    <a href="#splits-median-chart">Median Plot</a>
+                    <a href="#survival_splits">Survivability Graph</a>
+                    <a href="#splits_coverage_cnc">Coverage Graph</a>
+                    <a href="#splits_table_cnc">Table Summary</a>
+                </div>
+            </div>
+
+            <!-- Binary 2 -->
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">Console</button>
+            <div class="dropdown-content">
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Ember</button>
+                <div class="fuzzer-content">
+                    <a href="#ember_console_boxplot">Box Plot</a>
+                    <a href="#console_median_ember">Median Plot</a>
+                    <a href="#survival_ember_console">Survivability Graph</a>
+                    <a href="#ember_coverage_console">Coverage Graph</a>
+                    <a href="#ember_table_console">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Fuzzware-icicle</button>
+                <div class="fuzzer-content">
+                    <a href="#icicle_console_boxplot">Box Plot</a>
+                    <a href="#console_median_icicle">Median Plot</a>
+                    <a href="#survival_icicle_console">Survivability Graph</a>
+                    <a href="#icicle_coverage_console">Coverage Graph</a>
+                    <a href="#icicle_table_console">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Fuzzware</button>
+                <div class="fuzzer-content">
+                    <a href="#fuzzware_console_boxplot">Box Plot</a>
+                    <a href="#console_median_fuzzware">Median Plot</a>
+                    <a href="#survival_fuzzware_console">Survivability Graph</a>
+                    <a href="#fuzzware_coverage_console">Coverage Graph</a>
+                    <a href="#fuzzware_table_console">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Hoedur</button>
+                <div class="fuzzer-content">
+                    <a href="#hoedur_console_boxplot">Box Plot</a>
+                    <a href="#console_median_hoedur">Median Plot</a>
+                    <a href="#survival_hoedur_console">Survivability Graph</a>
+                    <a href="#hoedur_coverage_console">Coverage Graph</a>
+                    <a href="#hoedur_table_console">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Multifuzz</button>
+                <div class="fuzzer-content">
+                    <a href="#multifuzz_console_boxplot">Box Plot</a>
+                    <a href="#console_median_multifuzz">Median Plot</a>
+                    <a href="#survival_multifuzz_console">Survivability Graph</a>
+                    <a href="#multifuzz_coverage_console">Coverage Graph</a>
+                    <a href="#multifuzz_table_console">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Splits</button>
+                <div class="fuzzer-content">
+                    <a href="#splits_console_boxplot">Box Plot</a>
+                    <a href="#console_median_splits">Median Plot</a>
+                    <a href="#survival_splits_console">Survivability Graph</a>
+                    <a href="#splits_coverage_console">Coverage Graph</a>
+                    <a href="#splits_table_console">Table Summary</a>
+                </div>
+            </div>
+
+            <!-- Binary 3 -->
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">Gateway</button>
+            <div class="dropdown-content">
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Ember</button>
+                <div class="fuzzer-content">
+                    <a href="#ember_gateway_boxplot">Box Plot</a>
+                    <a href="#gateway_median_ember">Median Plot</a>
+                    <a href="#survival_ember_gateway">Survivability Graph</a>
+                    <a href="#ember_coverage_gateway">Coverage Graph</a>
+                    <a href="#ember_table_gateway">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Fuzzware-icicle</button>
+                <div class="fuzzer-content">
+                    <a href="#icicle_gateway_boxplot">Box Plot</a>
+                    <a href="#gateway_median_icicle">Median Plot</a>
+                    <a href="#survival_icicle_gateway">Survivability Graph</a>
+                    <a href="#icicle_coverage_gateway">Coverage Graph</a>
+                    <a href="#icicle_table_gateway">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Fuzzware</button>
+                <div class="fuzzer-content">
+                    <a href="#fuzzware_gateway_boxplot">Box Plot</a>
+                    <a href="#gateway_median_fuzzware">Median Plot</a>
+                    <a href="#survival_fuzzware_gateway">Survivability Graph</a>
+                    <a href="#fuzzware_coverage_gateway">Coverage Graph</a>
+                    <a href="#fuzzware_table_gateway">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Hoedur</button>
+                <div class="fuzzer-content">
+                    <a href="#hoedur_gateway_boxplot">Box Plot</a>
+                    <a href="#gateway_median_hoedur">Median Plot</a>
+                    <a href="#survival_hoedur_gateway">Survivability Graph</a>
+                    <a href="#hoedur_coverage_gateway">Coverage Graph</a>
+                    <a href="#hoedur_table_gateway">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Multifuzz</button>
+                <div class="fuzzer-content">
+                    <a href="#multifuzz_gateway_boxplot">Box Plot</a>
+                    <a href="#gateway_median_multifuzz">Median Plot</a>
+                    <a href="#survival_multifuzz_gateway">Survivability Graph</a>
+                    <a href="#multifuzz_coverage_gateway">Coverage Graph</a>
+                    <a href="#multifuzz_table_gateway">Table Summary</a>
+                </div>
+
+                <button class="fuzzer-btn" onclick="toggleFuzzer(this)">Splits</button>
+                <div class="fuzzer-content">
+                    <a href="#splits_gateway_boxplot">Box Plot</a>
+                    <a href="#gateway_median_splits">Median Plot</a>
+                    <a href="#survival_splits_gateway">Survivability Graph</a>
+                    <a href="#splits_coverage_gateway">Coverage Graph</a>
+                    <a href="#splits_table_gateway">Table Summary</a>
+                </div>
+            </div>
+
+            <a href="#experiment_data" class="dropdown-btn-link">Experiment Data</a>
+        </aside>
+  
+
+        
+        <!-- Main Content -->
+         <main class = "main-content">
+            <h1 class = title> Fuzzing 2025-01-01 report</h1>
+            <!-- experiment summary-->
+            <section class = "summary" id = "experiment_summary">
+                <h3 class = "subtitle">Experiment Summary</h3>
+            <p>Survival plots are visual tools used in fuzzing to track the 
+                progress of bug or coverage discovery over time, typically plotting 
+                time or executions on the x-axis and the number of unique paths, branches, 
+                or crashes on the y-axis. They help compare fuzzers by showing how 
+                quickly and effectively they discover new issues or code coverage, 
+                with plateaus indicating stagnation. Fuzzing techniques vary, 
+                with black-box fuzzing using random inputs without knowledge 
+                of the program, and white-box fuzzing leveraging symbolic execution
+                 and internal analysis for precision. Grey-box fuzzing strikes a 
+                 balance by using lightweight instrumentation for feedback, while 
+                 generation-based and mutation-based fuzzers differ in whether they 
+                 create inputs from scratch or modify existing ones.</p>
+                     
+              </section> 
+              <h3 class = "subtitle"> Reached vs Triggered Table </h3>
+                 <img src = "tablefinal fuzzer.png" id = "finaltable" alt = "tablefinal" style="width: 100%; height: auto;">  
+  
+      <section class = "subtitle" id = "ember"> 
+        <h2> CNC Fuzzing Results</h2>
+        <h3> Ember </h3>
+      </section>
+
+    <section>
+      
+      <div class = "chart-row">
+        <!-- boxplot for ember-->
+   <div id="ember-box-chart" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="ember-median-chart" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+  <iframe src="survival_plots_html/CNC_survival_plots.html" width="100%" height="1400px" frameborder="0" id = "survival_ember"></iframe>
+  <h4 class = "subtitle_graphs"> Ember Code Coverage Graph </h4>
+  <div class = "white-box" id = "ember_coverage_cnc"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+      </div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "ember_table_cnc"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Ember data</button>
+      <section class = "content">
+       <h2> Ember-IO-Fuzzing Summary on CNC (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class = "secondstohours">
+          <tr><td rowspan="3">run-1</td><td>FW11</td><td>–</td><td>–</td></tr>
+          <tr><td>FW18</td><td>1525</td><td>2550</td></tr>
+          <tr><td>CNCFP01</td><td>1561</td><td>3257</td></tr>
+          <tr><td rowspan="3">run-2</td><td>FW11</td><td>–</td><td>–</td></tr>
+          <tr><td>FW18</td><td>3655</td><td>20128</td></tr>
+          <tr><td>CNCFP01</td><td>4101</td><td>–</td></tr>
+
+          <tr><td rowspan="3">run-3</td><td>FW11</td><td>–</td><td>–</td></tr>
+          <tr><td>FW18</td><td>2328</td><td>74832</td></tr>
+          <tr><td>CNCFP01</td><td>2328</td><td>–</td></tr>
+
+          <tr><td rowspan="3">run-4</td><td>FW11</td><td>–</td><td>–</td></tr>
+          <tr><td>FW18</td><td>2185</td><td>58092</td></tr>
+          <tr><td>CNCFP01</td><td>2409</td><td>–</td></tr>
+
+      
+          <tr><td rowspan="3">run-5</td><td>FW11</td><td>55635</td><td>56813</td></tr>
+          <tr><td>FW18</td><td>1982</td><td>23663</td></tr>
+          <tr><td>CNCFP01</td><td>2035</td><td>–</td></tr>
+          <tr><td rowspan="3">run-6</td><td>FW11</td><td>8168</td><td>–</td></tr>
+          <tr><td>FW18</td><td>2888</td><td>28958</td></tr>
+          <tr><td>CNCFP01</td><td>15993</td><td>–</td></tr>
+          
+          <tr><td rowspan="3">run-7</td><td>FW11</td><td>56585</td><td>56703</td></tr>
+          <tr><td>FW18</td><td>1980</td><td>–</td></tr>
+          <tr><td>CNCFP01</td><td>1980</td><td>–</td></tr>
+          <tr><td rowspan="3">run-8</td><td>FW11</td><td>–</td><td>–</td></tr>
+          <tr><td>FW18</td><td>16810</td><td>73913</td></tr>
+          <tr><td>CNCFP01</td><td>36366</td><td>–</td></tr>
+
+          <tr><td rowspan="3">run-9</td><td>FW11</td><td>–</td><td>–</td></tr>
+          <tr><td>FW18</td><td>1350</td><td>47991</td></tr>
+          <tr><td>CNCFP01</td><td>1529</td><td>60313</td></tr>
+          <tr><td rowspan="3">run-10</td><td>FW11</td><td>–</td><td>–</td></tr>
+          <tr><td>FW18</td><td>1563</td><td>–</td></tr>
+          <tr><td>CNCFP01</td><td>1577</td><td>–</td></tr>
+
+             <!-- median rows-->
+             <tr><td rowspan="3"><strong>Median</strong></td><td>FW11</td><td>55635</td><td><strong>56758</strong></td></tr>
+             <tr><td>FW18</td><td>2185</td><td><strong>38474.5</strong></td></tr>
+             <tr><td>CNCFP01</td><td>2328</td><td><strong>31785</strong></td></tr>
     
-    <h2>Nightingale Chart</h2>
-    <h3>Treemap and Sunburst Visualisation</h3>
-    <h4>Bar Visualisation</h4>
-    
-    <div class="container">
-        <div id="chart1" class="chart"></div>
+   
+        </tbody>
+        
+          
+       </table>
+    </section>
     </div>
-    
-    <div class="container2">
-        <div id="chart2" class="chart"></div>
+   
+
+<!-- section -->
+<!-- next section-->
+<section class = "subtitle" id = "bloaty_fuzz_target"> 
+    <h3> Fuzzware-icicle </h3>
+  </section>
+ <!-- line fuzz-icicle graph-->
+  <section>
+    <div class = "chart-row">
+       <div id="fi-boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+<div id="fuzzware-median-chart" class="chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+<iframe src="survival_plots_html/CNC_survival_plots.html" width="100%" height="1400px" frameborder="0" id = "survival_fuzzware_icicle"></iframe>
+<h4 class = "subtitle_graphs"> Fuzzware-icicle Code Coverage Graph </h4>
+<div class = "white-box" id = "fuzzware_icicle_coverage_cnc"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
     </div>
+
+ 
+  </section> 
+
+
+<!-- section 2 -->
+<!--table collapsible-->
+
+<div class = fuzzing_table id = "fuzzware_icicle_table_cnc"> 
+  <button type = "button" class = "collapsible"> Bugs Triggered Fuzzware-icicle data</button>
+  <section class = "content">
+   <h2> Fuzzware-Icicle Summary on CNC (Runs 1–10)</h2>
+   <table>
+    <thead>
+      <tr>
+        <th>Run</th>
+        <th>Bug ID</th>
+        <th>Reached</th>
+        <th>Triggered</th>
     
-    <div class="container3">
-        <div id="chart3" class="chart"></div>
+      </tr>
+    </thead>
+    <tbody class = "secondstohours">
+      <tr><td rowspan="3">run-1</td><td>FW11</td><td>–</td><td>–</td></tr>
+      <tr><td>FW18</td><td>661</td><td>–</td></tr>
+      <tr><td>CNCFP01</td><td>2201</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-2</td><td>FW11</td><td>–</td><td>–</td></tr>
+      <tr><td>FW18</td><td>510</td><td>27618</td></tr>
+      <tr><td>CNCFP01</td><td>879</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-3</td><td>FW11</td><td>33496</td><td>35159</td></tr>
+      <tr><td>FW18</td><td>701</td><td>18528</td></tr>
+      <tr><td>CNCFP01</td><td>1185</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-4</td><td>FW11</td><td>24901</td><td>27625</td></tr>
+      <tr><td>FW18</td><td>390</td><td>26541</td></tr>
+      <tr><td>CNCFP01</td><td>975</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-5</td><td>FW11</td><td>63367</td><td>63367</td></tr>
+      <tr><td>FW18</td><td>215</td><td>9149</td></tr>
+      <tr><td>CNCFP01</td><td>626</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-6</td><td>FW11</td><td>11766</td><td>14235</td></tr>
+      <tr><td>FW18</td><td>163</td><td>24732</td></tr>
+      <tr><td>CNCFP01</td><td>333</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-7</td><td>FW11</td><td>–</td><td>–</td></tr>
+      <tr><td>FW18</td><td>305</td><td>20962</td></tr>
+      <tr><td>CNCFP01</td><td>305</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-8</td><td>FW11</td><td>–</td><td>–</td></tr>
+      <tr><td>FW18</td><td>345</td><td>1734</td></tr>
+      <tr><td>CNCFP01</td><td>360</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-9</td><td>FW11</td><td>–</td><td>–</td></tr>
+      <tr><td>FW18</td><td>564</td><td>10145</td></tr>
+      <tr><td>CNCFP01</td><td>634</td><td>–</td></tr>
+
+      <tr><td rowspan="3">run-10</td><td>FW11</td><td>2537</td><td>2537</td></tr>
+      <tr><td>FW18</td><td>175</td><td>10725</td></tr>
+      <tr><td>CNCFP01</td><td>–</td><td>–</td></tr>
+
+      <!-- median table-->
+      <tr><td rowspan="3"><strong>Median</strong></td><td>FW11</td><td>24901</td><td><strong>27625</strong></td></tr>
+      <tr><td>FW18</td><td>367.5</td><td><strong>	18528</strong></td></tr>
+      <tr><td>CNCFP01</td><td>634</td><td><strong>–</strong></td></tr>
+    </tbody>
+   </table>
+</section>
+</div>
+
+
+<!--section 4-->
+
+<!-- next section-->
+<section class = "subtitle" id = "curl_curl_fuzzer_http"> 
+  <h3> Fuzzware </h3>
+</section>
+<section>
+  <!-- line fuzzware graph-->
+  <div class = "chart-row">
+  <div id="fuzzware-box-chart" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+<div id="fuzz-median-chart" class="chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+<iframe src="survival_plots_html/CNC_survival_plots.html" width="100%" height="1400px" frameborder="0" id = "survival_fuzzware"></iframe>
+
+    </div>   
+
+</section>   
+
+    <h2> Code Coverage Graph </h2>
+                <iframe src="../fuzzware-cov-stats/multi_coverage_analysis_20250608_132546.html" width="100%" height="1100px" frameborder="0" id = "coverage_line"></iframe>
+
+<!--table-->
+<div class ="fuzzing_table" id = "fuzzware_table_cnc"> 
+  <button type="button" class="collapsible">Bugs Triggered Fuzzware data</button>
+  <section class="content">
+    <h2> Fuzzware Summary on CNC (Runs 1–10)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Run</th>
+          <th>Bug ID</th>
+          <th>Reached</th>
+          <th>Triggered</th>
+        </tr>
+      </thead>
+      <tbody class = "secondstohours">
+        <tr><td rowspan="3">run-1</td><td>FW11</td><td>2161</td><td>2161</td></tr>
+        <tr><td>FW18</td><td>867</td><td>43490</td></tr>
+        <tr><td>CNCFP01</td><td>1348</td><td>46072</td></tr>
+
+        <tr><td rowspan="3">run-2</td><td>FW11</td><td>–</td><td>–</td></tr>
+        <tr><td>FW18</td><td>1480</td><td>–</td></tr>
+        <tr><td>CNCFP01</td><td>1745</td><td>45130</td></tr>
+
+        <tr><td rowspan="3">run-3</td><td>FW11</td><td>–</td><td>–</td></tr>
+        <tr><td>FW18</td><td>1406</td><td>–</td></tr>
+        <tr><td>CNCFP01</td><td>1406</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-4</td><td>FW11</td><td>–</td><td>–</td></tr>
+        <tr><td>FW18</td><td>1674</td><td>29129</td></tr>
+        <tr><td>CNCFP01</td><td>1678</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-5</td><td>FW11</td><td>–</td><td>–</td></tr>
+        <tr><td>FW18</td><td>721</td><td>30678</td></tr>
+        <tr><td>CNCFP01</td><td>1392</td><td>22978</td></tr>
+
+        <tr><td rowspan="3">run-6</td><td>FW11</td><td>12901</td><td>12901</td></tr>
+        <tr><td>FW18</td><td>1136</td><td>–</td></tr>
+        <tr><td>CNCFP01</td><td>1361</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-7</td><td>FW11</td><td>–</td><td>–</td></tr>
+        <tr><td>FW18</td><td>639</td><td>17450</td></tr>
+        <tr><td>CNCFP01</td><td>752</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-8</td><td>FW11</td><td>–</td><td>–</td></tr>
+        <tr><td>FW18</td><td>243</td><td>–</td></tr>
+        <tr><td>CNCFP01</td><td>243</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-9</td><td>FW11</td><td>–</td><td>–</td></tr>
+        <tr><td>FW18</td><td>211</td><td>15710</td></tr>
+        <tr><td>CNCFP01</td><td>710</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-10</td><td>FW11</td><td>8962</td><td>9641</td></tr>
+        <tr><td>FW18</td><td>1173</td><td>17619</td></tr>
+        <tr><td>CNCFP01</td><td>1779</td><td>–</td></tr>
+
+
+        <!-- median table-->
+        <tr><td rowspan="3"><strong>Median</strong></td><td>FW11</td><td>8962</td><td><strong>9641</strong></td></tr>
+        <tr><td>FW18</td><td>1001.5</td><td><strong>	23374</strong></td></tr>
+        <tr></td><td>CNCFP01</td><td>1376.5</td><td><strong>45130</strong></td></tr>
+
+      </tbody>
+    </table>
+  </section>
+</div>
+
+
+   <!--section 5-->
+
+<!-- next section-->
+<section class = "subtitle" id = "freetype2-2017"> 
+  <h3>  Hoedur </h3>
+</section>
+ <!-- line hoedur  graph-->
+ <section>
+<div class = "chart-row">
+    <div id="hoedur-box-chart" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+<div id="hoedur-median-chart" class="chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+<iframe src="survival_plots_html/CNC_survival_plots.html" width="100%" height="1400px" frameborder="0" id = "survival_hoedur"></iframe>
+<h4 class = "subtitle_graphs"> Hoedur Code Coverage Graph </h4>
+<div class = "white-box" id = "hoedur_coverage_cnc"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+  </div>
+  </section>
+<!-- table collapisble-->
+<div class ="fuzzing_table" id = "hoedur_table_cnc"> 
+  <button type="button" class="collapsible">Bugs Triggered Hoedur data</button>
+  <section class="content">
+    <h2> Hoedur Summary on CNC (Runs 1–10)</h2>
+   
+
+    <table>
+      <thead>
+        <tr>
+          <th>Run</th>
+          <th>Bug ID</th>
+          <th>Reached</th>
+          <th>Triggered</th>
+        </tr>
+      </thead>
+      <tbody class = "secondstohours">
+        <tr><td rowspan="3">run-1</td><td>FW11</td><td>221</td><td>329</td></tr>
+        <tr><td>FW18</td><td>235</td><td>1333</td></tr>
+        <tr><td>CNCFP01</td><td>279</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-2</td><td>FW11</td><td>199</td><td>637</td></tr>
+        <tr><td>FW18</td><td>208</td><td>607</td></tr>
+        <tr><td>CNCFP01</td><td>384</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-3</td><td>FW11</td><td>211</td><td>476</td></tr>
+        <tr><td>FW18</td><td>213</td><td>615</td></tr>
+        <tr><td>CNCFP01</td><td>350</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-4</td><td>FW11</td><td>232</td><td>524</td></tr>
+        <tr><td>FW18</td><td>217</td><td>741</td></tr>
+        <tr><td>CNCFP01</td><td>292</td><td>2007</td></tr>
+
+        <tr><td rowspan="3">run-5</td><td>FW11</td><td>212</td><td>508</td></tr>
+        <tr><td>FW18</td><td>209</td><td>1721</td></tr>
+        <tr><td>CNCFP01</td><td>209</td><td>4928</td></tr>
+
+        <tr><td rowspan="3">run-6</td><td>FW11</td><td>318</td><td>441</td></tr>
+        <tr><td>FW18</td><td>230</td><td>460</td></tr>
+        <tr><td>CNCFP01</td><td>284</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-7</td><td>FW11</td><td>249</td><td>702</td></tr>
+        <tr><td>FW18</td><td>249</td><td>590</td></tr>
+        <tr><td>CNCFP01</td><td>282</td><td>18481</td></tr>
+
+        <tr><td rowspan="3">run-8</td><td>FW11</td><td>215</td><td>372</td></tr>
+        <tr><td>FW18</td><td>219</td><td>868</td></tr>
+        <tr><td>CNCFP01</td><td>227</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-9</td><td>FW11</td><td>457</td><td>704</td></tr>
+        <tr><td>FW18</td><td>341</td><td>742</td></tr>
+        <tr><td>CNCFP01</td><td>521</td><td>–</td></tr>
+
+        <tr><td rowspan="3">run-10</td><td>FW11</td><td>217</td><td>612</td></tr>
+        <tr><td>FW18</td><td>218</td><td>1064</td></tr>
+        <tr><td>CNCFP01</td><td>280</td><td>23005</td></tr>
+
+           <!-- median table-->
+           <tr><td rowspan="3"><strong>Median</strong></td><td>FW11</td><td>219</td><td><strong>	516</strong></td></tr>
+           <tr><td>FW18</td><td>218.5</td><td><strong>	741.5</strong></td></tr>
+           <tr><td>CNCFP01</td><td>283</td><td><strong>11704.5</strong></td></tr>
+   
+      </tbody>
+    </table>
+  </section>
+</div>
+
+
+<!--section 6-->
+
+<!-- next section-->
+<section class = "subtitle" id = "harfbuzz"> 
+  <h3>  Multifuzz </h3>
+  </section>
+   <!-- line multifuzz line graph-->
+  <section>
+    <div class = "chart-row">
+       <div id="multifuzz-box-chart" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+    <div id="multifuzz-median-chart" class="chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+    <iframe src="survival_plots_html/CNC_survival_plots.html" width="100%" height="1400px" frameborder="0" id = "survival_multifuzz"></iframe>
+    <h4 class = "subtitle_graphs"> Multifuzz Code Coverage Graph </h4>
+    <div class = "white-box" id = "multifuzz_coverage_cnc"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+      </div>
+  </section>
+
+<!--table collapsible-->
+<div class ="fuzzing_table" id = "multifuzz_table_cnc"> 
+  <button type="button" class="collapsible">Bugs Triggered MultiFuzz data</button>
+  <section class="content">
+    <h2> MultiFuzz Summary on CNC (Runs 1–10)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Run</th>
+          <th>Bug ID</th>
+          <th>Reached</th>
+          <th>Triggered</th>
+        </tr>
+      </thead>
+      <tbody class = "secondstohours">
+        <tr><td rowspan="3">run-1</td><td>FW11</td><td>23739</td><td>23739</td></tr>
+<tr><td>FW18</td><td>597</td><td>597</td></tr>
+<tr><td>CNCFP01</td><td>–</td><td>–</td></tr>
+
+<tr><td rowspan="3">run-2</td><td>FW11</td><td>3532</td><td>3532</td></tr>
+<tr><td>FW18</td><td>1839</td><td>1839</td></tr>
+<tr><td>CNCFP01</td><td>14902</td><td>14902</td></tr>
+
+<tr><td rowspan="3">run-3</td><td>FW11</td><td>2716</td><td>2716</td></tr>
+<tr><td>FW18</td><td>2404</td><td>2404</td></tr>
+<tr><td>CNCFP01</td><td>–</td><td>–</td></tr>
+
+<tr><td rowspan="3">run-4</td><td>FW11</td><td>4508</td><td>4508</td></tr>
+<tr><td>FW18</td><td>1979</td><td>1979</td></tr>
+<tr><td>CNCFP01</td><td>–</td><td>–</td></tr>
+
+<tr><td rowspan="3">run-5</td><td>FW11</td><td>18781</td><td>18781</td></tr>
+<tr><td>FW18</td><td>7897</td><td>7897</td></tr>
+<tr><td>CNCFP01</td><td>–</td><td>–</td></tr>
+
+<tr><td rowspan="3">run-6</td><td>FW11</td><td>2131</td><td>2131</td></tr>
+<tr><td>FW18</td><td>2908</td><td>2908</td></tr>
+<tr><td>CNCFP01</td><td>51667</td><td>51667</td></tr>
+
+<tr><td rowspan="3">run-7</td><td>FW11</td><td>10969</td><td>10969</td></tr>
+<tr><td>FW18</td><td>2774</td><td>2774</td></tr>
+<tr><td>CNCFP01</td><td>–</td><td>–</td></tr>
+
+<tr><td rowspan="3">run-8</td><td>FW11</td><td>–</td><td>–</td></tr>
+<tr><td>FW18</td><td>871</td><td>871</td></tr>
+<tr><td>CNCFP01</td><td>–</td><td>–</td></tr>
+
+<tr><td rowspan="3">run-9</td><td>FW11</td><td>5484</td><td>5484</td></tr>
+<tr><td>FW18</td><td>400</td><td>400</td></tr>
+<tr><td>CNCFP01</td><td>28131</td><td>28131</td></tr>
+
+<tr><td rowspan="3">run-10</td><td>FW11</td><td>24840</td><td>24840</td></tr>
+<tr><td>FW18</td><td>1800</td><td>1800</td></tr>
+<tr><td>CNCFP01</td><td>–</td><td>–</td></tr>
+
+
+          <!-- median table-->
+          <tr><td rowspan="3"><strong>Median</strong></td><td>FW11</td><td>5484</td><td><strong>	5484</strong></td></tr>
+          <tr><td>FW18</td><td>1909.0</td><td><strong>	1909.0</strong></td></tr>
+          <tr><td>CNCFP01</td><td>28131</td><td><strong>28131</strong></td></tr>
+
+      </tbody>
+    </table>
+  </section>
+</div>
+
+
+<!--section 7-->
+
+<!-- next section-->
+<section class = "subtitle" id = "openssl_x509"> 
+  <h3>  SplITs </h3>
+</section>
+   <!-- line splits  graph-->
+ <section>
+  <div class = "chart-row">
+   <div id="splits-box-chart" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+  <div id="splits-median-chart" class="chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+  <iframe src="survival_plots_html/CNC_survival_plots.html" width="100%" height="1400px" frameborder="0" id = "survival_splits"></iframe>
+<h4 class = "subtitle_graphs"> Splits Code Coverage Graph </h4>
+  <div class = "white-box" id = "splits_coverage_cnc"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>    
+</div>
+</section>
+<!--table collapsible-->
+<div class ="fuzzing_table" id = "splits_table_cnc"> 
+  <button type="button" class="collapsible">Bugs Triggered SplITS data</button>
+  <section class="content">
+    <h2> SplITS Summary on CNC (Runs 1–10)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Run</th>
+          <th>Bug ID</th>
+          <th>Reached</th>
+          <th>Triggered</th>
+        </tr>
+      </thead>
+      <tbody class = "secondstohours">
+         <tr><td rowspan="3">run-1</td><td>FW11</td><td>10559</td><td>10559</td></tr>
+  <tr><td>FW18</td><td>986</td><td>–</td></tr>
+  <tr><td>CNCFP01</td><td>1335</td><td>–</td></tr>
+
+  <tr><td rowspan="3">run-2</td><td>FW11</td><td>61264</td><td>–</td></tr>
+  <tr><td>FW18</td><td>616</td><td>13332</td></tr>
+  <tr><td>CNCFP01</td><td>795</td><td>–</td></tr>
+
+  <tr><td rowspan="3">run-3</td><td>FW11</td><td>–</td><td>–</td></tr>
+  <tr><td>FW18</td><td>773</td><td>14194</td></tr>
+  <tr><td>CNCFP01</td><td>1873</td><td>–</td></tr>
+
+  <tr><td rowspan="3">run-4</td><td>FW11</td><td>10073</td><td>10719</td></tr>
+  <tr><td>FW18</td><td>1134</td><td>43933</td></tr>
+  <tr><td>CNCFP01</td><td>1367</td><td>83123</td></tr>
+
+  <tr><td rowspan="3">run-5</td><td>FW11</td><td>5777</td><td>8464</td></tr>
+  <tr><td>FW18</td><td>773</td><td>18727</td></tr>
+  <tr><td>CNCFP01</td><td>915</td><td>–</td></tr>
+
+  <tr><td rowspan="3">run-6</td><td>FW11</td><td>46250</td><td>46419</td></tr>
+  <tr><td>FW18</td><td>327</td><td>72802</td></tr>
+  <tr><td>CNCFP01</td><td>480</td><td>–</td></tr>
+
+  <tr><td rowspan="3">run-7</td><td>FW11</td><td>26163</td><td>26180</td></tr>
+  <tr><td>FW18</td><td>461</td><td>25936</td></tr>
+  <tr><td>CNCFP01</td><td>642</td><td>–</td></tr>
+
+  <tr><td rowspan="3">run-8</td><td>FW11</td><td>–</td><td>–</td></tr>
+  <tr><td>FW18</td><td>331</td><td>–</td></tr>
+  <tr><td>CNCFP01</td><td>571</td><td>–</td></tr>
+
+  <tr><td rowspan="3">run-9</td><td>FW11</td><td>13473</td><td>13793</td></tr>
+  <tr><td>FW18</td><td>564</td><td>19989</td></tr>
+  <tr><td>CNCFP01</td><td>1004</td><td>–</td></tr>
+
+  <tr><td rowspan="3">run-10</td><td>FW11</td><td>33047</td><td>33184</td></tr>
+  <tr><td>FW18</td><td>1789</td><td>33958</td></tr>
+  <tr><td>CNCFP01</td><td>1990</td><td>–</td></tr>
+
+
+            <!-- median table-->
+            <tr><td rowspan="3"><strong>Median</strong></td><td>FW11</td><td>19818</td><td><strong>	13793</strong></td></tr>
+            <tr><td>FW18</td><td>694.5</td><td><strong>	22962.5</strong></td></tr>
+            <tr><td>CNCFP01</td><td>959.5</td><td><strong>83123</strong></td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+
+
+
+
+
+
+<!-- console-->
+<!-- ember-->
+ <section class = "subtitle" id = "console"> 
+        <h2> Console Fuzzing Results</h2>
+      </section>
+
+ <section class = "subtitle" id = "console_ember"> 
+        <h3> Ember </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for ember-->
+   <div id="ember_console_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="console_median_ember" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+ <iframe src="survival_plots_html/Console_survival_plots.html" width="100%" height="750px" frameborder="0" id = "survival_ember_console"></iframe>
+<h4 class = "subtitle_graphs"> Ember Code Coverage Graph </h4>
+<div class = "white-box" id = "ember_coverage_console"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>      
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "ember_table_console"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Ember data</button>
+      <section class = "content">
+       <h2> Ember-IO-Fuzzing Summary on Console (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class = "secondstohours">
+          <tr><td>run-1</td><td>I01</td><td>18382</td><td>18616</td></tr>
+          <tr><td>run-2</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-3</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-4</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-5</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-6</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-7</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-8</td><td>I01</td><td>–</td><td>–</td></tr>    
+          <tr><td>run-9</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-10</td><td>I01</td><td>–</td><td>–</td></tr>
+             <!-- median rows-->
+             <tr><td><strong>Median</strong></td><td>I01</td><td>18382</td><td><strong>18616</strong></td></tr>
+        </tbody>            
+       </table>
+    </section>
     </div>
-    
-    <script src="graph1.js" defer></script>
-    <script src="graph2.js" defer></script>
-    <script src="graph3.js" defer></script>
+
+<!-- fuzzware-->
+
+<section class = "subtitle" id = "console_fuzzware"> 
+        <h3> Fuzzware </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for fuzzware-->
+   <div id="fuzzware_console_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="console_median_fuzzware" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+ <iframe src="survival_plots_html/Console_survival_plots.html" width="100%" height="750px" frameborder="0" id = "survival_fuzzware_console"></iframe>
+      <h4 class = "subtitle_graphs"> Fuzzware Code Coverage Graph </h4>
+<div class = "white-box" id = "fuzzware_coverage_console"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "fuzzware_table_console"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Fuzzware data</button>
+      <section class = "content">
+       <h2> Fuzzware Summary on Console (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class = "secondstohours">
+          <tr><td>run-1</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-2</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-3</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-4</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-5</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-6</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-7</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-8</td><td>I01</td><td>–</td><td>–</td></tr>    
+          <tr><td>run-9</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-10</td><td>I01</td><td>–</td><td>–</td></tr>
+             <!-- median rows-->
+             <tr><td><strong>Median</strong></td><td>I01</td><td>–</td><td><strong>–</strong></td></tr>
+        </tbody>             
+       </table>
+    </section>
+    </div>
+
+
+<!-- hoedur-->
+<section class = "subtitle" id = "console_hoedur"> 
+        <h3> Hoedur </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for hoedur-->
+   <div id="hoedur_console_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="console_median_hoedur" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+ <iframe src="survival_plots_html/Console_survival_plots.html" width="100%" height="750px" frameborder="0" id = "survival_hoedur_console"></iframe>
+      <h4 class = "subtitle_graphs"> Hoedur Code Coverage Graph </h4>
+<div class = "white-box" id = "hoedur_coverage_console"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "hoedur_table_console"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Hoedur data</button>
+      <section class = "content">
+       <h2> Hoedur Summary on Console (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class = "secondstohours">
+          <tr><td>run-1</td><td>I01</td><td>434</td><td>598</td></tr>
+          <tr><td>run-2</td><td>I01</td><td>162</td><td>317</td></tr>
+          <tr><td>run-3</td><td>I01</td><td>432</td><td>623</td></tr>
+          <tr><td>run-4</td><td>I01</td><td>298</td><td>895</td></tr>
+          <tr><td>run-5</td><td>I01</td><td>253</td><td>591</td></tr>
+          <tr><td>run-6</td><td>I01</td><td>379</td><td>1122</td></tr>
+          <tr><td>run-7</td><td>I01</td><td>223</td><td>479</td></tr>
+          <tr><td>run-8</td><td>I01</td><td>305</td><td>847</td></tr>    
+          <tr><td>run-9</td><td>I01</td><td>346</td><td>590</td></tr>
+          <tr><td>run-10</td><td>I01</td><td>422</td><td>695</td></tr>
+             <!-- median rows-->
+             <tr><td><strong>Median</strong></td><td>I01</td><td>325.5</td><td><strong>610.5</strong></td></tr>
+        </tbody>             
+       </table>
+    </section>
+    </div>
+
+
+<!-- icicle-->
+<section class = "subtitle" id = "console_icicle"> 
+        <h3> Fuzzware-icicle </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for multifuzz-->
+   <div id="icicle_console_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="console_median_icicle" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+ <iframe src="survival_plots_html/Console_survival_plots.html" width="100%" height="750px" frameborder="0" id = "survival_icicle_console"></iframe>
+      <h4 class = "subtitle_graphs"> Fuzzware-icicle Code Coverage Graph </h4>
+<div class = "white-box" id = "icicle_coverage_console"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "icicle_table_console"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Fuzzware-icicle data</button>
+      <section class = "content">
+       <h2> Fuzzware-icicle Summary on Console (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class = "secondstohours">
+          <tr><td>run-1</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-2</td><td>I01</td><td>75595</td><td>76309</td></tr>
+          <tr><td>run-3</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-4</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-5</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-6</td><td>I01</td><td>57065</td><td>64416 </td></tr>
+          <tr><td>run-7</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-8</td><td>I01</td><td>–</td><td>–</td></tr>    
+          <tr><td>run-9</td><td>I01</td><td>–</td><td>–</td></tr>
+          <tr><td>run-10</td><td>I01</td><td>–</td><td>–</td></tr>
+             <!-- median rows-->
+             <tr><td><strong>Median</strong></td><td>I01</td><td>66330</td><td><strong>70362.5</strong></td></tr>
+        </tbody>             
+       </table>
+    </section>
+    </div>
+
+<!-- multifuzz-->
+
+<section class = "subtitle" id = "console_multifuzz"> 
+        <h3> Multifuzz </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for multifuzz-->
+   <div id="multifuzz_console_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="console_median_multifuzz" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+ <iframe src="survival_plots_html/Console_survival_plots.html" width="100%" height="750px" frameborder="0" id = "survival_multifuzz_console"></iframe>
+      <h4 class = "subtitle_graphs"> Multifuzz Code Coverage Graph </h4>
+<div class = "white-box" id = "multifuzz_coverage_console"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "multifuzz_table_console"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Multifuzz data</button>
+      <section class = "content">
+       <h2> Multifuzz Summary on Console (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class = "secondstohours">
+          <tr><td>run-1</td><td>I01</td><td>2342</td><td>2342</td></tr>
+          <tr><td>run-2</td><td>I01</td><td>701</td><td>701</td></tr>
+          <tr><td>run-3</td><td>I01</td><td>8344</td><td>8344</td></tr>
+          <tr><td>run-4</td><td>I01</td><td>4914</td><td>4914</td></tr>
+          <tr><td>run-5</td><td>I01</td><td>3134</td><td>3134</td></tr>
+          <tr><td>run-6</td><td>I01</td><td>5234</td><td>5234</td></tr>
+          <tr><td>run-7</td><td>I01</td><td>5770</td><td>5770</td></tr>    
+          <tr><td>run-8</td><td>I01</td><td>2419</td><td>2419</td></tr>
+          <tr><td>run-9</td><td>I01</td><td>3113</td><td>3113</td></tr>
+          <tr><td>run-10</td><td>I01</td><td>1818</td><td>1818</td></tr>
+             <!-- median rows-->
+             <tr><td><strong>Median</strong></td><td>I01</td><td>3123.5</td><td><strong>3123.5</strong></td></tr>
+        </tbody>             
+       </table>
+    </section>
+    </div>
+
+
+
+    <!-- splits-->
+
+<section class = "subtitle" id = "console_splits"> 
+        <h3> Splits </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for splits-->
+   <div id="splits_console_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="console_median_splits" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+ <iframe src="survival_plots_html/Console_survival_plots.html" width="100%" height="750px" frameborder="0" id = "survival_splits_console"></iframe>
+      <h4 class = "subtitle_graphs"> Splits Code Coverage Graph </h4>
+<div class = "white-box" id = "splits_coverage_console"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "splits_table_console"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Splits data</button>
+      <section class = "content">
+       <h2> Splits Summary on Console (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class = "secondstohours">
+          <tr><td>run-1</td><td>I01</td><td>2518</td><td>2518</td></tr>
+          <tr><td>run-2</td><td>I01</td><td>2010</td><td>2010</td></tr>
+          <tr><td>run-3</td><td>I01</td><td>2492</td><td>2492</td></tr>
+          <tr><td>run-4</td><td>I01</td><td>836</td><td>836</td></tr>
+          <tr><td>run-5</td><td>I01</td><td>1695</td><td>1695</td></tr>
+          <tr><td>run-6</td><td>I01</td><td>1462</td><td>1462</td></tr>
+          <tr><td>run-7</td><td>I01</td><td>2555</td><td>2555</td></tr>    
+          <tr><td>run-8</td><td>I01</td><td>1978</td><td>1978</td></tr>
+          <tr><td>run-9</td><td>I01</td><td>466</td><td>466</td></tr>
+          <tr><td>run-10</td><td>I01</td><td>2478</td><td>2478</td></tr>
+             <!-- median rows-->
+             <tr><td><strong>Median</strong></td><td>I01</td><td>1994</td><td><strong>1994</strong></td></tr>
+        </tbody>             
+       </table>
+    </section>
+    </div>
+
+
+
+    <!-- GATEWAY -->
+
+
+<!-- ember-->
+ <section class = "subtitle" id = "gateway"> 
+        <h2> Gateway Fuzzing Results</h2>
+      </section>
+
+ <section class = "subtitle" id = "gateway_ember"> 
+        <h3> Ember </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for ember-->
+   <div id="ember_gateway_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="gateway_median_ember" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+ <iframe src="survival_plots_html/Gateway_survival_plots.html" width="100%" height="3200px" frameborder="0" id = "survival_ember_gateway"></iframe>
+<h4 class = "subtitle_graphs"> Ember Code Coverage Graph </h4>
+<div class = "white-box" id = "ember_coverage_gateway"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>      
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "ember_table_gateway"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Ember data</button>
+      <section class = "content">
+       <h2> Ember-IO-Fuzzing Summary on Gateway (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class="secondstohours">
+        <tr><td rowspan="10">run-1</td><td>E01</td><td>3827</td><td>–</td></tr>
+        <tr><td>FW12</td><td>220</td><td>9186</td></tr>
+        <tr><td>FW23</td><td>9470</td><td>28462</td></tr>
+        <tr><td>GATFP01</td><td>13</td><td>13</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-10</td><td>E01</td><td>2155</td><td>–</td></tr>
+        <tr><td>FW12</td><td>0</td><td>20998</td></tr>
+        <tr><td>FW23</td><td>21946</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>23</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-2</td><td>E01</td><td>7653</td><td>11877</td></tr>
+        <tr><td>FW12</td><td>242</td><td>7638</td></tr>
+        <tr><td>FW23</td><td>7930</td><td>57558</td></tr>
+        <tr><td>GATFP01</td><td>21</td><td>21</td></tr>
+        <tr><td>GATFP02</td><td>11191</td><td>11191</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>11192</td><td>11192</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>10627</td><td>11354</td></tr>
+        <tr><td rowspan="10">run-3</td><td>E01</td><td>5465</td><td>–</td></tr>
+        <tr><td>FW12</td><td>0</td><td>10626</td></tr>
+        <tr><td>FW23</td><td>80331</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>11</td><td>14</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-4</td><td>E01</td><td>4391</td><td>–</td></tr>
+        <tr><td>FW12</td><td>16</td><td>51747</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>16</td><td>68</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-5</td><td>E01</td><td>6727</td><td>–</td></tr>
+        <tr><td>FW12</td><td>35</td><td>47296</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>18</td><td>18</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-6</td><td>E01</td><td>1678</td><td>–</td></tr>
+        <tr><td>FW12</td><td>15</td><td>29330</td></tr>
+        <tr><td>FW23</td><td>36105</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>15</td><td>18</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-7</td><td>E01</td><td>5594</td><td>30187</td></tr>
+        <tr><td>FW12</td><td>5249</td><td>6199</td></tr>
+        <tr><td>FW23</td><td>6574</td><td>23091</td></tr>
+        <tr><td>GATFP01</td><td>15</td><td>15</td></tr>
+        <tr><td>GATFP02</td><td>30959</td><td>30959</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>30959</td><td>30959</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>30942</td><td>51954</td></tr>
+        <tr><td rowspan="10">run-8</td><td>E01</td><td>6428</td><td>–</td></tr>
+        <tr><td>FW12</td><td>6234</td><td>7695</td></tr>
+        <tr><td>FW23</td><td>8810</td><td>81835</td></tr>
+        <tr><td>GATFP01</td><td>214</td><td>214</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-9</td><td>E01</td><td>7181</td><td>–</td></tr>
+        <tr><td>FW12</td><td>38</td><td>9915</td></tr>
+        <tr><td>FW23</td><td>9274</td><td>9747</td></tr>
+        <tr><td>GATFP01</td><td>38</td><td>154</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+
+        <!-- median table-->
+        <tr><td rowspan="10"><strong>Median</strong></td><td>E01</td><td>5529.5</td><td><strong>21032.0</strong></td></tr>
+        <tr><td>FW12</td><td>36.5</td><td><strong>10270.5</strong></td></tr>
+        <tr><td>FW23</td><td>9372.0</td><td><strong>28462</strong></td></tr>
+        <tr><td>GATFP01</td><td>15.5</td><td><strong>19.5</strong></td></tr>
+        <tr><td>GATFP02</td><td>21075.0</td><td><strong>21075.0</strong></td></tr>
+        <tr><td>GATFP03</td><td>–</td><td><strong>–</strong></td></tr>
+        <tr><td>GATFP04</td><td>21075.5</td><td><strong>21075.5</strong></td></tr>
+        <tr><td>GATFP05</td><td>–</td><td><strong>–</strong></td></tr>
+        <tr><td>GATFP06</td><td>–</td><td><strong>–</strong></td></tr>
+        <tr><td>MF01</td><td>20784.5</td><td><strong>31654.0</strong></td></tr>
+      </tbody>                  
+       </table>
+    </section>
+    </div>
+
+<!-- fuzzware-->
+
+<section class = "subtitle" id = "console_fuzzware"> 
+        <h3> Fuzzware </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for fuzzware-->
+   <div id="fuzzware_gateway_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="gateway_median_fuzzware" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+  <iframe src="survival_plots_html/Gateway_survival_plots.html" width="100%" height="3200px" frameborder="0" id = "survival_fuzzware_gateway"></iframe>
+      <h4 class = "subtitle_graphs"> Fuzzware Code Coverage Graph </h4>
+<div class = "white-box" id = "fuzzware_coverage_gateway"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "fuzzware_table_gateway"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Fuzzware data</button>
+      <section class = "content">
+       <h2> Fuzzware Summary on Gateway (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class="secondstohours">
+        <tr><td rowspan="10">run-1</td><td>E01</td><td>45563</td><td>45563</td></tr>
+        <tr><td>FW12</td><td>1160</td><td>1160</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>4</td><td>4</td></tr>
+        <tr><td>GATFP02</td><td>27273</td><td>27273</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>27274</td><td>27274</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-10</td><td>E01</td><td>–</td><td>–</td></tr>
+        <tr><td>FW12</td><td>10465</td><td>10465</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>2</td></tr>
+        <tr><td>GATFP02</td><td>7322</td><td>7322</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>7301</td><td>7301</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>17429</td><td>17429</td></tr>
+        <tr><td rowspan="10">run-2</td><td>E01</td><td>–</td><td>–</td></tr>
+        <tr><td>FW12</td><td>1367</td><td>1367</td></tr>
+        <tr><td>FW23</td><td>17779</td><td>17779</td></tr>
+        <tr><td>GATFP01</td><td>5</td><td>5</td></tr>
+        <tr><td>GATFP02</td><td>26865</td><td>26865</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>26979</td><td>26979</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-3</td><td>E01</td><td>–</td><td>–</td></tr>
+        <tr><td>FW12</td><td>2757</td><td>2757</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>5</td><td>5</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-4</td><td>E01</td><td>51099</td><td>51099</td></tr>
+        <tr><td>FW12</td><td>2488</td><td>2488</td></tr>
+        <tr><td>FW23</td><td>24093</td><td>24093</td></tr>
+        <tr><td>GATFP01</td><td>4</td><td>4</td></tr>
+        <tr><td>GATFP02</td><td>28049</td><td>28049</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>28048</td><td>28048</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>35841</td><td>35841</td></tr>
+        <tr><td rowspan="10">run-5</td><td>E01</td><td>45081</td><td>45081</td></tr>
+        <tr><td>FW12</td><td>2116</td><td>2116</td></tr>
+        <tr><td>FW23</td><td>26878</td><td>26878</td></tr>
+        <tr><td>GATFP01</td><td>3</td><td>3</td></tr>
+        <tr><td>GATFP02</td><td>25988</td><td>25988</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>25980</td><td>25980</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>27947</td><td>27947</td></tr>
+        <tr><td rowspan="10">run-6</td><td>E01</td><td>66312</td><td>66312</td></tr>
+        <tr><td>FW12</td><td>2003</td><td>2003</td></tr>
+        <tr><td>FW23</td><td>36645</td><td>36645</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>2</td></tr>
+        <tr><td>GATFP02</td><td>39031</td><td>39031</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>39026</td><td>39026</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>46304</td><td>46304</td></tr>
+        <tr><td rowspan="10">run-7</td><td>E01</td><td>–</td><td>–</td></tr>
+        <tr><td>FW12</td><td>6384</td><td>6384</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>2</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-8</td><td>E01</td><td>59631</td><td>59631</td></tr>
+        <tr><td>FW12</td><td>4465</td><td>4465</td></tr>
+        <tr><td>FW23</td><td>46712</td><td>46712</td></tr>
+        <tr><td>GATFP01</td><td>5</td><td>5</td></tr>
+        <tr><td>GATFP02</td><td>35424</td><td>35424</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>35566</td><td>35566</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>55346</td><td>55346</td></tr>
+        <tr><td rowspan="10">run-9</td><td>E01</td><td>–</td><td>–</td></tr>
+        <tr><td>FW12</td><td>3114</td><td>3114</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>10</td><td>10</td></tr>
+        <tr><td>GATFP02</td><td>63976</td><td>63976</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>64005</td><td>64005</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>77792</td><td>77792</td></tr>
+
+        <!-- median table-->
+        <tr><td rowspan="10"><strong>Median</strong></td><td>E01</td><td>51099</td><td><strong>51099</strong></td></tr>
+        <tr><td>FW12</td><td>2622.5</td><td><strong>2622.5</strong></td></tr>
+        <tr><td>FW23</td><td>26878</td><td><strong>26878</strong></td></tr>
+        <tr><td>GATFP01</td><td>4.0</td><td><strong>4.0</strong></td></tr>
+        <tr><td>GATFP02</td><td>27661.0</td><td><strong>27661.0</strong></td></tr>
+        <tr><td>GATFP03</td><td>–</td><td><strong>–</strong></td></tr>
+        <tr><td>GATFP04</td><td>27661.0</td><td><strong>27661.0</strong></td></tr>
+        <tr><td>GATFP05</td><td>–</td><td><strong>–</strong></td></tr>
+        <tr><td>GATFP06</td><td>–</td><td><strong>–</strong></td></tr>
+        <tr><td>MF01</td><td>41072.5</td><td><strong>41072.5</strong></td></tr>
+      </tbody>
+       </table>
+    </section>
+    </div>
+
+
+<!-- hoedur-->
+<section class = "subtitle" id = "gateway_hoedur"> 
+        <h3> Hoedur </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for hoedur-->
+   <div id="hoedur_gateway_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="gateway_median_hoedur" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+  <iframe src="survival_plots_html/Gateway_survival_plots.html" width="100%" height="3200px" frameborder="0" id = "survival_hoedur_gateway"></iframe>
+      <h4 class = "subtitle_graphs"> Hoedur Code Coverage Graph </h4>
+<div class = "white-box" id = "hoedur_coverage_gateway"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "hoedur_table_gateway"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Hoedur data</button>
+      <section class = "content">
+       <h2> Hoedur Summary on Gateway (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class="secondstohours">
+        <tr><td rowspan="10">run-1</td><td>E01</td><td>180</td><td>2040</td></tr>
+        <tr><td>FW12</td><td>115</td><td>452</td></tr>
+        <tr><td>FW23</td><td>283</td><td>1767</td></tr>
+        <tr><td>GATFP01</td><td>141</td><td>149</td></tr>
+        <tr><td>GATFP02</td><td>3507</td><td>3534</td></tr>
+        <tr><td>GATFP03</td><td>3507</td><td>6075</td></tr>
+        <tr><td>GATFP04</td><td>3461</td><td>3461</td></tr>
+        <tr><td>GATFP05</td><td>3507</td><td>32203</td></tr>
+        <tr><td>GATFP06</td><td>3773</td><td>–</td></tr>
+        <tr><td>MF01</td><td>1657</td><td>3013</td></tr>
+        <tr><td rowspan="10">run-10</td><td>E01</td><td>308</td><td>4407</td></tr>
+        <tr><td>FW12</td><td>234</td><td>546</td></tr>
+        <tr><td>FW23</td><td>481</td><td>1020</td></tr>
+        <tr><td>GATFP01</td><td>253</td><td>–</td></tr>
+        <tr><td>GATFP02</td><td>1209</td><td>1209</td></tr>
+        <tr><td>GATFP03</td><td>2258</td><td>2815</td></tr>
+        <tr><td>GATFP04</td><td>2225</td><td>2225</td></tr>
+        <tr><td>GATFP05</td><td>1209</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>2419</td><td>3580</td></tr>
+        <tr><td>MF01</td><td>474</td><td>2345</td></tr>
+        <tr><td rowspan="10">run-2</td><td>E01</td><td>184</td><td>5797</td></tr>
+        <tr><td>FW12</td><td>143</td><td>250</td></tr>
+        <tr><td>FW23</td><td>334</td><td>1693</td></tr>
+        <tr><td>GATFP01</td><td>143</td><td>153</td></tr>
+        <tr><td>GATFP02</td><td>2565</td><td>2631</td></tr>
+        <tr><td>GATFP03</td><td>2565</td><td>19774</td></tr>
+        <tr><td>GATFP04</td><td>2552</td><td>2552</td></tr>
+        <tr><td>GATFP05</td><td>2565</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>5113</td><td>5449</td></tr>
+        <tr><td>MF01</td><td>3016</td><td>3139</td></tr>
+        <tr><td rowspan="10">run-3</td><td>E01</td><td>185</td><td>2443</td></tr>
+        <tr><td>FW12</td><td>121</td><td>619</td></tr>
+        <tr><td>FW23</td><td>428</td><td>1113</td></tr>
+        <tr><td>GATFP01</td><td>146</td><td>155</td></tr>
+        <tr><td>GATFP02</td><td>4758</td><td>4758</td></tr>
+        <tr><td>GATFP03</td><td>4840</td><td>15997</td></tr>
+        <tr><td>GATFP04</td><td>4746</td><td>4746</td></tr>
+        <tr><td>GATFP05</td><td>4758</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>6852</td><td>6852</td></tr>
+        <tr><td>MF01</td><td>4410</td><td>5529</td></tr>
+        <tr><td rowspan="10">run-4</td><td>E01</td><td>157</td><td>8895</td></tr>
+        <tr><td>FW12</td><td>141</td><td>456</td></tr>
+        <tr><td>FW23</td><td>299</td><td>1121</td></tr>
+        <tr><td>GATFP01</td><td>147</td><td>158</td></tr>
+        <tr><td>GATFP02</td><td>6567</td><td>8169</td></tr>
+        <tr><td>GATFP03</td><td>6567</td><td>11018</td></tr>
+        <tr><td>GATFP04</td><td>6236</td><td>6236</td></tr>
+        <tr><td>GATFP05</td><td>6567</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>10910</td><td>–</td></tr>
+        <tr><td>MF01</td><td>727</td><td>7369</td></tr>
+        <tr><td rowspan="10">run-5</td><td>E01</td><td>197</td><td>2230</td></tr>
+        <tr><td>FW12</td><td>137</td><td>735</td></tr>
+        <tr><td>FW23</td><td>643</td><td>697</td></tr>
+        <tr><td>GATFP01</td><td>159</td><td>163</td></tr>
+        <tr><td>GATFP02</td><td>1823</td><td>1855</td></tr>
+        <tr><td>GATFP03</td><td>1823</td><td>4097</td></tr>
+        <tr><td>GATFP04</td><td>1847</td><td>1847</td></tr>
+        <tr><td>GATFP05</td><td>1823</td><td>26776</td></tr>
+        <tr><td>GATFP06</td><td>3107</td><td>5415</td></tr>
+        <tr><td>MF01</td><td>2254</td><td>2577</td></tr>
+        <tr><td rowspan="10">run-6</td><td>E01</td><td>182</td><td>7468</td></tr>
+        <tr><td>FW12</td><td>119</td><td>719</td></tr>
+        <tr><td>FW23</td><td>265</td><td>1055</td></tr>
+        <tr><td>GATFP01</td><td>122</td><td>150</td></tr>
+        <tr><td>GATFP02</td><td>1324</td><td>1324</td></tr>
+        <tr><td>GATFP03</td><td>1429</td><td>19535</td></tr>
+        <tr><td>GATFP04</td><td>1327</td><td>1327</td></tr>
+        <tr><td>GATFP05</td><td>1324</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>2920</td><td>3849</td></tr>
+        <tr><td>MF01</td><td>814</td><td>1104</td></tr>
+        <tr><td rowspan="10">run-7</td><td>E01</td><td>191</td><td>4331</td></tr>
+        <tr><td>FW12</td><td>111</td><td>346</td></tr>
+        <tr><td>FW23</td><td>484</td><td>1050</td></tr>
+        <tr><td>GATFP01</td><td>149</td><td>157</td></tr>
+        <tr><td>GATFP02</td><td>2652</td><td>2665</td></tr>
+        <tr><td>GATFP03</td><td>2652</td><td>48380</td></tr>
+        <tr><td>GATFP04</td><td>2206</td><td>2206</td></tr>
+        <tr><td>GATFP05</td><td>2652</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>2716</td><td>2884</td></tr>
+        <tr><td>MF01</td><td>1010</td><td>2755</td></tr>
+        <tr><td rowspan="10">run-8</td><td>E01</td><td>189</td><td>1761</td></tr>
+        <tr><td>FW12</td><td>139</td><td>1595</td></tr>
+        <tr><td>FW23</td><td>491</td><td>1130</td></tr>
+        <tr><td>GATFP01</td><td>139</td><td>158</td></tr>
+        <tr><td>GATFP02</td><td>3936</td><td>3936</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>2483</td><td>2483</td></tr>
+        <tr><td>GATFP05</td><td>3936</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>4052</td><td>4831</td></tr>
+        <tr><td rowspan="10">run-9</td><td>E01</td><td>182</td><td>6507</td></tr>
+        <tr><td>FW12</td><td>126</td><td>311</td></tr>
+        <tr><td>FW23</td><td>388</td><td>539</td></tr>
+        <tr><td>GATFP01</td><td>158</td><td>–</td></tr>
+        <tr><td>GATFP02</td><td>2715</td><td>2715</td></tr>
+        <tr><td>GATFP03</td><td>2737</td><td>5380</td></tr>
+        <tr><td>GATFP04</td><td>2690</td><td>2690</td></tr>
+        <tr><td>GATFP05</td><td>2715</td><td>14342</td></tr>
+        <tr><td>GATFP06</td><td>5031</td><td>5218</td></tr>
+        <tr><td>MF01</td><td>3139</td><td>3168</td></tr>
+
+        <!-- median table-->
+        <tr><td rowspan="10"><strong>Median</strong></td><td>E01</td><td>184.5</td><td><strong>4369.0</strong></td></tr>
+        <tr><td>FW12</td><td>131.5</td><td><strong>501.0</strong></td></tr>
+        <tr><td>FW23</td><td>408.0</td><td><strong>1084.0</strong></td></tr>
+        <tr><td>GATFP01</td><td>146.5</td><td><strong>156.0</strong></td></tr>
+        <tr><td>GATFP02</td><td>2683.5</td><td><strong>2690.0</strong></td></tr>
+        <tr><td>GATFP03</td><td>2652</td><td><strong>11018</strong></td></tr>
+        <tr><td>GATFP04</td><td>2517.5</td><td><strong>2517.5</strong></td></tr>
+        <tr><td>GATFP05</td><td>2683.5</td><td><strong>26776</strong></td></tr>
+        <tr><td>GATFP06</td><td>3773</td><td><strong>5218</strong></td></tr>
+        <tr><td>MF01</td><td>1955.5</td><td><strong>3076.0</strong></td></tr>
+      </tbody>            
+       </table>
+    </section>
+    </div>
+
+
+<!-- icicle-->
+<section class = "subtitle" id = "gateway_icicle"> 
+        <h3> Fuzzware-icicle </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for multifuzz-->
+   <div id="icicle_gateway_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="gateway_median_icicle" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+  <iframe src="survival_plots_html/Gateway_survival_plots.html" width="100%" height="3200px" frameborder="0" id = "survival_icicle_gateway"></iframe>
+      <h4 class = "subtitle_graphs"> Fuzzware-icicle Code Coverage Graph </h4>
+<div class = "white-box" id = "icicle_coverage_gateway"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "icicle_table_gateway"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Fuzzware-icicle data</button>
+      <section class = "content">
+       <h2> Fuzzware-icicle Summary on Gateway (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class="secondstohours">
+        <tr><td rowspan="10">run-1</td><td>E01</td><td>613</td><td>–</td></tr>
+        <tr><td>FW12</td><td>5</td><td>907</td></tr>
+        <tr><td>FW23</td><td>853</td><td>18775</td></tr>
+        <tr><td>GATFP01</td><td>5</td><td>15</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-10</td><td>E01</td><td>415</td><td>–</td></tr>
+        <tr><td>FW12</td><td>8</td><td>687</td></tr>
+        <tr><td>FW23</td><td>1495</td><td>7793</td></tr>
+        <tr><td>GATFP01</td><td>8</td><td>23</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-2</td><td>E01</td><td>381</td><td>–</td></tr>
+        <tr><td>FW12</td><td>5</td><td>4437</td></tr>
+        <tr><td>FW23</td><td>4913</td><td>22020</td></tr>
+        <tr><td>GATFP01</td><td>5</td><td>15</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>26214</td><td>26214</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-3</td><td>E01</td><td>503</td><td>–</td></tr>
+        <tr><td>FW12</td><td>6</td><td>1623</td></tr>
+        <tr><td>FW23</td><td>1622</td><td>16700</td></tr>
+        <tr><td>GATFP01</td><td>6</td><td>8</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-4</td><td>E01</td><td>568</td><td>37293</td></tr>
+        <tr><td>FW12</td><td>7</td><td>5461</td></tr>
+        <tr><td>FW23</td><td>6188</td><td>23759</td></tr>
+        <tr><td>GATFP01</td><td>7</td><td>11</td></tr>
+        <tr><td>GATFP02</td><td>23284</td><td>23284</td></tr>
+        <tr><td>GATFP03</td><td>23982</td><td>23982</td></tr>
+        <tr><td>GATFP04</td><td>23273</td><td>23273</td></tr>
+        <tr><td>GATFP05</td><td>24330</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>21231</td><td>24039</td></tr>
+        <tr><td rowspan="10">run-5</td><td>E01</td><td>290</td><td>–</td></tr>
+        <tr><td>FW12</td><td>6</td><td>2159</td></tr>
+        <tr><td>FW23</td><td>2013</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>6</td><td>11</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-6</td><td>E01</td><td>544</td><td>–</td></tr>
+        <tr><td>FW12</td><td>6</td><td>1130</td></tr>
+        <tr><td>FW23</td><td>1129</td><td>19725</td></tr>
+        <tr><td>GATFP01</td><td>6</td><td>11</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-7</td><td>E01</td><td>417</td><td>–</td></tr>
+        <tr><td>FW12</td><td>5</td><td>5069</td></tr>
+        <tr><td>FW23</td><td>4770</td><td>22844</td></tr>
+        <tr><td>GATFP01</td><td>5</td><td>10</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-8</td><td>E01</td><td>477</td><td>53310</td></tr>
+        <tr><td>FW12</td><td>5</td><td>5182</td></tr>
+        <tr><td>FW23</td><td>5021</td><td>21928</td></tr>
+        <tr><td>GATFP01</td><td>5</td><td>8</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>75019</td><td>–</td></tr>
+        <tr><td rowspan="10">run-9</td><td>E01</td><td>346</td><td>67708</td></tr>
+        <tr><td>FW12</td><td>5</td><td>3731</td></tr>
+        <tr><td>FW23</td><td>4177</td><td>35111</td></tr>
+        <tr><td>GATFP01</td><td>5</td><td>13</td></tr>
+        <tr><td>GATFP02</td><td>67575</td><td>67575</td></tr>
+        <tr><td>GATFP03</td><td>68462</td><td>68462</td></tr>
+        <tr><td>GATFP04</td><td>67759</td><td>67759</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>68985</td><td>–</td></tr>
+
+        <!-- median table-->
+        <tr><td rowspan="10"><strong>Median</strong></td><td>E01</td><td>447.0</td><td><strong>53310</strong></td></tr>
+        <tr><td>FW12</td><td>5.5</td><td><strong>2945.0</strong></td></tr>
+        <tr><td>FW23</td><td>3095.0</td><td><strong>21928</strong></td></tr>
+        <tr><td>GATFP01</td><td>5.5</td><td><strong>11.0</strong></td></tr>
+        <tr><td>GATFP02</td><td>45429.5</td><td><strong>45429.5</strong></td></tr>
+        <tr><td>GATFP03</td><td>46222.0</td><td><strong>46222.0</strong></td></tr>
+        <tr><td>GATFP04</td><td>26214</td><td><strong>26214</strong></td></tr>
+        <tr><td>GATFP05</td><td>24330</td><td><strong>–</strong></td></tr>
+        <tr><td>GATFP06</td><td>–</td><td><strong>–</strong></td></tr>
+        <tr><td>MF01</td><td>68985</td><td><strong>24039</strong></td></tr>
+      </tbody>      
+       </table>
+    </section>
+    </div>
+
+<!-- multifuzz-->
+
+<section class = "subtitle" id = "gateway_multifuzz"> 
+        <h3> Multifuzz </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for multifuzz-->
+   <div id="multifuzz_gateway_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="gateway_median_multifuzz" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+ <iframe src="survival_plots_html/Gateway_survival_plots.html" width="100%" height="3200px" frameborder="0" id = "survival_multifuzz_gateway"></iframe>
+      <h4 class = "subtitle_graphs"> Fuzzware-icicle Code Coverage Graph </h4>
+<div class = "white-box" id = "multifuzz_coverage_gateway"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "multifuzz_table_gateway"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Multifuzz data</button>
+      <section class = "content">
+       <h2> Multifuzz Summary on Gateway (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class="secondstohours">
+        <tr><td rowspan="10">run-0</td><td>E01</td><td>69</td><td>51670</td></tr>
+        <tr><td>FW12</td><td>3</td><td>277</td></tr>
+        <tr><td>FW23</td><td>33</td><td>1375</td></tr>
+        <tr><td>GATFP01</td><td>1</td><td>1</td></tr>
+        <tr><td>GATFP02</td><td>1492</td><td>1492</td></tr>
+        <tr><td>GATFP03</td><td>1492</td><td>1492</td></tr>
+        <tr><td>GATFP04</td><td>1492</td><td>1492</td></tr>
+        <tr><td>GATFP05</td><td>1492</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>72</td><td>7912</td></tr>
+        <tr><td rowspan="10">run-1</td><td>E01</td><td>21</td><td>–</td></tr>
+        <tr><td>FW12</td><td>3</td><td>479</td></tr>
+        <tr><td>FW23</td><td>284</td><td>3860</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>0</td></tr>
+        <tr><td>GATFP02</td><td>1670</td><td>1670</td></tr>
+        <tr><td>GATFP03</td><td>1670</td><td>1670</td></tr>
+        <tr><td>GATFP04</td><td>1670</td><td>1670</td></tr>
+        <tr><td>GATFP05</td><td>1670</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>73636</td><td>73636</td></tr>
+        <tr><td>MF01</td><td>435</td><td>435</td></tr>
+        <tr><td rowspan="10">run-2</td><td>E01</td><td>57</td><td>81886</td></tr>
+        <tr><td>FW12</td><td>3</td><td>336</td></tr>
+        <tr><td>FW23</td><td>78</td><td>12326</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>0</td></tr>
+        <tr><td>GATFP02</td><td>596</td><td>596</td></tr>
+        <tr><td>GATFP03</td><td>596</td><td>596</td></tr>
+        <tr><td>GATFP04</td><td>596</td><td>596</td></tr>
+        <tr><td>GATFP05</td><td>596</td><td>72750</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>60</td><td>60</td></tr>
+        <tr><td rowspan="10">run-3</td><td>E01</td><td>18</td><td>60680</td></tr>
+        <tr><td>FW12</td><td>3</td><td>623</td></tr>
+        <tr><td>FW23</td><td>165</td><td>8192</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>0</td></tr>
+        <tr><td>GATFP02</td><td>906</td><td>906</td></tr>
+        <tr><td>GATFP03</td><td>906</td><td>906</td></tr>
+        <tr><td>GATFP04</td><td>906</td><td>906</td></tr>
+        <tr><td>GATFP05</td><td>906</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>126</td><td>140</td></tr>
+        <tr><td rowspan="10">run-4</td><td>E01</td><td>129</td><td>–</td></tr>
+        <tr><td>FW12</td><td>3</td><td>237</td></tr>
+        <tr><td>FW23</td><td>193</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>0</td></tr>
+        <tr><td>GATFP02</td><td>599</td><td>599</td></tr>
+        <tr><td>GATFP03</td><td>599</td><td>599</td></tr>
+        <tr><td>GATFP04</td><td>599</td><td>599</td></tr>
+        <tr><td>GATFP05</td><td>599</td><td>81394</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>330</td><td>–</td></tr>
+        <tr><td rowspan="10">run-5</td><td>E01</td><td>101</td><td>19701</td></tr>
+        <tr><td>FW12</td><td>3</td><td>54</td></tr>
+        <tr><td>FW23</td><td>45</td><td>523</td></tr>
+        <tr><td>GATFP01</td><td>1</td><td>1</td></tr>
+        <tr><td>GATFP02</td><td>2468</td><td>2468</td></tr>
+        <tr><td>GATFP03</td><td>2468</td><td>2468</td></tr>
+        <tr><td>GATFP04</td><td>2468</td><td>2468</td></tr>
+        <tr><td>GATFP05</td><td>2468</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>981</td><td>1729</td></tr>
+        <tr><td rowspan="10">run-6</td><td>E01</td><td>58</td><td>12194</td></tr>
+        <tr><td>FW12</td><td>3</td><td>586</td></tr>
+        <tr><td>FW23</td><td>137</td><td>12194</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>0</td></tr>
+        <tr><td>GATFP02</td><td>1453</td><td>1453</td></tr>
+        <tr><td>GATFP03</td><td>1453</td><td>1453</td></tr>
+        <tr><td>GATFP04</td><td>1453</td><td>1453</td></tr>
+        <tr><td>GATFP05</td><td>1453</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>80665</td><td>80665</td></tr>
+        <tr><td>MF01</td><td>519</td><td>662</td></tr>
+        <tr><td rowspan="10">run-7</td><td>E01</td><td>27</td><td>–</td></tr>
+        <tr><td>FW12</td><td>3</td><td>346</td></tr>
+        <tr><td>FW23</td><td>184</td><td>6999</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>0</td></tr>
+        <tr><td>GATFP02</td><td>1870</td><td>1870</td></tr>
+        <tr><td>GATFP03</td><td>1870</td><td>1870</td></tr>
+        <tr><td>GATFP04</td><td>1870</td><td>1870</td></tr>
+        <tr><td>GATFP05</td><td>1870</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>800</td><td>800</td></tr>
+        <tr><td rowspan="10">run-8</td><td>E01</td><td>30</td><td>19016</td></tr>
+        <tr><td>FW12</td><td>3</td><td>235</td></tr>
+        <tr><td>FW23</td><td>181</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>0</td></tr>
+        <tr><td>GATFP02</td><td>946</td><td>946</td></tr>
+        <tr><td>GATFP03</td><td>946</td><td>946</td></tr>
+        <tr><td>GATFP04</td><td>946</td><td>946</td></tr>
+        <tr><td>GATFP05</td><td>946</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>383</td><td>814</td></tr>
+        <tr><td rowspan="10">run-9</td><td>E01</td><td>24</td><td>–</td></tr>
+        <tr><td>FW12</td><td>3</td><td>527</td></tr>
+        <tr><td>FW23</td><td>281</td><td>8412</td></tr>
+        <tr><td>GATFP01</td><td>0</td><td>0</td></tr>
+        <tr><td>GATFP02</td><td>144</td><td>144</td></tr>
+        <tr><td>GATFP03</td><td>144</td><td>144</td></tr>
+        <tr><td>GATFP04</td><td>144</td><td>144</td></tr>
+        <tr><td>GATFP05</td><td>144</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>141</td><td>512</td></tr>
+
+        <!-- median table-->
+        <tr><td rowspan="10"><strong>Median</strong></td><td>E01</td><td>43.5</td><td><strong>35685.5</strong></td></tr>
+        <tr><td>FW12</td><td>3.0</td><td><strong>341.0</strong></td></tr>
+        <tr><td>FW23</td><td>173.0</td><td><strong>7595.5</strong></td></tr>
+        <tr><td>GATFP01</td><td>0.0</td><td><strong>0.0</strong></td></tr>
+        <tr><td>GATFP02</td><td>1199.5</td><td><strong>1199.5</strong></td></tr>
+        <tr><td>GATFP03</td><td>1199.5</td><td><strong>1199.5</strong></td></tr>
+        <tr><td>GATFP04</td><td>1199.5</td><td><strong>1199.5</strong></td></tr>
+        <tr><td>GATFP05</td><td>1199.5</td><td><strong>77072.0</strong></td></tr>
+        <tr><td>GATFP06</td><td>77150.5</td><td><strong>77150.5</strong></td></tr>
+        <tr><td>MF01</td><td>356.5</td><td><strong>662</strong></td></tr>
+      </tbody>
+       </table>
+    </section>
+    </div>
+
+
+
+    <!-- splits-->
+
+<section class = "subtitle" id = "gateway_splits"> 
+        <h3> Splits </h3>
+      </section>
+    <section>
+      <div class = "chart-row">
+        <!-- boxplot for splits-->
+   <div id="splits_gateway_boxplot" class="chart-box" style="width: 800px; height: 500px; margin: 0 auto;"></div>
+ <div id="gateway_median_splits" class = "chart-box" style="width: 100%; height: 400px; margin: 20px auto;"></div>
+  <iframe src="survival_plots_html/Gateway_survival_plots.html" width="100%" height="3200px" frameborder="0" id = "survival_splits_gateway"></iframe>
+      <h4 class = "subtitle_graphs"> Splits Code Coverage Graph </h4>
+<div class = "white-box" id = "splits_coverage_gateway"> 
+    <h4> Code Coverage Graph unavailable</h4>
+  </div>
+</div>
+    </section>
+   
+
+    </section>
+   <!-- table collapisble-->
+    <div class = "fuzzing_table" id = "splits_table_gateway"> 
+      <button type = "button" class = "collapsible"> Bugs Triggered Splits data</button>
+      <section class = "content">
+       <h2> Splits Summary on Gateway (Runs 1–10)</h2>
+       <table>
+        <thead>
+          <tr>
+            <th>Run</th>
+            <th>Bug ID</th>
+            <th>Reached</th>
+            <th>Triggered</th>
+        
+          </tr>
+        </thead>
+        <tbody class="secondstohours">
+        <tr><td rowspan="10">run-1</td><td>E01</td><td>76844</td><td>–</td></tr>
+        <tr><td>FW12</td><td>2</td><td>–</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>61</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-10</td><td>E01</td><td>480</td><td>74032</td></tr>
+        <tr><td>FW12</td><td>2</td><td>3376</td></tr>
+        <tr><td>FW23</td><td>81827</td><td>81827</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>61</td></tr>
+        <tr><td>GATFP02</td><td>14610</td><td>14610</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>14578</td><td>14578</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>14838</td><td>20287</td></tr>
+        <tr><td rowspan="10">run-2</td><td>E01</td><td>547</td><td>81920</td></tr>
+        <tr><td>FW12</td><td>3</td><td>824</td></tr>
+        <tr><td>FW23</td><td>19728</td><td>19728</td></tr>
+        <tr><td>GATFP01</td><td>3</td><td>62</td></tr>
+        <tr><td>GATFP02</td><td>18028</td><td>18028</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>18255</td><td>18255</td></tr>
+        <tr><td>GATFP05</td><td>18198</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>17555</td><td>27944</td></tr>
+        <tr><td rowspan="10">run-3</td><td>E01</td><td>612</td><td>–</td></tr>
+        <tr><td>FW12</td><td>41</td><td>3705</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>41</td><td>62</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+        <tr><td rowspan="10">run-4</td><td>E01</td><td>556</td><td>–</td></tr>
+        <tr><td>FW12</td><td>4</td><td>1646</td></tr>
+        <tr><td>FW23</td><td>46291</td><td>46291</td></tr>
+        <tr><td>GATFP01</td><td>4</td><td>61</td></tr>
+        <tr><td>GATFP02</td><td>21733</td><td>21733</td></tr>
+        <tr><td>GATFP03</td><td>22122</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>21157</td><td>21157</td></tr>
+        <tr><td>GATFP05</td><td>22122</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>21137</td><td>–</td></tr>
+        <tr><td rowspan="10">run-5</td><td>E01</td><td>578</td><td>–</td></tr>
+        <tr><td>FW12</td><td>2</td><td>2204</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>61</td></tr>
+        <tr><td>GATFP02</td><td>76977</td><td>76977</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>76967</td><td>76967</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>76904</td><td>76904</td></tr>
+        <tr><td rowspan="10">run-6</td><td>E01</td><td>1295</td><td>–</td></tr>
+        <tr><td>FW12</td><td>2</td><td>4375</td></tr>
+        <tr><td>FW23</td><td>13320</td><td>13320</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>63</td></tr>
+        <tr><td>GATFP02</td><td>27271</td><td>27271</td></tr>
+        <tr><td>GATFP03</td><td>27674</td><td>28903</td></tr>
+        <tr><td>GATFP04</td><td>27264</td><td>27264</td></tr>
+        <tr><td>GATFP05</td><td>27674</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>26955</td><td>–</td></tr>
+        <tr><td rowspan="10">run-7</td><td>E01</td><td>1018</td><td>–</td></tr>
+        <tr><td>FW12</td><td>2</td><td>3195</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>61</td></tr>
+        <tr><td>GATFP02</td><td>24484</td><td>24484</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>24487</td><td>24487</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>24608</td><td>24608</td></tr>
+        <tr><td rowspan="10">run-8</td><td>E01</td><td>1031</td><td>–</td></tr>
+        <tr><td>FW12</td><td>2</td><td>2702</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>61</td></tr>
+        <tr><td>GATFP02</td><td>37138</td><td>37138</td></tr>
+        <tr><td>GATFP03</td><td>37392</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>37130</td><td>37130</td></tr>
+        <tr><td>GATFP05</td><td>37392</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>35632</td><td>40354</td></tr>
+        <tr><td rowspan="10">run-9</td><td>E01</td><td>–</td><td>–</td></tr>
+        <tr><td>FW12</td><td>2</td><td>–</td></tr>
+        <tr><td>FW23</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP01</td><td>2</td><td>60</td></tr>
+        <tr><td>GATFP02</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP03</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP04</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP05</td><td>–</td><td>–</td></tr>
+        <tr><td>GATFP06</td><td>–</td><td>–</td></tr>
+        <tr><td>MF01</td><td>–</td><td>–</td></tr>
+
+        <!-- median table-->
+        <tr><td rowspan="10"><strong>Median</strong></td><td>E01</td><td>612</td><td><strong>77976.0</strong></td></tr>
+        <tr><td>FW12</td><td>2.0</td><td><strong>2948.5</strong></td></tr>
+        <tr><td>FW23</td><td>33009.5</td><td><strong>33009.5</strong></td></tr>
+        <tr><td>GATFP01</td><td>2.0</td><td><strong>61.0</strong></td></tr>
+        <tr><td>GATFP02</td><td>24484</td><td><strong>24484</strong></td></tr>
+        <tr><td>GATFP03</td><td>27674</td><td><strong>28903</strong></td></tr>
+        <tr><td>GATFP04</td><td>24487</td><td><strong>24487</strong></td></tr>
+        <tr><td>GATFP05</td><td>24898.0</td><td><strong>–</strong></td></tr>
+        <tr><td>GATFP06</td><td>–</td><td><strong>–</strong></td></tr>
+        <tr><td>MF01</td><td>24608</td><td><strong>27944</strong></td></tr>
+      </tbody>
+       </table>
+    </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- experiment data-->
+
+<section class = "subtitle" id = "experiment_data">
+  <h3>Experiment Data</h3>
+
+</section>
+
+<p>You can download the raw data for this report <button onclick="fetchAndZip()">Download Folder as ZIP</button>.</p>
+
+         </main>
+    </div>
+<!-- download zip function-->
+    <script>
+  async function fetchAndZip() {
+    const zip = new JSZip();
+
+    // Create main folder and subfolder
+    const rootFolder = zip.folder("fuzzing_results");
+    const jsonsFolder = rootFolder.folder("CNC_jsons");
+
+    const files = [
+      { name: "ember.json", url: "/jsons/ember.json" },
+      { name: "fuzzware.json", url: "/jsons/fuzzware.json" },
+      { name: "multifuzz.json", url: "/jsons/multifuzz.json" },
+      { name: "fuzzware-icicle.json", url: "/jsons/fuzzware-icicle.json" },
+      { name: "hoedur.json", url: "/jsons/hoedur.json" },
+      { name: "splits.json", url: "/jsons/splits.json" }
+    ];
+
+    for (const file of files) {
+      const response = await fetch(file.url);
+      if (!response.ok) {
+        console.error(`Failed to fetch ${file.url}: ${response.status}`);
+        continue;
+      }
+
+      const blob = await response.blob();
+      jsonsFolder.file(file.name, blob);
+    }
+
+    const content = await zip.generateAsync({ type: "blob" });
+
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(content);
+    a.download = "fuzzing_results.zip";
+    a.click();
+  }
+</script>
+
+
+  <!-- time conversion-->
+
+    <script>
+     document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.querySelectorAll("tbody.secondstohours tr");
+
+  rows.forEach(row => {
+    const cells = row.querySelectorAll("td");
+
+    // Bug ID always at index 0 or 1 depending on if "Run" column exists
+    const offset = cells.length === 4 ? 0 : -1;
+
+    const reachedIndex = 2 + offset;
+    const triggeredIndex = 3 + offset;
+
+    if (cells[reachedIndex]) {
+      const reached = parseFloat(cells[reachedIndex].textContent.replace(',', '').trim());
+      if (!isNaN(reached)) {
+        cells[reachedIndex].textContent = (reached / 3600).toFixed(2) + " hrs";
+      }
+    }
+
+    if (cells[triggeredIndex]) {
+      const triggered = parseFloat(cells[triggeredIndex].textContent.replace(',', '').trim());
+      if (!isNaN(triggered)) {
+        cells[triggeredIndex].textContent = (triggered / 3600).toFixed(2) + " hrs";
+      }
+    }
+  });
+});
+
+      </script>
+<!-- zoom -->
+ <script>
+   document.querySelectorAll('.zoom-image').forEach((img) => {
+  img.addEventListener('click', () => {
+    img.classList.toggle('zoomed');
+  });
+});
+ </script>
+
+ <!-- Scripts -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="graph1.js" defer></script>
+ <script src="graph2.js" defer></script>
+ <script src="graph3.js" defer></script>
+ <script src="collapsible.js" defer></script>
+  <script src = "sidebars.js" defer></script>
+  <script src="ember-median.js" defer></script>
+  <script src = "fuzzware_icicle_median.js" defer></script>
+<script src = "fuzzware_median.js" defer></script>
+<script src = "hoedur_median.js" defer></script>
+<script src = "multifuzz-median.js" defer></script>
+<script src = "splits-median.js" defer></script>
+<script src="convertsecondstohours.js" defer></script>
+<script src="convertTime.js"></script>
+<script src="sidebar.js"></script>
+<script src = "ember_boxplot.js" ></script>
+<script src="fuzzware_boxplot.js" ></script>
+<script src="fuzzware_icicle_boxplot.js" ></script>
+<script src="hoedur_boxplot.js" ></script>
+<script src="multifuzz-boxplot.js"></script> 
+<script src="splits_boxplot.js"></script>
+<script src = "sidebar.js"></script>
+<script src="console_median/console_ember_median.js"></script>
+<script src="console_box_plots/ember.js"></script>
+<script src="console_box_plots/fuzzware-icicle.js"></script>
+<script src="console_box_plots/fuzzware.js"></script>
+<script src="console_box_plots/hoedur.js"></script>
+<script src="console_box_plots/multifuzz.js"></script>
+<script src="console_box_plots/splits.js"></script>
+<script src = "console_median/console_fuzzware_median.js" ></script>
+<script src = "console_median/console_icicle_median.js" ></script>
+<script src = "console_median/console_hoedur_median.js" ></script>
+<script src = "console_median/console_multifuzz_median.js" ></script>
+<script src = "console_median/console_splits_median.js" ></script>
+
+<!-- scripts for gateway-->
+ <script src = "gateway_boxplot/ember_boxplot.js" ></script>
+ <script src = "gateway_boxplot/fuzzware_boxplot.js" ></script>
+  <script src = "gateway_boxplot/icicle_boxplot.js" ></script>
+  <script src = "gateway_boxplot/hoedur_boxplot.js" ></script>
+  <script src = "gateway_boxplot/multifuzz_boxplot.js" ></script>
+  <script src = "gateway_boxplot/splits_boxplot.js" ></script>
+
+<!-- scripts for gateway median-->  
+<script src = "gateway_median/gateway_ember_median.js" ></script>
+<script src = "gateway_median/gateway_fuzzware_median.js" ></script>
+<script src = "gateway_median/gateway_icicle_median.js" ></script>
+<script src = "gateway_median/gateway_hoedur_median.js" ></script>
+<script src = "gateway_median/gateway_multifuzz_median.js" ></script>
+<script src = "gateway_median/gateway_splits_median.js" ></script>
 </body>
 </html>
+  

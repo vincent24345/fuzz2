@@ -1,0 +1,10 @@
+---
+- hoedur-dict-arm
+- "--name"
+- output-02
+- "--fuzzware"
+- "--config"
+- hoedur_config.yml
+- fuzz
+- "--archive-dir"
+- hoedur-r2-2-dict

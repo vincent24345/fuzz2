@@ -1,0 +1,168 @@
+{
+    "Fuzzer": "MultiFuzz",
+    "Target": "Console",
+    "Number-Trials": 10,
+    "Trial-Time": 86400,
+    "Campaign": {
+        "run-0": [
+            {
+                "bug_id": "I01",
+                "reached": 2342,
+                "triggered": 2342,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-1": [
+            {
+                "bug_id": "I01",
+                "reached": 701,
+                "triggered": 701,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-2": [
+            {
+                "bug_id": "I01",
+                "reached": 8344,
+                "triggered": 8344,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-3": [
+            {
+                "bug_id": "I01",
+                "reached": 4914,
+                "triggered": 4914,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-4": [
+            {
+                "bug_id": "I01",
+                "reached": 3134,
+                "triggered": 3134,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-5": [
+            {
+                "bug_id": "I01",
+                "reached": 5234,
+                "triggered": 5234,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-6": [
+            {
+                "bug_id": "I01",
+                "reached": 5770,
+                "triggered": 5770,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-7": [
+            {
+                "bug_id": "I01",
+                "reached": 2419,
+                "triggered": 2419,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-8": [
+            {
+                "bug_id": "I01",
+                "reached": 3113,
+                "triggered": 3113,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-9": [
+            {
+                "bug_id": "I01",
+                "reached": 1818,
+                "triggered": 1818,
+                "raw_crash_data": [
+                    "0x337f_0x3272_read_error"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ]
+    }
+}

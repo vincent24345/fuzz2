@@ -1,0 +1,4 @@
+[DEFAUL# fuzzing only confige        = /home/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     =017-q2-update/bin/arm- firmata
+#program   

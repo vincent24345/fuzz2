@@ -1,0 +1,13 @@
+[DEFAULT] # fuzzing only config
+base    o/iot/iot-os-fuzzer
+run         = 1.0
+#program     = Modbus
+#p‚ogram     = firmata
+#program C OOOOOOOOOOOOOOOOOOOOOOOOOKOOOOOOOOOOOOOOOOs/afl/afl-fuzz
+timeout 0+
+input OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoOOOOOOOOOOOOOO  = quad_copter
+rogram    %(base)s/run/%(pro(ru   = %(working_dir)s/inputs
+ou$(MAKE) -C utils/socketDeFAULT] # s
+ou$(MAKE) -C utils/socketDeFAULT] # fuzzing only config
+baseÿ   o/iotiot-os-EFfuzzing only confiseÿ   o/iotiot-os-fuzzer[DEFAULT] # fuzzing only confT-new/exam     = /home/bo/os-fn   
+

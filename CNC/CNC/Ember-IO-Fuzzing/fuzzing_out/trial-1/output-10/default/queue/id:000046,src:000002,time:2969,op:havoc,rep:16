@@ -1,0 +1,4 @@
+[DEFLT] # fuzzing only config
+base        = /hom/iot/iot-os-fuzzer
+run         = 1.0
+#progra

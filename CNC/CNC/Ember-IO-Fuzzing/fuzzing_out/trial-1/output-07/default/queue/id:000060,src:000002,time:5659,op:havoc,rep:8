@@ -1,0 +1,4 @@
+[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iotiot/os/grbl_stm32f4/grbl_stm32-os-fuzzer
+run         = 1.0
+#progra

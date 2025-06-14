@@ -1,0 +1,579 @@
+{
+    "Fuzzer": "Ember-IO-Fuzzing",
+    "Target": "CNC",
+    "Number-Trials": 10,
+    "Trial-Time": 86400,
+    "Campaign": {
+        "run-1": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1525,
+                "triggered": 2550,
+                "raw_crash_data": [
+                    "./output-01/default/crashes/id:000000,sig:06,src:000671,time:2549543,op:havoc,rep:2",
+                    "./output-01/default/crashes/id:000001,sig:06,src:000671,time:2553768,op:havoc,rep:8",
+                    "./output-01/default/crashes/id:000002,sig:06,src:000671,time:2554906,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000003,sig:06,src:000671,time:2559452,op:havoc,rep:8",
+                    "./output-01/default/crashes/id:000004,sig:06,src:000671,time:2562906,op:havoc,rep:2",
+                    "./output-01/default/crashes/id:000005,sig:06,src:000678,time:3249691,op:havoc,rep:16",
+                    "./output-01/default/crashes/id:000007,sig:06,src:000678,time:3265369,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000008,sig:06,src:000678,time:3265733,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000009,sig:06,src:000704,time:3412908,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000010,sig:06,src:000766,time:3451127,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000011,sig:06,src:000763,time:4333294,op:havoc,rep:16",
+                    "./output-01/default/crashes/id:000012,sig:06,src:000763,time:7620241,op:havoc,rep:8",
+                    "./output-01/default/crashes/id:000013,sig:06,src:000766,time:8178668,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000014,sig:06,src:000766+000578,time:8197647,op:splice,rep:2",
+                    "./output-01/default/crashes/id:000015,sig:06,src:000766+000578,time:8197927,op:splice,rep:2",
+                    "./output-01/default/crashes/id:000016,sig:06,src:000677,time:8267472,op:havoc,rep:16",
+                    "./output-01/default/crashes/id:000017,sig:06,src:000665+000836,time:10567061,op:splice,rep:8",
+                    "./output-01/default/crashes/id:000018,sig:06,src:000764,time:13063415,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000019,sig:06,src:000766,time:15211166,op:havoc,rep:2",
+                    "./output-01/default/crashes/id:000020,sig:06,src:000766,time:15213566,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000021,sig:06,src:000766,time:15769060,op:havoc,rep:2",
+                    "./output-01/default/crashes/id:000022,sig:06,src:000766,time:15769667,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000023,sig:06,src:001401+001539,time:27355529,op:splice,rep:2",
+                    "./output-01/default/crashes/id:000024,sig:06,src:000823+001557,time:37637153,op:splice,rep:8",
+                    "./output-01/default/crashes/id:000025,sig:06,src:000766,time:42495109,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000026,sig:06,src:000764,time:49195992,op:havoc,rep:4",
+                    "./output-01/default/crashes/id:000027,sig:06,src:000764,time:50785220,op:havoc,rep:16",
+                    "./output-01/default/crashes/id:000028,sig:06,src:001401+001536,time:69316695,op:splice,rep:16",
+                    "./output-01/default/crashes/id:000029,sig:06,src:001001+001389,time:69671328,op:splice,rep:2"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1561,
+                "triggered": 3257,
+                "raw_crash_data": [
+                    "./output-01/default/crashes/id:000006,sig:06,src:000678,time:3256589,op:havoc,rep:8"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-2": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 3655,
+                "triggered": 20128,
+                "raw_crash_data": [
+                    "./output-02/default/crashes/id:000000,sig:06,src:001255+001062,time:20128445,op:splice,rep:16",
+                    "./output-02/default/crashes/id:000001,sig:06,src:001255+001062,time:20128917,op:splice,rep:8",
+                    "./output-02/default/crashes/id:000002,sig:06,src:000787+001064,time:42046433,op:splice,rep:16",
+                    "./output-02/default/crashes/id:000003,sig:06,src:000596+001285,time:63193875,op:splice,rep:16",
+                    "./output-02/default/crashes/id:000004,sig:06,src:000691+000815,time:76344848,op:splice,rep:16"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 4101,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-3": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 2328,
+                "triggered": 74832,
+                "raw_crash_data": [
+                    "./output-03/default/crashes/id:000000,sig:06,src:001170,time:74831801,op:havoc,rep:4"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 2328,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-4": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 2185,
+                "triggered": 58092,
+                "raw_crash_data": [
+                    "./output-04/default/crashes/id:000000,sig:06,src:001090,time:58092488,op:havoc,rep:4",
+                    "./output-04/default/crashes/id:000001,sig:06,src:001090,time:58094681,op:havoc,rep:16",
+                    "./output-04/default/crashes/id:000002,sig:06,src:001090,time:58094832,op:havoc,rep:4",
+                    "./output-04/default/crashes/id:000003,sig:06,src:001090,time:58102983,op:havoc,rep:16",
+                    "./output-04/default/crashes/id:000004,sig:06,src:001090,time:58103723,op:havoc,rep:4",
+                    "./output-04/default/crashes/id:000005,sig:06,src:001090,time:58107220,op:havoc,rep:4",
+                    "./output-04/default/crashes/id:000006,sig:06,src:001090,time:58109594,op:havoc,rep:4",
+                    "./output-04/default/crashes/id:000007,sig:06,src:001090,time:58118607,op:havoc,rep:2",
+                    "./output-04/default/crashes/id:000008,sig:06,src:001090,time:58134284,op:havoc,rep:4",
+                    "./output-04/default/crashes/id:000009,sig:06,src:001090,time:58165061,op:havoc,rep:4"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 2409,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-5": [
+            {
+                "bug_id": "FW11",
+                "reached": 55635,
+                "triggered": 56813,
+                "raw_crash_data": [
+                    "./output-05/default/crashes/id:000038,sig:06,src:002106,time:56813264,op:havoc,rep:4",
+                    "./output-05/default/crashes/id:000039,sig:06,src:002114,time:57614915,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000040,sig:06,src:002139,time:58998322,op:havoc,rep:2",
+                    "./output-05/default/crashes/id:000041,sig:06,src:002139+002113,time:59243282,op:splice,rep:4",
+                    "./output-05/default/crashes/id:000046,sig:06,src:002329,time:69364938,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000048,sig:06,src:002340,time:70532443,op:havoc,rep:2",
+                    "./output-05/default/crashes/id:000049,sig:06,src:002340,time:70547644,op:havoc,rep:4",
+                    "./output-05/default/crashes/id:000050,sig:06,src:002340+002181,time:70577455,op:splice,rep:16",
+                    "./output-05/default/crashes/id:000051,sig:06,src:002344+001793,time:71546955,op:splice,rep:2",
+                    "./output-05/default/crashes/id:000054,sig:06,src:002415+001651,time:73734092,op:splice,rep:8"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1982,
+                "triggered": 23663,
+                "raw_crash_data": [
+                    "./output-05/default/crashes/id:000000,sig:06,src:001234+001476,time:23662618,op:splice,rep:8",
+                    "./output-05/default/crashes/id:000001,sig:06,src:001234+001476,time:23665739,op:splice,rep:8",
+                    "./output-05/default/crashes/id:000002,sig:06,src:001499,time:23698895,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000003,sig:06,src:001499,time:23711702,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000004,sig:06,src:001499,time:23744030,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000005,sig:06,src:001499,time:23753670,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000006,sig:06,src:001499,time:23768963,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000007,sig:06,src:001499,time:23824464,op:havoc,rep:2",
+                    "./output-05/default/crashes/id:000008,sig:06,src:001508,time:24738297,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000009,sig:06,src:001508,time:24739078,op:havoc,rep:2",
+                    "./output-05/default/crashes/id:000010,sig:06,src:001508,time:24744866,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000011,sig:06,src:001508,time:24750159,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000012,sig:06,src:001508,time:24753987,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000013,sig:06,src:001301,time:26797384,op:havoc,rep:4",
+                    "./output-05/default/crashes/id:000014,sig:06,src:001301,time:26822670,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000015,sig:06,src:001301,time:26827821,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000016,sig:06,src:001735,time:27213424,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000017,sig:06,src:001735,time:27216245,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000018,sig:06,src:001719,time:27430588,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000019,sig:06,src:000951,time:27558396,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000020,sig:06,src:000951+001037,time:27576338,op:splice,rep:16",
+                    "./output-05/default/crashes/id:000021,sig:06,src:001765+001468,time:28068539,op:splice,rep:16",
+                    "./output-05/default/crashes/id:000022,sig:06,src:000832,time:29345832,op:havoc,rep:2",
+                    "./output-05/default/crashes/id:000023,sig:06,src:000849,time:30245625,op:havoc,rep:2",
+                    "./output-05/default/crashes/id:000024,sig:06,src:001221,time:30560360,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000025,sig:06,src:001221,time:30587297,op:havoc,rep:4",
+                    "./output-05/default/crashes/id:000026,sig:06,src:001221,time:30590816,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000027,sig:06,src:001853,time:32469037,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000028,sig:06,src:001853,time:32520243,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000029,sig:06,src:001853,time:32540007,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000030,sig:06,src:001301+001696,time:33725495,op:splice,rep:16",
+                    "./output-05/default/crashes/id:000031,sig:06,src:001838,time:34712918,op:havoc,rep:2",
+                    "./output-05/default/crashes/id:000032,sig:06,src:001838,time:34716057,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000033,sig:06,src:001382,time:44377189,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000034,sig:06,src:000921+001304,time:45666758,op:splice,rep:4",
+                    "./output-05/default/crashes/id:000035,sig:06,src:001382+001407,time:49923840,op:splice,rep:8",
+                    "./output-05/default/crashes/id:000036,sig:06,src:001382+001407,time:49926633,op:splice,rep:16",
+                    "./output-05/default/crashes/id:000037,sig:06,src:001978,time:54537559,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000042,sig:06,src:000984,time:64669743,op:havoc,rep:2",
+                    "./output-05/default/crashes/id:000043,sig:06,src:002193,time:68066519,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000044,sig:06,src:002292,time:68164610,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000045,sig:06,src:002317,time:68933324,op:havoc,rep:4",
+                    "./output-05/default/crashes/id:000047,sig:06,src:002324,time:70159164,op:havoc,rep:8",
+                    "./output-05/default/crashes/id:000052,sig:06,src:002301,time:72277387,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000053,sig:06,src:002313,time:72765761,op:havoc,rep:16",
+                    "./output-05/default/crashes/id:000055,sig:06,src:002301+001758,time:76333304,op:splice,rep:16",
+                    "./output-05/default/crashes/id:000056,sig:06,src:001378,time:85561503,op:havoc,rep:16"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 2035,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-6": [
+            {
+                "bug_id": "FW11",
+                "reached": 8168,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 2888,
+                "triggered": 28958,
+                "raw_crash_data": [
+                    "./output-06/default/crashes/id:000000,sig:06,src:001819,time:28958233,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000001,sig:06,src:001910,time:30269085,op:havoc,rep:8",
+                    "./output-06/default/crashes/id:000002,sig:06,src:001910,time:30271150,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000003,sig:06,src:001910,time:30273428,op:havoc,rep:8",
+                    "./output-06/default/crashes/id:000004,sig:06,src:001504+001907,time:32070832,op:splice,rep:2",
+                    "./output-06/default/crashes/id:000005,sig:06,src:001504+001907,time:32071207,op:splice,rep:8",
+                    "./output-06/default/crashes/id:000006,sig:06,src:001504+001907,time:32071209,op:splice,rep:8",
+                    "./output-06/default/crashes/id:000007,sig:06,src:001504+001907,time:32071230,op:splice,rep:8",
+                    "./output-06/default/crashes/id:000008,sig:06,src:001504+001907,time:32078687,op:splice,rep:8",
+                    "./output-06/default/crashes/id:000009,sig:06,src:001710,time:32289185,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000010,sig:06,src:001234,time:36618005,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000011,sig:06,src:001237+002015,time:38428859,op:splice,rep:8",
+                    "./output-06/default/crashes/id:000012,sig:06,src:001247,time:45401090,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000013,sig:06,src:001502+001933,time:46008463,op:splice,rep:4",
+                    "./output-06/default/crashes/id:000014,sig:06,src:001502+001933,time:46009735,op:splice,rep:8",
+                    "./output-06/default/crashes/id:000015,sig:06,src:001276+002007,time:46416941,op:splice,rep:2",
+                    "./output-06/default/crashes/id:000016,sig:06,src:001449+002114,time:47783876,op:splice,rep:8",
+                    "./output-06/default/crashes/id:000017,sig:06,src:001449+001942,time:48868524,op:splice,rep:8",
+                    "./output-06/default/crashes/id:000018,sig:06,src:001275,time:49905023,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000019,sig:06,src:001275,time:49912719,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000020,sig:06,src:001275,time:49915946,op:havoc,rep:8",
+                    "./output-06/default/crashes/id:000021,sig:06,src:002132,time:52246483,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000022,sig:06,src:001325+000980,time:52896692,op:splice,rep:16",
+                    "./output-06/default/crashes/id:000023,sig:06,src:001264,time:54297942,op:havoc,rep:4",
+                    "./output-06/default/crashes/id:000024,sig:06,src:001095+002011,time:56247119,op:splice,rep:4",
+                    "./output-06/default/crashes/id:000025,sig:06,src:001325+002149,time:58624458,op:splice,rep:4",
+                    "./output-06/default/crashes/id:000026,sig:06,src:000947+002130,time:60327790,op:splice,rep:16",
+                    "./output-06/default/crashes/id:000027,sig:06,src:002155,time:60478003,op:havoc,rep:8",
+                    "./output-06/default/crashes/id:000028,sig:06,src:002089+002098,time:65809117,op:splice,rep:16",
+                    "./output-06/default/crashes/id:000029,sig:06,src:001521+001639,time:69005895,op:splice,rep:4",
+                    "./output-06/default/crashes/id:000030,sig:06,src:001343+002029,time:72385271,op:splice,rep:4",
+                    "./output-06/default/crashes/id:000031,sig:06,src:002138,time:77166607,op:havoc,rep:16",
+                    "./output-06/default/crashes/id:000032,sig:06,src:000981+001988,time:81296294,op:splice,rep:4",
+                    "./output-06/default/crashes/id:000033,sig:06,src:001586+002009,time:85334292,op:splice,rep:4"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 15993,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-7": [
+            {
+                "bug_id": "FW11",
+                "reached": 56585,
+                "triggered": 56703,
+                "raw_crash_data": [
+                    "./output-07/default/crashes/id:000000,sig:06,src:001395+000969,time:56703376,op:splice,rep:2",
+                    "./output-07/default/crashes/id:000001,sig:06,src:001395+000918,time:56708931,op:splice,rep:16",
+                    "./output-07/default/crashes/id:000002,sig:06,src:001395+000918,time:56709060,op:splice,rep:4",
+                    "./output-07/default/crashes/id:000003,sig:06,src:001402,time:56784964,op:havoc,rep:16",
+                    "./output-07/default/crashes/id:000004,sig:06,src:001402,time:56785980,op:havoc,rep:8",
+                    "./output-07/default/crashes/id:000005,sig:06,src:001393+000962,time:58724845,op:splice,rep:2",
+                    "./output-07/default/crashes/id:000006,sig:06,src:001395+000965,time:61664796,op:splice,rep:16",
+                    "./output-07/default/crashes/id:000007,sig:06,src:001499,time:63583282,op:havoc,rep:4",
+                    "./output-07/default/crashes/id:000008,sig:06,src:001501,time:64046308,op:havoc,rep:16",
+                    "./output-07/default/crashes/id:000009,sig:06,src:001501,time:64063308,op:havoc,rep:4",
+                    "./output-07/default/crashes/id:000010,sig:06,src:001504,time:64120404,op:havoc,rep:8",
+                    "./output-07/default/crashes/id:000011,sig:06,src:001504,time:64120824,op:havoc,rep:4",
+                    "./output-07/default/crashes/id:000012,sig:06,src:001393+001215,time:64784485,op:splice,rep:16",
+                    "./output-07/default/crashes/id:000013,sig:06,src:001393+001334,time:70359297,op:splice,rep:8",
+                    "./output-07/default/crashes/id:000014,sig:06,src:001395+001384,time:72377527,op:splice,rep:2",
+                    "./output-07/default/crashes/id:000015,sig:06,src:001395+001213,time:72387969,op:splice,rep:16",
+                    "./output-07/default/crashes/id:000016,sig:06,src:001395+001213,time:72389077,op:splice,rep:8",
+                    "./output-07/default/crashes/id:000017,sig:06,src:001395+000975,time:73047957,op:splice,rep:16",
+                    "./output-07/default/crashes/id:000018,sig:06,src:001504,time:76045774,op:havoc,rep:8",
+                    "./output-07/default/crashes/id:000019,sig:06,src:001504,time:76052211,op:havoc,rep:8",
+                    "./output-07/default/crashes/id:000020,sig:06,src:001504+001144,time:76067436,op:splice,rep:16",
+                    "./output-07/default/crashes/id:000021,sig:06,src:001504+001144,time:76068126,op:splice,rep:2",
+                    "./output-07/default/crashes/id:000022,sig:06,src:001504+001144,time:76068324,op:splice,rep:4",
+                    "./output-07/default/crashes/id:000023,sig:06,src:001504+001144,time:76068554,op:splice,rep:2",
+                    "./output-07/default/crashes/id:000024,sig:06,src:001504+001144,time:76069466,op:splice,rep:8",
+                    "./output-07/default/crashes/id:000025,sig:06,src:001499,time:79768124,op:havoc,rep:16",
+                    "./output-07/default/crashes/id:000026,sig:06,src:001393+001439,time:81555881,op:splice,rep:4"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1980,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1980,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-8": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 16810,
+                "triggered": 73913,
+                "raw_crash_data": [
+                    "./output-08/default/crashes/id:000000,sig:06,src:000857+001010,time:73912628,op:splice,rep:16"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 36366,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-9": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1350,
+                "triggered": 47991,
+                "raw_crash_data": [
+                    "./output-09/default/crashes/id:000000,sig:06,src:001338,time:47990503,op:havoc,rep:16",
+                    "./output-09/default/crashes/id:000001,sig:06,src:001338,time:47990582,op:havoc,rep:4",
+                    "./output-09/default/crashes/id:000002,sig:06,src:001338,time:47990739,op:havoc,rep:16",
+                    "./output-09/default/crashes/id:000003,sig:06,src:001338,time:47990805,op:havoc,rep:4",
+                    "./output-09/default/crashes/id:000004,sig:06,src:001338,time:47991107,op:havoc,rep:2",
+                    "./output-09/default/crashes/id:000005,sig:06,src:001338,time:47992966,op:havoc,rep:4",
+                    "./output-09/default/crashes/id:000006,sig:06,src:001338,time:47993622,op:havoc,rep:8",
+                    "./output-09/default/crashes/id:000007,sig:06,src:001338,time:47996976,op:havoc,rep:4",
+                    "./output-09/default/crashes/id:000008,sig:06,src:001338,time:47999798,op:havoc,rep:8",
+                    "./output-09/default/crashes/id:000009,sig:06,src:001338,time:48005169,op:havoc,rep:16",
+                    "./output-09/default/crashes/id:000010,sig:06,src:001338,time:48007915,op:havoc,rep:4",
+                    "./output-09/default/crashes/id:000011,sig:06,src:001338,time:48008346,op:havoc,rep:8",
+                    "./output-09/default/crashes/id:000013,sig:06,src:001313,time:75551867,op:havoc,rep:8"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1529,
+                "triggered": 60313,
+                "raw_crash_data": [
+                    "./output-09/default/crashes/id:000012,sig:06,src:001341,time:60312875,op:havoc,rep:4"
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-10": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1563,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1577,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ]
+    }
+}

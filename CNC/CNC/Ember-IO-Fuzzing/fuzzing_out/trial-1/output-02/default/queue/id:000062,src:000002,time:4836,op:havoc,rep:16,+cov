@@ -1,0 +1,5 @@
+[DEFAULT] # fuzzing only e/bo/iot/iot-os-fuzzer
+run         = 1.0
+#program     = modbus
+#program     = firmata
+#    = qu      =ccccc#cccccccccs/inpuir)s/out

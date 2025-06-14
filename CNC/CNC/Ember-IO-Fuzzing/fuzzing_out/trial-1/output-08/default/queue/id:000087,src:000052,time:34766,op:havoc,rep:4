@@ -1,0 +1,7 @@
+#
+# ams/iot/oduino/erican fuzzy lop++ + makefile
+# -----------------------[DEFAULT] # fuzzing only config
+base        = /home/bo/iot/iot-os-fuzz  = modbus
+#progr   = firmata
+#progr   = quad_copter
+prorking_di

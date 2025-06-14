@@ -1,0 +1,299 @@
+{
+    "Fuzzer": "Fuzzware",
+    "Target": "CNC",
+    "Number-Trials": 10,
+    "Trial-Time": 86400,
+    "Campaign": {
+        "run-1": [
+            {
+                "bug_id": "FW11",
+                "reached": 2161,
+                "triggered": 2161,
+                "raw_crash_data": [
+               
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 867,
+                "triggered": 43490,
+                "raw_crash_data": [
+                    
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1348,
+                "triggered": 46072,
+                "raw_crash_data": [
+               
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-2": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1480,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1745,
+                "triggered": 45130,
+                "raw_crash_data": [
+                  
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-3": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1406,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1406,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-4": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1674,
+                "triggered": 29129,
+                "raw_crash_data": [
+                 
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1678,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-5": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 721,
+                "triggered": 30678,
+                "raw_crash_data": [
+               
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1392,
+                "triggered": 22978,
+                "raw_crash_data": [
+           
+                ]
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-6": [
+            {
+                "bug_id": "FW11",
+                "reached": 12901,
+                "triggered": 12901,
+                "raw_crash_data": [
+                  
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1136,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1361,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-7": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 639,
+                "triggered": 17450,
+                "raw_crash_data": [
+          
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 752,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-8": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 243,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 243,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-9": [
+            {
+                "bug_id": "FW11",
+                "reached": null,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 211,
+                "triggered": 15710,
+                "raw_crash_data": [
+       
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 710,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": []
+            }
+        ],
+        "run-10": [
+            {
+                "bug_id": "FW11",
+                "reached": 8962,
+                "triggered": 9641,
+                "raw_crash_data": [
+             
+                ]
+            },
+            {
+                "bug_id": "FW18",
+                "reached": 1173,
+                "triggered": 17619,
+                "raw_crash_data": [
+         
+                ]
+            },
+            {
+                "bug_id": "CNCFP01",
+                "reached": 1779,
+                "triggered": null,
+                "raw_crash_data": []
+            },
+            {
+                "ungrouped_crashes": []
+            },
+            {
+                "multi_bugs_triggered": [
+                    [
+                   
+                        [
+                         
+                        ]
+                    ]
+                ]
+            }
+        ]
+    }
+}

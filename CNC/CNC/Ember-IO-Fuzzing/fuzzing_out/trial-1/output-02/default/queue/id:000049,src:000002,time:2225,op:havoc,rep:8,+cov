@@ -1,0 +1,4 @@
+[DEF] # fuzzing only %%%%%%%%%%%%%%%%%%%%config
+base        = /home/bo/iot/iot-os-fuzzer
+run = 1.0
+#

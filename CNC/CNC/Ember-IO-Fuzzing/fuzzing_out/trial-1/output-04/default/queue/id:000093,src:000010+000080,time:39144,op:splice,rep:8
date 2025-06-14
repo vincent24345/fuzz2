@@ -1,0 +1,5 @@
+[ÿÿÿULT] # fuzzing only config
+base       = /home/bo/iot/iot-os-fuzzer
+run   3     = 9.0
+#program     dbus
+#program     = 

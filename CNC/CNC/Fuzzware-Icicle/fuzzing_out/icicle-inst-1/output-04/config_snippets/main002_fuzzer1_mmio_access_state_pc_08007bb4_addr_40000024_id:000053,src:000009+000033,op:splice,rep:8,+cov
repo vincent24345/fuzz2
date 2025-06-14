@@ -1,0 +1,6 @@
+mmio_models:
+  unmodeled:
+    pc_08007bb4_mmio_40000024:
+      access_size: 0x4
+      addr: 0x40000024
+      pc: 0x8007bb4

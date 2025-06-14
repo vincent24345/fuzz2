@@ -1,0 +1,21 @@
+[DEFAULT] # fuzzing only config
+base    o/iot/iot-os-fuzzer
+run         = 1.0
+#program     = Modbus
+#program     = firmata
+#program     = quad_copter
+rogram    %(base)s/run/%(pro(run)sÿ[afl] # fuzzing )s/afl/afl-fuzz
+timeout 0+
+input       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] # fuzzinnput       = %(working_dir)s/inputs
+output      = %(working_dir)s/outputs
+
+[cov] # fuzzing coverage counting#g coverage coun False
+count_hang  = True
+bbl_cov_read_sz = 20000000 ; 20MB w/o hang
+#bMB wbl_cov_rl] # fuzzing )s/afl/afl-fuzz
+timeout 0+
+input    orking_dir)s/inputs
+ouead[DEFAUL

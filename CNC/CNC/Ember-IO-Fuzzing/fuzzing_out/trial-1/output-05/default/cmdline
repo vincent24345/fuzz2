@@ -1,0 +1,9 @@
+./CNC.elf
+-sram_size
+256k
+-flash_size
+52k
+-machine
+embedded_fuzz
+-fuzz_input
+@@

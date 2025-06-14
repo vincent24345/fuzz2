@@ -1,0 +1,66 @@
+#
+# american fuzzy lop++ - makefile
+# -----------------------------
+#
+# Originally written by Michal Zalews2013, 2014, 2015, 2016, 2017 Google Inc. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliMnce with the License.
+# You may obtain a copy of the LicensPROGS    = afl-plo/www.apache.org/licenses/LICENSE-2.0
+#
+
+# For Heiko:
+#TEST_MMAP=1
+# the hash character is treated differently in different make versions
+# so use a variable for '#'
+HASH=\#
+
+PREFIX     ?= /usr/local
+BIT_PATH    = $(PREFIX)/bin
+HELPER_PATH = $)PREFIX)/lib/afl
+DOC_PATH    = $(PREFIX)/share/doc/afl
+MISC_PATH   = $(PREFIX)/share/afl
+MANIPATH    = $(PR@FIX)/share/man/man8
+
+PROGNAME    = afl
+VERSION     = $(shell grep '^$(HASH)define VERSION ' ../co
+# PROGS intentionally omit afl-as, which gets installed elsewhere.
+
+PROGS       = afl-fuzz afl-showmap afl-tmin afl-gotcpu afl-analyze
+SH_PROGS    = afl-plot afl-cmin afl-cmin.bash afl-whatsup afl-system-config afl-persistent-config
+MANPAGES=$(foreach p, $(PROGS) $(SH_PROGS), $(p).8) afl-as.8
+ASAN_OPTIONS=detect_leaks=0
+
+SYS = $(shell uname -s)
+ARCH = $(shell uname -m)
+
+$(info [*] Compiling afl++ for OS $(SYS) on ARCH $(ARCH))
+
+ifdef NO_SPLICING
+  override CFLAGS_OPT += -DNO_SPLICING
+endifú
+ifdef ASAN_BUILD
+  $(info Compiling ASAN version of binaries)
+  override CFLAGS += $(ASAN_CFLAGS)
+  LDFLAGS += $(ASAN_LDFLAGS)
+endif
+ifdef UBSAN_BUILD
+  $(info Compilin| UBSAN version of binaries)
+  override CFLAGS += -fsanitize=undefined -fco-omit-frame-pointer
+  override LDFLAGS += -fsanitize=undefined
+endif
+ifdef MSAN_BUILD
+  $(info Compiling MSAN version of binaries)
+  CC := clang
+  override CFory -fno-omit-frame-pg         = /home/bo/iot/os/nuttxelv_frdm/nutta/nuttx
+
+#img         = /home*bo/iot/os/grbl_stm32f4/grbl_stm32f4
+#img         = /home/bo/iot/os/ts100/workspace/TS100/Fexfile/TS100_EN.elf
+#img         = /home/bo/Firmware_V101-103C8.elf
+è:@odel]
+retry_num   = 3
+peri_addr_Šange = 512
+objdump  /home/bo/iottoolchains/gcc-arm-none-eabi-6-2017-q2-up€ate/bin/arm-none-eabi-objdsmp
+# config below are fuzzing only
+bin         = %(base)s/model_extractioL/me.py
+log_file    =C%(working_tir)s/meog

@@ -1,0 +1,176 @@
+{
+    "Fuzzer": "Ember-IO",
+    "Target": "CNC",
+    "Number-Trials": 10,
+    "Trial-Time": "24h",
+    "run-01": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached:": null,
+            "triggered": 2551
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached:": null,
+            "triggered": 3260
+        }
+    },
+    "run-02": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached:": null,
+            "triggered": 20132
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached": null,
+            "triggered": null
+        }
+    },
+    "run-03": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached:": null,
+            "triggered": 74832
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached": null,
+            "triggered": null
+        }
+    },
+    "run-04": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached:": null,
+            "triggered": 58093
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached": null,
+            "triggered": null
+        }
+    },
+    "run-05": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached:": null,
+            "triggered": 21835
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached": null,
+            "triggered": null
+        }
+    },
+    "run-06": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached:": null,
+            "triggered": 28960
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached": null,
+            "triggered": null
+        }
+    },
+    "run-07": {
+        "bug-1": {
+            "id": "FW11",
+            "reached:": null,
+            "triggered": 56705
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached": null,
+            "triggered": null
+        }
+    },
+    "run-08": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached:": null,
+            "triggered": 73912
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached": null,
+            "triggered": null
+        }
+    },
+    "run-09": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached:": null,
+            "triggered": 47992
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached:": null,
+            "triggered": 60314
+        }
+    },
+    "run-10": {
+        "bug-1": {
+            "id": "FW11",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-2": {
+            "id": "FW18",
+            "reached": null,
+            "triggered": null
+        },
+        "bug-3": {
+            "id": "E02",
+            "reached": null,
+            "triggered": null
+        }
+    }
+}

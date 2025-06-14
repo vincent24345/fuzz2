@@ -1,0 +1,9 @@
+mmio_models:
+  bitextract:
+    pc_080064d8_mmio_40023804:
+      access_size: 0x4
+      addr: 0x40023804
+      left_shift: 0x0
+      mask: 0x3f
+      pc: 0x80064d8
+      size: 0x1
